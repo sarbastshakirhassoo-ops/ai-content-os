@@ -17,5 +17,6 @@ export async function POST(req: NextRequest) {
     topic:       (body.topic as string) || '',
     triggeredBy: 'manual',
   })
-  return NextResponse.json({ job })
+  // Return jobId so client can pass it directly to workflow/run
+  return NextResponse.json({ job, jobId: job.id })
 }

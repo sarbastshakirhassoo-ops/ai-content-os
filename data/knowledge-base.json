@@ -1,0 +1,235 @@
+{
+  "topics": [
+    "Luxury Lifestyle Motivation"
+  ],
+  "bestHooks": [
+    {
+      "id": "kb_1782772271749_np9",
+      "type": "hook",
+      "value": "Das haben sie dir nie gesagt.",
+      "score": 100,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z",
+      "notes": "QC: 90 | Upload-freigegeben"
+    }
+  ],
+  "bestCTAs": [],
+  "bestHashtags": [
+    {
+      "id": "kb_1782772271749_sto",
+      "type": "hashtag",
+      "value": "#luxury",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_8bv",
+      "type": "hashtag",
+      "value": "#motivation",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_51t",
+      "type": "hashtag",
+      "value": "#success",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_itu",
+      "type": "hashtag",
+      "value": "#lifestyle",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_a70",
+      "type": "hashtag",
+      "value": "#mindset",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_ghv",
+      "type": "hashtag",
+      "value": "#discipline",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_0wr",
+      "type": "hashtag",
+      "value": "#wealthy",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_2sv",
+      "type": "hashtag",
+      "value": "#luxurylifestyle",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_rnd",
+      "type": "hashtag",
+      "value": "#cinematic",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_3uw",
+      "type": "hashtag",
+      "value": "#reels",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    }
+  ],
+  "assetKeywords": [
+    {
+      "id": "kb_1782772271749_0b0",
+      "type": "asset-keyword",
+      "value": "cinematic dark moody",
+      "score": 70,
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_m3u",
+      "type": "asset-keyword",
+      "value": "golden hour slow motion",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_bdr",
+      "type": "asset-keyword",
+      "value": "rain on glass cinematic",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    },
+    {
+      "id": "kb_1782772271749_8kf",
+      "type": "asset-keyword",
+      "value": "luxury car night",
+      "score": 70,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "createdAt": "2026-06-29T22:31:11.749Z"
+    }
+  ],
+  "musicStyles": [
+    {
+      "id": "kb_1782772271756_evc",
+      "type": "music-style",
+      "value": "Nostalgic Lo-Fi — warm, vintage, ruhig",
+      "score": 75,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z"
+    }
+  ],
+  "videoFormats": [],
+  "inVideoPrompts": [
+    {
+      "id": "kb_1782772271756_m85",
+      "type": "invideo-prompt",
+      "value": "Create a 30-45 second cinematic luxury lifestyle video in 9:16 vertical format.\n\nStyle: Dark luxury aesthetic, similar to @69perception. Cinematic quality.\nLook: Deep shadows, golden highlights, film grain, smooth slow-motion.\nCuts: Fast but smooth — beat-synced cuts, speed ramping on key moments.\nText: Minimal overlays — powerful single-line statements, high-end typography.\nMood: Aspirational, motivational, nostalgic — makes viewer feel something.\nMusic: Nostalgic Lo-Fi — warm, vintage, ruhig\nHook: Das haben sie dir nie gesagt.\nTopic: Luxury Lifestyle Motivation\n\nVisual sequence:\n1. Lamborghini bei Sonnenuntergang — cinematic establishing shot\n2. Rooftop-Pool mit Stadtblick — emotional connection moment\n3. Privatjet Cockpit bei Sonnenaufgang — luxury lifestyle peak visual\n4. Super-8 Film-Look alter Kindheitsmomente — aspirational closing image\n5. CTA overlay: \"Follow for more\" — minimal, elegant\n\nFormat: MP4, 9:16, 1080x1920, 30fps\nEffects: Film grain overlay, subtle vignette, color grade (Teal & Orange or Dark & Moody)\nSubtitles: Dynamic captions, bold sans-serif, white with dark outline",
+      "score": 90,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "QC Score: 90 | Topic: Luxury Lifestyle Motivation"
+    }
+  ],
+  "learnings": [
+    {
+      "id": "kb_1782772271756_e1r",
+      "type": "learning",
+      "value": "Cinematic Hook",
+      "score": 80,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "Analytics: 30.6.2026"
+    },
+    {
+      "id": "kb_1782772271756_3ny",
+      "type": "learning",
+      "value": "Dark Luxury Aesthetic",
+      "score": 80,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "Analytics: 30.6.2026"
+    },
+    {
+      "id": "kb_1782772271756_7uy",
+      "type": "learning",
+      "value": "Motivational Voiceover",
+      "score": 80,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "Analytics: 30.6.2026"
+    },
+    {
+      "id": "kb_1782772271756_el8",
+      "type": "learning",
+      "value": "Behind-the-scenes Luxury Routine",
+      "score": 75,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "Community-Wunsch via Engagement Analyzer"
+    },
+    {
+      "id": "kb_1782772271756_vi0",
+      "type": "learning",
+      "value": "Millionaire Morning Routine",
+      "score": 75,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "Community-Wunsch via Engagement Analyzer"
+    },
+    {
+      "id": "kb_1782772271756_g9h",
+      "type": "learning",
+      "value": "5 Dinge die Erfolgreiche täglich tun",
+      "score": 75,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "createdAt": "2026-06-29T22:31:11.756Z",
+      "notes": "Community-Wunsch via Engagement Analyzer"
+    }
+  ],
+  "lastUpdated": "2026-06-29T22:31:11.756Z"
+}

@@ -85,11 +85,14 @@ async function runStep(
 
 export async function POST(req: NextRequest) {
   const body        = await req.json().catch(() => ({}))
+  const jobId       = body.jobId as string | undefined
   const niche       = (body.niche       as string) || NICHE
   const topic       = (body.topic       as string) || ''
   const triggeredBy = (body.triggeredBy as 'manual' | 'scheduled' | 'auto') || 'manual'
 
-  const job = createJob({ niche, topic, triggeredBy })
+  // Use existing job if jobId provided, otherwise create new one
+  let job = jobId ? (await import('@/lib/job-store').then(m => m.getJob(jobId))) ?? null : null
+  if (!job) job = createJob({ niche, topic, triggeredBy })
   updateJob(job.id, { status: 'running', startedAt: new Date().toISOString() })
 
   const ctx: Record<string, unknown> = { niche, topic }

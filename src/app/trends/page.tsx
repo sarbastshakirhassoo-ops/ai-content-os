@@ -410,7 +410,16 @@ function TrendsPageInner() {
   const predictions  = data?.predictions   || []
   const notifications = data?.notifications || []
 
-  const allCreators: CreatorProfile[] = trends.flatMap(t => t.topCreators || [])
+  // Dedupliziert nach platform:username — kein Creator doppelt im Tab
+  const allCreators: CreatorProfile[] = (() => {
+    const seen = new Set<string>()
+    return trends.flatMap(t => t.topCreators || []).filter(c => {
+      const key = `${c.platform}:${c.username}`
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+  })()
   const categories   = ['all', ...Array.from(new Set(trends.map(t => t.category)))]
   const filtered     = catFilter === 'all' ? trends : trends.filter(t => t.category === catFilter)
 

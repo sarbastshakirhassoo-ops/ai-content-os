@@ -351,17 +351,19 @@ function buildPredictions(): PredictedTrend[] {
 // niche seeds — avoids unreliable search endpoints entirely.
 
 const NICHE_CREATORS: Record<TrendCategory, string[]> = {
-  'KI / Tech':          ['mrwhosetheboss', 'larrysaidso', 'mkbhd', 'techwithtim'],
-  'Business / Finance': ['garyvee', 'andreijikh', 'minority.mindset', 'humphreytalks'],
-  'Gaming':             ['ninja', 'pokimane', 'valkyraegaming', 'shroud'],
-  'Entertainment':      ['khaby.lame', 'zachking', 'bellapoarch', 'charlidamelio'],
-  'Fitness / Health':   ['jeffnippard', 'chrisheria', 'gymshark', 'athleanx'],
-  'Food':               ['gordonramsayofficial', 'tabitha.brown', 'tasty', 'koreanfoodie'],
-  'Travel / Lifestyle': ['nasdaily', 'lostleblanc', 'kara.and.nate', 'tomscott'],
-  'Beauty / Fashion':   ['nikkietutorials', 'jamescharles', 'bretmanrock', 'hyramyarbro'],
-  'Science':            ['markrober', 'veritasium', 'vsauce', 'minutephysics'],
-  'Crypto / Web3':      ['coinbureau', 'themooncarl', 'cryptodifferent', 'coindesk'],
-  'Allgemein':          ['khaby.lame', 'zachking', 'mrwhosetheboss', 'nas.daily'],
+  // Unsere Kern-Nische: Lifestyle, Fashion, Personal Brand, Travel
+  'Travel / Lifestyle': ['wesleyywang', 'wisdom.kaye', 'erikakullberg', 'jackmorris'],
+  'Beauty / Fashion':   ['camerondallas', 'wisdom.kaye', 'colinwayne', 'louistheroux'],
+  'Allgemein':          ['wesleyywang', 'wisdom.kaye', 'erikakullberg', 'camerondallas'],
+  // Andere Nischen — saubere, nicht-duplizierte Seeds
+  'KI / Tech':          ['mrwhosetheboss', 'larrysaidso', 'techwithtim', 'aiexplained'],
+  'Business / Finance': ['alexhormozi', 'andreijikh', 'humphreytalks', 'noahkagan'],
+  'Gaming':             ['pokimane', 'valkyraegaming', 'streamerbanter', 'lobitoflow'],
+  'Entertainment':      ['bellapoarch', 'charlidamelio', 'addisonre', 'dixiedamelio'],
+  'Fitness / Health':   ['jeffnippard', 'chrisheria', 'gymshark', 'cbum'],
+  'Food':               ['gordonramsayofficial', 'tabitha.brown', 'tasty', 'joincooking'],
+  'Science':            ['markrober', 'veritasium', 'smartereveryday', 'minuteearth'],
+  'Crypto / Web3':      ['coinbureau', 'themooncarl', 'cryptodifferent', 'lookonchain'],
 }
 
 async function fetchTikTokUserInfo(
@@ -398,6 +400,29 @@ async function fetchTikTokUserInfo(
     const avgLikes   = Math.round(likes / Math.max(videos, 1))
     const engRate    = avgViews > 0 ? parseFloat(((avgLikes / avgViews) * 100).toFixed(1)) : 3.5
 
+    const er = isNaN(engRate) ? 3.5 : engRate
+
+    // Dynamische Analyse basierend auf echten Metriken
+    const whyItWorks = (() => {
+      if (er > 15)  return `Extrem hohe Engagement-Rate (~${Math.round(er)}%) — starke Community-Bindung durch authentischen Content und konsistente Nischen-Positionierung.`
+      if (er > 8)   return `Überdurchschnittliche Engagement-Rate (~${Math.round(er)}%) — cinematic Ästhetik und kurze prägnante Botschaften erzeugen loyale Zielgruppe.`
+      if (er > 4)   return `Solide Engagement-Rate (~${Math.round(er)}%) — konsistentes Posting und starke visuelle Identität bauen nachhaltig Reichweite auf.`
+      return `Reichweiten-Kanal mit ${Math.round(er)}% Engagement — primärer Hebel ist Volumen und SEO-Optimierung der Titel.`
+    })()
+
+    const hookStyle = (() => {
+      if (followers > 10_000_000) return 'Schweigen + visuelle Handlung — kein Wort nötig, Bild erzählt die Story in 2 Sek.'
+      if (er > 10)                return 'Provokante Aussage die dem Zuschauer widerspricht — erzeugt sofortige Reaktion.'
+      if (avgViews > 500_000)     return 'Cinematic Opening Shot + Musik-Drop — Hook funktioniert ohne Sprache.'
+      return 'Direkte Frage oder Statement das Neugier erzeugt — "Das wusstest du nicht..."'
+    })()
+
+    const videoLength = (() => {
+      if (followers > 5_000_000) return '15–30 Sekunden (maximale Retention)'
+      if (er > 8)                return '20–45 Sekunden'
+      return '30–60 Sekunden'
+    })()
+
     return {
       platform:         'tiktok',
       username:         uid,
@@ -406,11 +431,11 @@ async function fetchTikTokUserInfo(
       followers,
       avgViews,
       avgLikes,
-      engagementRate:   isNaN(engRate) ? 3.5 : engRate,
+      engagementRate:   er,
       postingFrequency: followers > 1_000_000 ? 'täglich' : followers > 200_000 ? '5–6×/Woche' : '3–4×/Woche',
-      whyItWorks:       `Starke Hook-Strategie & konsistente Nischen-Positionierung. Engagement-Rate ~${isNaN(engRate) ? '3.5' : Math.round(engRate)}% zeigt loyale Community.`,
-      hookStyle:        'Direkte Anrede oder provokante Aussage in ersten 2 Sek.',
-      videoLength:      '30–60 Sekunden',
+      whyItWorks,
+      hookStyle,
+      videoLength,
       hashtags:         HASHTAGS[category].slice(0, 5),
     }
   } catch {
@@ -451,70 +476,94 @@ async function getYTToken(): Promise<string | null> {
   } catch { return null }
 }
 
+// Kuratierte YouTube-Handles pro Nische — verhindert random Suchergebnisse
+const YT_NICHE_HANDLES: Record<TrendCategory, string[]> = {
+  'Travel / Lifestyle': ['@jackmorris', '@KaraandNate', '@LostLeBlanc', '@theblondeabroad'],
+  'Beauty / Fashion':   ['@GarrettWatts', '@LauraLee', '@AlishaMarieVlogs', '@MannyMua733'],
+  'Allgemein':          ['@jackmorris', '@GarrettWatts', '@AlexHormozi', '@garyvee'],
+  'KI / Tech':          ['@MrWhoseTheBoss', '@mkbhd', '@LinusTechTips', '@veritasium'],
+  'Business / Finance': ['@AlexHormozi', '@garyvee', '@GrahamStephan', '@AndreiJikh'],
+  'Gaming':             ['@Pokimane', '@Valkyrae', '@Ninja', '@jacksepticeye'],
+  'Entertainment':      ['@MrBeast', '@DudePerfect', '@MarkiplierGAME', '@PewDiePie'],
+  'Fitness / Health':   ['@JeffNippard', '@ChrisHeria', '@Athlean-X', '@cbum'],
+  'Food':               ['@GordonRamsay', '@TabithaBrown', '@BingingwithBabish', '@JoshuaWeissman'],
+  'Science':            ['@markrober', '@veritasium', '@SmarterEveryDay', '@MinuteEarth'],
+  'Crypto / Web3':      ['@CoinBureau', '@TheMoonCarl', '@aantonop', '@Coindesk'],
+}
+
+async function fetchYouTubeChannelByHandle(
+  handle: string,
+  token: string,
+  category: TrendCategory,
+): Promise<CreatorProfile | null> {
+  try {
+    const cleanHandle = handle.startsWith('@') ? handle : `@${handle}`
+    const res = await fetch(
+      `https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&forHandle=${encodeURIComponent(cleanHandle)}&maxResults=1`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    )
+    if (!res.ok) return null
+    const data  = await res.json() as Record<string, unknown>
+    const items = (data.items || []) as Record<string, unknown>[]
+    if (items.length === 0) return null
+
+    const ch    = items[0]
+    const snip  = (ch.snippet    || {}) as Record<string, unknown>
+    const stat  = (ch.statistics || {}) as Record<string, unknown>
+    const n     = (v: unknown) => { const p = parseInt(String(v ?? '0').replace(/\D/g, ''), 10); return isNaN(p) ? 0 : p }
+
+    const channelId  = String(ch.id || '')
+    const customUrl  = String(snip.customUrl || cleanHandle)
+    const followers  = n(stat.subscriberCount)
+    const totalViews = n(stat.viewCount)
+    const videoCount = n(stat.videoCount) || 1
+    const avgViews   = totalViews > 0 ? Math.round(totalViews / videoCount) : (followers > 0 ? Math.round(followers * 0.08) : 5000)
+    const avgLikes   = Math.round(avgViews * 0.04)
+    const engRate    = parseFloat(((avgLikes / Math.max(avgViews, 1)) * 100).toFixed(1))
+    const er         = isNaN(engRate) ? 4.0 : engRate
+
+    const whyItWorks = (() => {
+      if (followers > 10_000_000) return `${(followers / 1_000_000).toFixed(1)}M Abos — dominiert Nische durch Thumbnail-CTR + SEO-Titel. Jedes Video ein Algorithmus-Magnet.`
+      if (followers > 1_000_000)  return `${(followers / 1_000_000).toFixed(1)}M Abos — konsistente Upload-Frequenz und starke Community-Bindung durch Authentizität.`
+      return `Wachsender Kanal (~${(followers / 1_000).toFixed(0)}K Abos) — Nischen-Expertise schlägt Reichweite. Ideal zum Analysieren der Hook-Struktur.`
+    })()
+
+    const hookStyle = (() => {
+      if (avgViews > 2_000_000) return 'Thumbnail-Versprechen + Cliffhanger in ersten 10 Sek — Neugier-Lücke erzwingen.'
+      if (er > 6)               return 'Persönliche Story-Hook + direktes Ansprechen: "Du bist hier weil..." — Community-Gefühl.'
+      return 'Wert sofort liefern — keine Wartezeit, sofortiger Nutzen sichtbar in ersten 5 Sek.'
+    })()
+
+    return {
+      platform:         'youtube',
+      username:         channelId || cleanHandle,
+      displayName:      String(snip.title || cleanHandle),
+      profileUrl:       customUrl.startsWith('@') ? `https://youtube.com/${customUrl}` : `https://youtube.com/channel/${channelId}`,
+      followers,
+      avgViews,
+      avgLikes,
+      engagementRate:   er,
+      postingFrequency: followers > 2_000_000 ? '3–4×/Woche' : followers > 500_000 ? '1–2×/Woche' : '1×/Woche',
+      whyItWorks,
+      hookStyle,
+      videoLength:      avgViews > 1_000_000 ? '8–15 Minuten' : '5–20 Minuten',
+      hashtags:         HASHTAGS[category].slice(0, 4),
+    }
+  } catch { return null }
+}
+
 async function discoverYouTubeCreators(keyword: string, token: string): Promise<CreatorProfile[]> {
   try {
     const category = detectCategory(keyword)
+    const handles  = (YT_NICHE_HANDLES[category] || YT_NICHE_HANDLES['Allgemein']).slice(0, 3)
 
-    // Step 1 — search for channels
-    const searchRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(keyword)}&type=channel&maxResults=4&order=relevance`,
-      { headers: { Authorization: `Bearer ${token}` } }
+    // Kuratierten Handles abfragen — kein offener Search, keine random Ergebnisse
+    const results = await Promise.allSettled(
+      handles.map(h => fetchYouTubeChannelByHandle(h, token, category))
     )
-    if (!searchRes.ok) return []
-    const searchData = await searchRes.json() as Record<string, unknown>
-    const items = (searchData.items || []) as Record<string, unknown>[]
-    if (items.length === 0) return []
-
-    // Step 2 — get real subscriber / view counts via channels.list
-    const ids = items
-      .map(i => String((i.id as Record<string, unknown>)?.channelId || ''))
-      .filter(Boolean)
-      .join(',')
-
-    const statsRes = await fetch(
-      `https://www.googleapis.com/youtube/v3/channels?part=statistics,snippet&id=${ids}&maxResults=4`,
-      { headers: { Authorization: `Bearer ${token}` } }
-    )
-    const statsData = statsRes.ok ? await statsRes.json() as Record<string, unknown> : {}
-    const statsMap: Record<string, Record<string, unknown>> = {}
-    for (const ch of ((statsData.items || []) as Record<string, unknown>[])) {
-      const id  = String(ch.id || '')
-      const snip = (ch.snippet    || {}) as Record<string, unknown>
-      const stat = (ch.statistics || {}) as Record<string, unknown>
-      statsMap[id] = { ...stat, title: snip.title, customUrl: snip.customUrl }
-    }
-
-    const n = (v: unknown) => { const p = parseInt(String(v ?? '0').replace(/\D/g, ''), 10); return isNaN(p) ? 0 : p }
-
-    return items.map(item => {
-      const snip      = (item.snippet || {}) as Record<string, unknown>
-      const channelId = String((item.id as Record<string, unknown>)?.channelId || '')
-      const st        = statsMap[channelId] || {}
-      const handle    = String(st.customUrl || snip.channelTitle || channelId)
-
-      const followers  = n(st.subscriberCount)
-      const totalViews = n(st.viewCount)
-      const videoCount = n(st.videoCount) || 1
-      const avgViews   = totalViews > 0 ? Math.round(totalViews / videoCount) : (followers > 0 ? Math.round(followers * 0.08) : 5000)
-      const avgLikes   = Math.round(avgViews * 0.04)
-      const engRate    = parseFloat(((avgLikes / Math.max(avgViews, 1)) * 100).toFixed(1))
-
-      return {
-        platform:         'youtube' as const,
-        username:         channelId,
-        displayName:      String(st.title || snip.title || snip.channelTitle || 'Unknown Channel'),
-        profileUrl:       handle.startsWith('@') ? `https://youtube.com/${handle}` : `https://youtube.com/channel/${channelId}`,
-        followers,
-        avgViews,
-        avgLikes,
-        engagementRate:   isNaN(engRate) ? 4.0 : engRate,
-        postingFrequency: followers > 1_000_000 ? '2–3×/Woche' : '1–2×/Woche',
-        whyItWorks:       'Starke SEO-optimierte Titel + Thumbnails generieren hohe CTR. Konsistente Uploads bauen Abo-Loyalität auf.',
-        hookStyle:        'Neugier-Lücke durch Titel + Thumbnail, offene Frage im Intro',
-        videoLength:      '8–20 Minuten',
-        hashtags:         HASHTAGS[category].slice(0, 4),
-      }
-    }).filter(c => c.username !== '')
+    return results
+      .filter((r): r is PromiseFulfilledResult<CreatorProfile> => r.status === 'fulfilled' && r.value !== null)
+      .map(r => r.value)
   } catch { return [] }
 }
 
@@ -851,7 +900,9 @@ export class TrendAgent extends BaseAgent {
     // Sort by opportunity score
     trendResults.sort((a, b) => b.opportunityScore - a.opportunityScore)
 
-    // 5. Creator discovery for top 4 trends
+    // 5. Creator discovery für top 4 Trends — global dedupliziert
+    const seenCreators = new Set<string>()
+
     await Promise.allSettled(
       trendResults.slice(0, 4).map(async trend => {
         const keyword = trend.keywords[0] || trend.topic.split(' ')[0]
@@ -859,7 +910,15 @@ export class TrendAgent extends BaseAgent {
           discoverTikTokCreators(keyword),
           ytToken ? discoverYouTubeCreators(keyword, ytToken) : Promise.resolve([]),
         ])
-        trend.topCreators = [...ttCreators, ...ytCreators].slice(0, 6)
+        // Nur Creator hinzufügen die noch nicht in einem anderen Trend vorkommen
+        const allCreators = [...ttCreators, ...ytCreators]
+        const unique = allCreators.filter(c => {
+          const key = `${c.platform}:${c.username}`
+          if (seenCreators.has(key)) return false
+          seenCreators.add(key)
+          return true
+        })
+        trend.topCreators = unique.slice(0, 5)
       })
     )
 

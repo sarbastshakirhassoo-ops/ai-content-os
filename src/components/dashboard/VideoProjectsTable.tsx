@@ -1,12 +1,34 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { DEMO_VIDEOS } from '@/lib/demo-data'
 import { StatusBadge } from '@/components/ui/Badge'
 import { formatNumber, timeAgo } from '@/lib/utils'
+import type { VideoProject } from '@/types'
 
 export default function VideoProjectsTable() {
+  const [videos, setVideos] = useState<VideoProject[]>(DEMO_VIDEOS)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch('/api/videos')
+      .then(r => r.json())
+      .then(data => {
+        if (Array.isArray(data.videos) && data.videos.length > 0) {
+          setVideos(data.videos)
+        }
+      })
+      .catch(() => {/* Fallback auf DEMO_VIDEOS */})
+      .finally(() => setLoading(false))
+  }, [])
+
   return (
     <div className="bg-card border border-border rounded-xl overflow-hidden">
       <div className="px-4 py-3 border-b border-border flex items-center justify-between">
-        <h2 className="text-sm font-semibold text-white">Recent Video Projects</h2>
+        <h2 className="text-sm font-semibold text-white">
+          Recent Video Projects
+          {loading && <span className="ml-2 w-3 h-3 inline-block border border-t-white/40 border-white/10 rounded-full animate-spin align-middle" />}
+        </h2>
         <a href="/content" className="text-xs text-accent hover:text-accent-hover">View all →</a>
       </div>
       <div className="overflow-x-auto">
@@ -22,7 +44,7 @@ export default function VideoProjectsTable() {
             </tr>
           </thead>
           <tbody>
-            {DEMO_VIDEOS.map((video) => (
+            {videos.map((video) => (
               <tr key={video.id} className="border-b border-border/50 hover:bg-surface/50 transition-colors">
                 <td className="px-4 py-3">
                   <div className="text-white font-medium text-xs leading-snug max-w-xs truncate">{video.title}</div>

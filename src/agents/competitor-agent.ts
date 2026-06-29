@@ -736,3 +736,48 @@ export async function analyzeCompetitor(
     summary: `@${username} ist ein ${plat}-Kanal in der "${profile.analysis.niche}"-Nische. ${profile.followers.toLocaleString('de')} Follower · ${profile.totalLikes?.toLocaleString('de') || '?'} Gesamt-Likes · Ø ${profile.avgViews.toLocaleString('de')} Views · ${profile.engagementRate}% Engagement. ${profile.dataSource === 'live' ? '✅ Echte Daten' : '⚠️ Demo-Daten'}`,
   }
 }
+
+// ── Agent-Klasse für Pipeline-Integration ─────────────────────────────────────
+import { BaseAgent, AgentInput, AgentOutput } from './base'
+
+export class CompetitorAgent extends BaseAgent {
+  slug = 'competitor-agent'
+  name = 'Competitor Analyst'
+
+  validateInput(_input: AgentInput): boolean {
+    return true
+  }
+
+  async run(input: AgentInput): Promise<AgentOutput> {
+    const start = Date.now()
+
+    const niche = (input.niche as string) || 'Fashion, Lifestyle, Travel, Personal Brand'
+    // Default-Creator für die Nische — @69perception Stil
+    const handle = (input.handle as string) || (input.username as string) || '@69perception'
+
+    try {
+      const report = await analyzeCompetitor(handle, 'instagram')
+      const output = this.generateOutput({
+        ...report,
+        niche,
+        dataSource: report.profiles[0]?.dataSource || 'mock',
+      }, start)
+      this.logResult(output)
+      return output
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err)
+      console.warn('[CompetitorAgent] Fehler, nutze Mock:', msg)
+      // Graceful fallback
+      const output = this.generateOutput({
+        niche,
+        viralHooks: ['Die Leute die wenig reden bauen am meisten auf', 'Niemand erinnert sich an den Durchschnitt'],
+        topHashtagsAcrossPlatforms: ['#lifestyle', '#personalbrand', '#aesthetic', '#mindset', '#builddifferent'],
+        contentCalendar: ['Mo: Hook-Video', 'Mi: Montage', 'Fr: CTA-Video'],
+        summary: `Competitor-Analyse für Nische: ${niche} (Demo)`,
+        dataSource: 'mock',
+      }, start)
+      this.logResult(output)
+      return output
+    }
+  }
+}

@@ -4,36 +4,36 @@ import { useState } from 'react'
 import type { VideoScript } from '@/agents/script-agent'
 
 const DEMO_SCRIPT: VideoScript = {
-  topic: 'Diese 3 Side Hustles bringen dir 1000€ im Monat',
-  niche: 'Side Hustle',
-  platform: 'TikTok / YouTube Shorts',
-  duration: '55–60 Sek.',
-  hook: 'Diese 3 Side Hustles bringen dir 1000€ im Monat — ohne Startkapital',
+  topic: 'Die Leute die wenig reden bauen am meisten auf',
+  niche: 'Fashion, Lifestyle, Travel, Personal Brand',
+  platform: 'Instagram Reels / TikTok / YouTube Shorts',
+  duration: '25–30 Sek.',
+  hook: 'Die Leute die am wenigsten reden — bauen am meisten auf.',
   sections: [
     {
-      label: 'Problem',
-      duration: '10 Sek.',
-      text: 'Die meisten Menschen denken, sie brauchen viel Geld um Geld zu verdienen. Das ist falsch. Diese 3 Methoden kosten dich nichts.',
-      visualNote: '',
+      label: 'Hook',
+      duration: '5 Sek.',
+      text: 'Die Leute die am wenigsten reden — bauen am meisten auf.',
+      visualNote: 'Cinematic urban shot. Golden hour. Dark moody.',
     },
     {
-      label: 'Lösung',
-      duration: '30 Sek.',
-      text: 'Nummer 1: Freelancing auf Fiverr. Du verkaufst Fähigkeiten die du bereits hast. Nummer 2: Digitale Produkte auf Gumroad. Einmal erstellen, immer wieder verkaufen. Nummer 3: KI-gestützter Content. Dein Handy plus KI Tools reichen aus.',
-      visualNote: '',
+      label: 'Montage',
+      duration: '18 Sek.',
+      text: 'Kein Drama. Keine Ausreden. Nur Fokus. Nur Bewegung. Jeden Tag. Ohne Publikum.',
+      visualNote: 'Fast cuts: luxury interior, fashion details, travel shots, city skyline at night. Beat-synced.',
     },
     {
       label: 'CTA',
-      duration: '10 Sek.',
-      text: 'Folge mir für mehr Side Hustle Tipps die wirklich funktionieren.',
-      visualNote: '',
+      duration: '5 Sek.',
+      text: 'Build different.',
+      visualNote: 'Text overlay fade-in. Logo/handle @killa_wp bottom right.',
     },
   ],
-  cta: 'Folge mir für mehr Side Hustle Tipps!',
-  hashtags: ['#SideHustle', '#OnlineGeldVerdienen'],
-  thumbnailIdea: '',
-  postingTime: '',
-  wordCount: 80,
+  cta: 'Follow für mehr.',
+  hashtags: ['#lifestyle', '#personalbrand', '#builddifferent', '#motivation', '#aesthetic'],
+  thumbnailIdea: 'Dark cinematic frame — city lights in background, text "BUILD DIFFERENT" center',
+  postingTime: '18:00–20:00 Uhr',
+  wordCount: 45,
 }
 
 export default function VideoPage() {
@@ -41,6 +41,7 @@ export default function VideoPage() {
   const [loading, setLoading] = useState(false)
   const [videoUrl, setVideoUrl] = useState<string | null>(null)
   const [duration, setDuration] = useState<number | null>(null)
+  const [invideoPPrompt, setInvideoPrompt] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState('')
 
@@ -54,11 +55,12 @@ export default function VideoPage() {
     setProgress('Lade Stock-Videos von Pexels…')
 
     const progressMessages = [
-      'Lade Stock-Videos von Pexels…',
-      'Erstelle KI-Voiceover…',
-      'Füge Text-Overlays hinzu…',
-      'Kombiniere alle Clips…',
-      'Finales Video wird exportiert…',
+      'InVideo AI wird gestartet…',
+      'Logge in InVideo ein…',
+      'Prompt wird eingegeben…',
+      'Video wird generiert (2–5 Min.)…',
+      'Warte auf Fertigstellung…',
+      'Video wird heruntergeladen…',
     ]
     let i = 0
     const interval = setInterval(() => {
@@ -81,6 +83,7 @@ export default function VideoPage() {
 
       setVideoUrl(data.videoUrl)
       setDuration(data.duration)
+      setInvideoPrompt(data.prompt || null)
       setProgress('')
     } catch (e) {
       clearInterval(interval)
@@ -183,7 +186,7 @@ export default function VideoPage() {
           <p className="font-medium mb-1">Fehler bei der Video-Erstellung:</p>
           <p className="text-xs opacity-80">{error}</p>
           <p className="text-xs mt-2 text-slate-500">
-            Stelle sicher dass Python-Pakete installiert sind: <code className="bg-black/30 px-1 rounded">pip3 install moviepy gtts Pillow requests numpy --break-system-packages</code>
+            Stelle sicher dass <code className="bg-black/30 px-1 rounded">INVIDEO_EMAIL</code> und <code className="bg-black/30 px-1 rounded">INVIDEO_PASSWORD</code> in der .env gesetzt sind.
           </p>
         </div>
       )}

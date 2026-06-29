@@ -17,23 +17,40 @@ type ScriptResult = {
 }
 
 export default function ScriptPage() {
-  const [script, setScript]     = useState<ScriptResult | null>(null)
-  const [loading, setLoading]   = useState(true)
-  const [copied, setCopied]     = useState<string | null>(null)
+  const [script, setScript]   = useState<ScriptResult | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [copied, setCopied]   = useState<string | null>(null)
 
   const generate = async () => {
     setLoading(true)
     setScript(null)
     try {
-      // 1. Trend Scout holen
-      const trendRes = await fetch('/api/trends', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ niche: 'Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic' }) })
-      const trendData = await trendRes.json()
-      const topTrend = trendData?.trends?.[0]?.title || trendData?.topTrend || 'Luxury Lifestyle Mindset'
+      // 1. Trend Scout — GET (kein POST)
+      let topic = 'Luxury Lifestyle Mindset'
+      try {
+        const tRes = await fetch('/api/trends')
+        if (tRes.ok) {
+          const tData = await tRes.json()
+          topic = tData?.trends?.[0]?.title || topic
+        }
+      } catch (_) { /* Fallback bleibt */ }
 
       // 2. Script generieren
-      const scriptRes = await fetch('/api/script', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topic: topTrend, niche: 'Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic', platform: 'TikTok / YouTube Shorts' }) })
-      const scriptData = await scriptRes.json()
-      setScript(scriptData?.script || scriptData)
+      const scriptRes = await fetch('/api/script', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topic,
+          niche: 'Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic',
+          platform: 'TikTok / YouTube Shorts',
+        }),
+      })
+      if (!scriptRes.ok) {
+        const err = await scriptRes.text()
+        throw new Error(`API Fehler ${scriptRes.status}: ${err.slice(0, 200)}`)
+      }
+      const data = await scriptRes.json()
+      setScript(data)
     } catch (e) {
       setScript({ error: String(e) })
     } finally {
@@ -91,7 +108,7 @@ export default function ScriptPage() {
                 <div className="text-xs text-muted mb-1">HOOK</div>
                 <div className="flex items-start justify-between gap-2">
                   <div className="text-indigo-300 font-medium text-sm leading-relaxed">"{script.hook}"</div>
-                  <button onClick={() => copy(script.hook, 'hook')} className="shrink-0 text-xs text-muted hover:text-white px-2 py-1 rounded hover:bg-surface transition-colors">
+                  <button onClick={() => copy(script.hook!, 'hook')} className="shrink-0 text-xs text-muted hover:text-white px-2 py-1 rounded hover:bg-surface transition-colors">
                     {copied === 'hook' ? '✓' : 'Kopieren'}
                   </button>
                 </div>
@@ -110,7 +127,7 @@ export default function ScriptPage() {
             <div className="bg-card border border-border rounded-xl p-4">
               <div className="flex items-center justify-between mb-3">
                 <div className="text-xs text-muted">VOLLSTÄNDIGES SKRIPT</div>
-                <button onClick={() => copy(script.fullScript, 'script')} className="text-xs text-muted hover:text-white px-2 py-1 rounded hover:bg-surface transition-colors">
+                <button onClick={() => copy(script.fullScript!, 'script')} className="text-xs text-muted hover:text-white px-2 py-1 rounded hover:bg-surface transition-colors">
                   {copied === 'script' ? '✓ Kopiert' : 'Alles kopieren'}
                 </button>
               </div>
@@ -123,7 +140,7 @@ export default function ScriptPage() {
             <div className="bg-indigo-500/5 border border-indigo-500/20 rounded-xl p-4">
               <div className="flex items-center justify-between mb-3">
                 <div className="text-xs text-indigo-400 font-medium">🎬 INVIDEO AI PROMPT</div>
-                <button onClick={() => copy(script.videoPrompt, 'prompt')} className="text-xs text-indigo-400 hover:text-indigo-300 px-2 py-1 rounded hover:bg-indigo-500/10 transition-colors">
+                <button onClick={() => copy(script.videoPrompt!, 'prompt')} className="text-xs text-indigo-400 hover:text-indigo-300 px-2 py-1 rounded hover:bg-indigo-500/10 transition-colors">
                   {copied === 'prompt' ? '✓ Kopiert' : 'In Clipboard'}
                 </button>
               </div>
@@ -133,7 +150,7 @@ export default function ScriptPage() {
 
           {/* Scene Keywords + Hashtags */}
           <div className="grid grid-cols-2 gap-4">
-            {script.sceneKeywords?.length > 0 && (
+            {script.sceneKeywords && script.sceneKeywords.length > 0 && (
               <div className="bg-card border border-border rounded-xl p-4">
                 <div className="text-xs text-muted mb-2">ASSET KEYWORDS</div>
                 <div className="flex flex-wrap gap-1.5">
@@ -143,7 +160,7 @@ export default function ScriptPage() {
                 </div>
               </div>
             )}
-            {script.hashtags?.length > 0 && (
+            {script.hashtags && script.hashtags.length > 0 && (
               <div className="bg-card border border-border rounded-xl p-4">
                 <div className="text-xs text-muted mb-2">HASHTAGS</div>
                 <div className="flex flex-wrap gap-1.5">
@@ -155,7 +172,6 @@ export default function ScriptPage() {
             )}
           </div>
 
-          {/* Warnungen */}
           {script.isDuplicate && (
             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-3 text-sm text-yellow-400">
               ⚠️ Topic wurde bereits verwendet — Neu generieren für ein anderes Thema

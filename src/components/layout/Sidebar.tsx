@@ -9,6 +9,7 @@ const NAV_SECTIONS: NavSection[] = [
     title: 'System',
     items: [
       { href: '/',          label: 'Dashboard',       icon: '⊞'  },
+      { href: '/pipeline',  label: 'Pipeline Live',    icon: '⛓️' },
       { href: '/workflow',  label: 'Workflow Canvas',  icon: '◈'  },
       { href: '/agents',    label: 'Alle Agenten',     icon: '◉'  },
     ],

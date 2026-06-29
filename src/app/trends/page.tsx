@@ -213,7 +213,11 @@ function CreatorMiniCard({ creator }: { creator: CreatorProfile }) {
 
 function CreatorFullCard({ creator }: { creator: CreatorProfile }) {
   const icon = creator.platform === 'tiktok' ? '🎵 TikTok' : creator.platform === 'youtube' ? '▶️ YouTube' : '📷 Instagram'
-  const platformColor = creator.platform === 'tiktok' ? 'text-pink-400 bg-pink-500/10 border-pink-500/20' : 'text-red-400 bg-red-500/10 border-red-500/20'
+  const platformColor = creator.platform === 'tiktok'
+    ? 'text-pink-400 bg-pink-500/10 border-pink-500/20'
+    : creator.platform === 'instagram'
+    ? 'text-purple-400 bg-purple-500/10 border-purple-500/20'
+    : 'text-red-400 bg-red-500/10 border-red-500/20'
 
   return (
     <div className="bg-[#16161f] border border-[#1e1e2e] rounded-xl p-5 space-y-4">

@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Script Writer Agent — Luxury Lifestyle + Nostalgie + Motivation
-// Erstellt High-Retention Skripte im @69perception-Stil
+// Erstellt High-Retention Skripte im Luxury-Cinematic-Stil
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { BaseAgent, AgentInput, AgentOutput } from './base'

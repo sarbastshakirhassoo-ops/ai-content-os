@@ -752,8 +752,8 @@ export class CompetitorAgent extends BaseAgent {
     const start = Date.now()
 
     const niche = (input.niche as string) || 'Fashion, Lifestyle, Travel, Personal Brand'
-    // Default-Creator für die Nische — @69perception Stil
-    const handle = (input.handle as string) || (input.username as string) || '@69perception'
+    // Default-Creator aus Input oder leer
+    const handle = (input.handle as string) || (input.username as string) || ''
 
     try {
       const report = await analyzeCompetitor(handle, 'instagram')

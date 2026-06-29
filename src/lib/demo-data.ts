@@ -15,7 +15,7 @@ export const AGENT_DEFINITIONS: AgentDef[] = [
   },
   {
     id: 'agent-2', slug: 'competitor-agent', name: 'Competitor Analyst', icon: '🕵️',
-    description: 'Analysiert @69perception und Top-Creator der Nische. Erkennt Hook-Muster, Schnittstil, Musikstil, Posting-Zeiten und erfolgreiche Formate für Luxury-Cinematic-Content.',
+    description: 'Analysiert Top-Creator der Nische. Erkennt Hook-Muster, Schnittstil, Musikstil, Posting-Zeiten und erfolgreiche Formate für Luxury-Cinematic-Content.',
     input: 'Nische + Trend vom Trend Scout', output: 'Competitor Report: Hooks, Formate, Hashtags, Ästhetik-Analyse',
     status: 'idle', errorCount: 0, color: '#8b5cf6', position: { x: 270, y: 80 },
   },
@@ -27,7 +27,7 @@ export const AGENT_DEFINITIONS: AgentDef[] = [
   },
   {
     id: 'agent-4', slug: 'script-agent', name: 'Script Writer', icon: '✍️',
-    description: 'Erstellt High-Retention Skripte im @69perception-Stil: Cinematic Dark Luxury, motivierend, nostalgisch. Keine Scam-Phrasen. Strukturiert nach Hook → Visual → Emotion → CTA.',
+    description: 'Erstellt High-Retention Skripte im Cinematic Luxury Stil, motivierend, nostalgisch. Keine Scam-Phrasen. Strukturiert nach Hook → Visual → Emotion → CTA.',
     input: 'Topic, Nische, Competitor-Kontext, KB-Insights', output: 'Script, Hook, Szenen, CTA, Video-Prompt, Scene-Keywords',
     status: 'idle', errorCount: 0, color: '#ec4899', position: { x: 50, y: 280 },
   },

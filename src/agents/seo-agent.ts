@@ -16,7 +16,7 @@ export class SEOAgent extends BaseAgent {
       const hook  = (input.hook  as string) || ''
 
       const youtubeTitle  = `${topic} 🔥 ${hook.slice(0, 40) || 'Motivation'} #Shorts`
-      const description   = `${topic} — Luxury Lifestyle, Motivation & Erfolg.\n\n${hook}\n\n📲 Follow @killa_wp für tägliche Inspiration.\n\n#luxury #motivation #success #lifestyle #mindset #discipline #cinematic`
+      const description   = `${topic} — Luxury Lifestyle, Motivation & Erfolg.\n\n${hook}\n\n📲 Folge uns für tägliche Inspiration.\n\n#luxury #motivation #success #lifestyle #mindset #discipline #cinematic`
       const tiktokCaption = `${hook || topic} ✨ #fyp #luxurylifestyle #motivation #viral #cinematicedit #success`
       const instagramCaption = `${hook || topic}\n\n${BRAND_VALUES.slice(0,3).join(' · ')}\n\n.\n.\n.\n${HASHTAG_SETS.instagram.join(' ')}`
 

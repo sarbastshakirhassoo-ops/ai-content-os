@@ -27,7 +27,7 @@ const DEMO_SCRIPT: VideoScript = {
       label: 'CTA',
       duration: '5 Sek.',
       text: 'Build different.',
-      visualNote: 'Text overlay fade-in. Logo/handle @killa_wp bottom right.',
+      visualNote: 'Text overlay fade-in. Logo/handle bottom right.',
     },
   ],
   cta: 'Follow für mehr.',

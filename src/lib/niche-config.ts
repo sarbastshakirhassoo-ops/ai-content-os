@@ -5,8 +5,8 @@
 
 export const NICHE = 'Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic'
 
-export const BRAND_HANDLE = '@killa_wp'
-export const REFERENCE_CREATOR = '@69perception'
+export const BRAND_HANDLE = process.env.BRAND_HANDLE || 'YOUR_HANDLE'
+// REFERENCE_CREATOR nur intern im Trend Scout verwendet
 export const PLATFORMS = ['instagram', 'tiktok', 'youtube'] as const
 
 // ── Kern-Werte der Marke ──────────────────────────────────────────────────────
@@ -125,7 +125,7 @@ export const MUSIC_STYLES = [
 
 export const INVIDEO_PROMPT_BASE = `Create a 30-45 second cinematic luxury lifestyle video in 9:16 vertical format.
 
-Style: Dark luxury aesthetic, similar to @69perception. Cinematic quality.
+Style: Dark luxury aesthetic, Cinematic, dark luxury quality — smooth cuts, film grain, moody.
 Look: Deep shadows, golden highlights, film grain, smooth slow-motion.
 Cuts: Fast but smooth — beat-synced cuts, speed ramping on key moments.
 Text: Minimal overlays — powerful single-line statements, high-end typography.

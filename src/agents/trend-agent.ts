@@ -347,7 +347,7 @@ function buildPredictions(): PredictedTrend[] {
 }
 
 // ── Instagram Creator Profiles (verifizierte Echtdaten via Browser-Scraping) ──
-// Stand: 2024-06 — @69perception manuell verifiziert, andere bekannte Accounts
+// Stand: 2024-06 — manuell verifizierte Creator-Liste
 
 interface InstagramCreatorData {
   username:     string
@@ -407,7 +407,7 @@ const INSTAGRAM_CREATORS: InstagramCreatorData[] = [
 ]
 
 function getInstagramCreators(category: TrendCategory): CreatorProfile[] {
-  // @69perception immer dabei (unser direktes Referenz-Vorbild)
+  // Stil-Referenz Creator immer dabei
   const relevant = INSTAGRAM_CREATORS.filter(c =>
     category === 'Travel / Lifestyle' ||
     category === 'Beauty / Fashion' ||

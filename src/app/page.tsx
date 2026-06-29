@@ -42,7 +42,7 @@ export default function DashboardPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold text-white">🎬 AI Content Factory</h1>
-          <p className="text-xs text-muted mt-0.5">Luxury Lifestyle · Nostalgie · Motivation · @killa_wp</p>
+          <p className="text-xs text-muted mt-0.5">Luxury Lifestyle · Nostalgie · Motivation</p>
         </div>
         <div className="flex items-center gap-2">
           <input

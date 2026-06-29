@@ -30,7 +30,7 @@ export class UploadAgent extends BaseAgent {
         title,
         youtubeUrl:   hasYTKey  ? `https://youtube.com/shorts/[pending_${Date.now()}]` : null,
         instagramUrl: hasMeta   ? `https://instagram.com/reel/[pending_${Date.now()}]` : null,
-        tiktokUrl:    hasTikTok ? `https://tiktok.com/@killa_wp/video/[pending_${Date.now()}]` : null,
+        tiktokUrl:    hasTikTok ? `https://tiktok.com/@YOUR_HANDLE/video/[pending_${Date.now()}]` : null,
         status: {
           youtube:   hasYTKey  ? 'queued'      : 'api_key_missing',
           instagram: hasMeta   ? 'queued'      : 'api_key_missing',

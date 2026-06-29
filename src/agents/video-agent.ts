@@ -21,7 +21,7 @@ function ensureDownloadDir() {
   }
 }
 
-// Baut den InVideo Prompt für den @69perception Stil
+// Baut den InVideo Prompt für den cinematic Luxury Stil
 function buildInVideoPrompt(input: AgentInput): string {
   const script = (input.script as string) || ''
   const topic = (input.topic as string) || 'lifestyle motivation'
@@ -34,7 +34,7 @@ Topic: ${topic}
 Niche: ${niche}
 Hook: ${hook}
 
-Style: Dark, moody, cinematic. Smooth transitions. Warm color grading. Fast cuts synced to beat. Text overlays with motivational quotes. No talking heads. Pure montage style like @69perception on Instagram.
+Style: Dark, moody, cinematic. Smooth transitions. Warm color grading. Fast cuts synced to beat. Text overlays with motivational quotes. No talking heads. Pure montage style — pure cinematic montage style.
 
 Script content:
 ${script}
@@ -196,7 +196,7 @@ function getMockVideoOutput(input: AgentInput) {
     videoUrl: '/videos/demo_video.mp4',
     videoPath: 'public/videos/demo_video.mp4',
     prompt,
-    style: 'Cinematic Dark Montage (@69perception style)',
+    style: 'Cinematic Dark Luxury Montage',
     resolution: '1080x1920 (9:16)',
     duration: '30s',
     platform: 'Instagram Reels / TikTok / YouTube Shorts',
@@ -233,7 +233,7 @@ export class VideoAgent extends BaseAgent {
         videoUrl: result.videoUrl,
         videoPath: result.videoPath,
         prompt: result.prompt,
-        style: 'Cinematic Dark Montage (@69perception style)',
+        style: 'Cinematic Dark Luxury Montage',
         resolution: '1080x1920 (9:16)',
         generatedBy: 'InVideo AI',
         platform: 'Instagram Reels / TikTok / YouTube Shorts',

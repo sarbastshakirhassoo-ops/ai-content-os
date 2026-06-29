@@ -1,0 +1,122 @@
+[
+  {
+    "id": "kb-seed-1",
+    "topic": "ChatGPT für Anfänger — alles was du wissen musst",
+    "niche": "KI / Tech",
+    "hook": "Die meisten Menschen nutzen ChatGPT falsch. Hier ist der richtige Weg.",
+    "hashtags": [
+      "#ChatGPT",
+      "#KI",
+      "#AITutorial",
+      "#Tech2024"
+    ],
+    "platform": "YouTube Shorts",
+    "format": "Tutorial",
+    "scriptQuality": "good",
+    "createdAt": "2026-06-19T15:05:22.069Z",
+    "performance": {
+      "views": 284000,
+      "likes": 18200,
+      "comments": 3400,
+      "shares": 2100,
+      "retention": 72,
+      "watchtime": 38
+    }
+  },
+  {
+    "id": "kb-seed-2",
+    "topic": "5 KI-Tools die dein Business automatisieren",
+    "niche": "Business / Finance",
+    "hook": "Diese 5 Tools ersetzen 3 Vollzeitstellen. Und kosten nichts.",
+    "hashtags": [
+      "#AITools",
+      "#BusinessAutomation",
+      "#Productivity",
+      "#KI"
+    ],
+    "platform": "TikTok",
+    "format": "List",
+    "scriptQuality": "good",
+    "createdAt": "2026-06-22T15:05:22.069Z",
+    "performance": {
+      "views": 156000,
+      "likes": 12400,
+      "comments": 8900,
+      "shares": 1800,
+      "retention": 68,
+      "watchtime": 42
+    }
+  },
+  {
+    "id": "kb-seed-3",
+    "topic": "Passives Einkommen mit KI — so gehts wirklich",
+    "niche": "Business / Finance",
+    "hook": "Ich verdiene 8.000€ im Monat ohne aktiv zu arbeiten. Das ist mein System.",
+    "hashtags": [
+      "#PassivesEinkommen",
+      "#KI",
+      "#OnlineBusiness",
+      "#Geld"
+    ],
+    "platform": "TikTok",
+    "format": "Story",
+    "scriptQuality": "good",
+    "createdAt": "2026-06-24T15:05:22.069Z",
+    "performance": {
+      "views": 421000,
+      "likes": 34100,
+      "comments": 12300,
+      "shares": 5600,
+      "retention": 81,
+      "watchtime": 51
+    }
+  },
+  {
+    "id": "kb-seed-4",
+    "topic": "Morgenroutine für maximale Produktivität",
+    "niche": "Fitness / Health",
+    "hook": "Deine Morgenroutine zerstört deine Produktivität. Ein Neurowissenschaftler erklärt warum.",
+    "hashtags": [
+      "#Morgenroutine",
+      "#Produktivität",
+      "#Mindset",
+      "#Fitness"
+    ],
+    "platform": "Instagram Reels",
+    "format": "Educational",
+    "scriptQuality": "average",
+    "createdAt": "2026-06-26T15:05:22.069Z",
+    "performance": {
+      "views": 89000,
+      "likes": 7200,
+      "comments": 1200,
+      "shares": 890,
+      "retention": 59,
+      "watchtime": 31
+    }
+  },
+  {
+    "id": "kb-seed-5",
+    "topic": "Wie ich in 30 Tagen 10 Kilo abgenommen habe",
+    "niche": "Fitness / Health",
+    "hook": "Keine Diät. Kein Gym. Nur diese eine Veränderung.",
+    "hashtags": [
+      "#Abnehmen",
+      "#Fitness",
+      "#Gewichtsverlust",
+      "#Motivation"
+    ],
+    "platform": "TikTok",
+    "format": "Story",
+    "scriptQuality": "bad",
+    "createdAt": "2026-06-27T15:05:22.069Z",
+    "performance": {
+      "views": 12000,
+      "likes": 340,
+      "comments": 89,
+      "shares": 45,
+      "retention": 31,
+      "watchtime": 18
+    }
+  }
+]

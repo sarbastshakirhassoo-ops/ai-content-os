@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Agent {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  status      String   @default("idle")
+  lastRun     DateTime?
+  lastRunMs   Int?
+  errorCount  Int      @default(0)
+  lastError   String?
+  createdAt   DateTime @default(now())
+  runs        WorkflowRun[]
+}
+
+model WorkflowRun {
+  id          String   @id @default(cuid())
+  agentId     String
+  agent       Agent    @relation(fields: [agentId], references: [id])
+  status      String
+  inputJson   String?
+  outputJson  String?
+  durationMs  Int?
+  error       String?
+  createdAt   DateTime @default(now())
+}
+
+model VideoProject {
+  id           String   @id @default(cuid())
+  title        String
+  topic        String
+  hook         String?
+  script       String?
+  videoPrompt  String?
+  platforms    String   @default("youtube,instagram,tiktok")
+  status       String   @default("pending")
+  qcScore      Int?
+  qcPassed     Boolean  @default(false)
+  uploadStatus String   @default("pending")
+  youtubeUrl   String?
+  instagramUrl String?
+  tiktokUrl    String?
+  views        Int      @default(0)
+  likes        Int      @default(0)
+  comments     Int      @default(0)
+  shares       Int      @default(0)
+  watchtime    Float    @default(0)
+  retention    Float    @default(0)
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  assets       Asset[]
+}
+
+model Asset {
+  id             String       @id @default(cuid())
+  projectId      String
+  project        VideoProject @relation(fields: [projectId], references: [id])
+  scene          String
+  searchTerm     String
+  source         String
+  url            String?
+  licenseStatus  String       @default("free")
+  copyrightRisk  String       @default("low")
+  assetType      String       @default("video")
+  createdAt      DateTime     @default(now())
+}
+
+model Analytics {
+  id           String   @id @default(cuid())
+  date         DateTime @default(now())
+  platform     String
+  totalViews   Int      @default(0)
+  totalLikes   Int      @default(0)
+  avgRetention Float    @default(0)
+  bestHook     String?
+  bestTopic    String?
+  bestTime     String?
+  createdAt    DateTime @default(now())
+}
+
+model ImprovementRule {
+  id          String   @id @default(cuid())
+  agentSlug   String
+  ruleText    String
+  reason      String?
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}

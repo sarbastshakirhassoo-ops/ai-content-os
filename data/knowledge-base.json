@@ -1,6 +1,7 @@
 {
   "topics": [
-    "Luxury Lifestyle Motivation"
+    "Luxury Lifestyle Motivation",
+    "AI replacing jobs"
   ],
   "bestHooks": [
     {
@@ -12,6 +13,16 @@
       "lastUsed": "2026-06-29T22:31:11.749Z",
       "createdAt": "2026-06-29T22:31:11.749Z",
       "notes": "QC: 90 | Upload-freigegeben"
+    },
+    {
+      "id": "kb_1782774551249_rt2",
+      "type": "hook",
+      "value": "Die Version von dir, die du sein könntest.",
+      "score": 100,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
+      "createdAt": "2026-06-29T23:09:11.249Z",
+      "notes": "QC: 91 | Upload-freigegeben"
     }
   ],
   "bestCTAs": [],
@@ -21,8 +32,8 @@
       "type": "hashtag",
       "value": "#luxury",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -30,8 +41,8 @@
       "type": "hashtag",
       "value": "#motivation",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -39,8 +50,8 @@
       "type": "hashtag",
       "value": "#success",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -48,8 +59,8 @@
       "type": "hashtag",
       "value": "#lifestyle",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -57,8 +68,8 @@
       "type": "hashtag",
       "value": "#mindset",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -66,8 +77,8 @@
       "type": "hashtag",
       "value": "#discipline",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -75,8 +86,8 @@
       "type": "hashtag",
       "value": "#wealthy",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -84,8 +95,8 @@
       "type": "hashtag",
       "value": "#luxurylifestyle",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -93,8 +104,8 @@
       "type": "hashtag",
       "value": "#cinematic",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -102,8 +113,8 @@
       "type": "hashtag",
       "value": "#reels",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     }
   ],
@@ -113,8 +124,8 @@
       "type": "asset-keyword",
       "value": "cinematic dark moody",
       "score": 70,
-      "usedCount": 2,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 4,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -122,8 +133,8 @@
       "type": "asset-keyword",
       "value": "golden hour slow motion",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -131,8 +142,8 @@
       "type": "asset-keyword",
       "value": "rain on glass cinematic",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     },
     {
@@ -140,8 +151,8 @@
       "type": "asset-keyword",
       "value": "luxury car night",
       "score": 70,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.749Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.249Z",
       "createdAt": "2026-06-29T22:31:11.749Z"
     }
   ],
@@ -154,10 +165,29 @@
       "usedCount": 1,
       "lastUsed": "2026-06-29T22:31:11.756Z",
       "createdAt": "2026-06-29T22:31:11.756Z"
+    },
+    {
+      "id": "kb_1782774551252_tbd",
+      "type": "music-style",
+      "value": "Epic Orchestra + Bass — maximale Wirkung",
+      "score": 75,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
+      "createdAt": "2026-06-29T23:09:11.252Z"
     }
   ],
   "videoFormats": [],
   "inVideoPrompts": [
+    {
+      "id": "kb_1782774551252_afc",
+      "type": "invideo-prompt",
+      "value": "Create a 30-45 second cinematic luxury lifestyle video in 9:16 vertical format.\n\nStyle: Dark luxury aesthetic, Cinematic, dark luxury quality — smooth cuts, film grain, moody.\nLook: Deep shadows, golden highlights, film grain, smooth slow-motion.\nCuts: Fast but smooth — beat-synced cuts, speed ramping on key moments.\nText: Minimal overlays — powerful single-line statements, high-end typography.\nMood: Aspirational, motivational, nostalgic — makes viewer feel something.\nMusic: Epic Orchestra + Bass — maximale Wirkung\nHook: Die Version von dir, die du sein könntest.\nTopic: AI replacing jobs\n\nVisual sequence:\n1. Lamborghini bei Sonnenuntergang — cinematic establishing shot\n2. Rooftop-Pool mit Stadtblick — emotional connection moment\n3. Privatjet Cockpit bei Sonnenaufgang — luxury lifestyle peak visual\n4. Super-8 Film-Look alter Kindheitsmomente — aspirational closing image\n5. CTA overlay: \"Follow for more\" — minimal, elegant\n\nFormat: MP4, 9:16, 1080x1920, 30fps\nEffects: Film grain overlay, subtle vignette, color grade (Teal & Orange or Dark & Moody)\nSubtitles: Dynamic captions, bold sans-serif, white with dark outline",
+      "score": 91,
+      "usedCount": 1,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
+      "createdAt": "2026-06-29T23:09:11.252Z",
+      "notes": "QC Score: 91 | Topic: AI replacing jobs"
+    },
     {
       "id": "kb_1782772271756_m85",
       "type": "invideo-prompt",
@@ -175,8 +205,8 @@
       "type": "learning",
       "value": "Cinematic Hook",
       "score": 80,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
       "createdAt": "2026-06-29T22:31:11.756Z",
       "notes": "Analytics: 30.6.2026"
     },
@@ -185,8 +215,8 @@
       "type": "learning",
       "value": "Dark Luxury Aesthetic",
       "score": 80,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
       "createdAt": "2026-06-29T22:31:11.756Z",
       "notes": "Analytics: 30.6.2026"
     },
@@ -195,8 +225,8 @@
       "type": "learning",
       "value": "Motivational Voiceover",
       "score": 80,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
       "createdAt": "2026-06-29T22:31:11.756Z",
       "notes": "Analytics: 30.6.2026"
     },
@@ -205,8 +235,8 @@
       "type": "learning",
       "value": "Behind-the-scenes Luxury Routine",
       "score": 75,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
       "createdAt": "2026-06-29T22:31:11.756Z",
       "notes": "Community-Wunsch via Engagement Analyzer"
     },
@@ -215,8 +245,8 @@
       "type": "learning",
       "value": "Millionaire Morning Routine",
       "score": 75,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
       "createdAt": "2026-06-29T22:31:11.756Z",
       "notes": "Community-Wunsch via Engagement Analyzer"
     },
@@ -225,11 +255,11 @@
       "type": "learning",
       "value": "5 Dinge die Erfolgreiche täglich tun",
       "score": 75,
-      "usedCount": 1,
-      "lastUsed": "2026-06-29T22:31:11.756Z",
+      "usedCount": 2,
+      "lastUsed": "2026-06-29T23:09:11.252Z",
       "createdAt": "2026-06-29T22:31:11.756Z",
       "notes": "Community-Wunsch via Engagement Analyzer"
     }
   ],
-  "lastUpdated": "2026-06-29T22:31:11.756Z"
+  "lastUpdated": "2026-06-29T23:09:11.252Z"
 }

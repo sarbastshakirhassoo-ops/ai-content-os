@@ -1735,5 +1735,3315 @@
       "instagram": null,
       "tiktok": null
     }
+  },
+  {
+    "id": "job_1782774540477_6zq9r",
+    "niche": "Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic",
+    "topic": "AI replacing jobs",
+    "status": "completed",
+    "createdAt": "2026-06-29T23:09:00.477Z",
+    "steps": [
+      {
+        "agentSlug": "trend-agent",
+        "agentName": "Trend Scout",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:00.479Z] Trend Scout gestartet",
+          "[2026-06-29T23:09:10.254Z] ✅ Trend Scout fertig (9766ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:00.478Z",
+        "completedAt": "2026-06-29T23:09:10.245Z",
+        "durationMs": 9766,
+        "output": {
+          "trends": [
+            {
+              "id": "trend_1782774548820_ahb9",
+              "topic": "GTA 6 Won’t Be On A Disc, Not At Launch Or Months After, Report Says - GameSpot",
+              "keywords": [
+                "disc",
+                "launch",
+                "months",
+                "after",
+                "report"
+              ],
+              "category": "Gaming",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 92,
+              "velocityScore": 27,
+              "viralScore": 92,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "GTA 6 Won’t Be On A Disc, Not At Launch Or Months  — das MUSST du wissen",
+              "contentIdeas": [
+                "\"GTA 6 Won’t Be On A Disc, Not At Launch \" erklärt in 60 Sekunden",
+                "3 Dinge zu \"GTA 6 Won’t Be On A Disc, Not At Launch \" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"GTA 6 Won’t Be On A Disc, Not At Launch \" nach 30 Tagen",
+                "\"GTA 6 Won’t Be On A Disc, Not At Launch \" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"GTA 6 Won’t Be On A Disc, Not At Launch \" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#gaming",
+                "#gamer",
+                "#videogames",
+                "#pcgaming",
+                "#twitch",
+                "#esports"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "GTA 6 Won’t Be On A Disc, Not At Launch Or Months After, Report Says - GameSpot",
+                  "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNaTZEekFDbTNfN2k5ekFSWUo0X0F6RmhxUEdzUXpPOE44WmVuNkNiZVQ1TVJsOGFpZHl4S2lpXzNUblg4Y01WRTdKZXEtRU5nQ1Q0OHM1dElUcV90QnVDaElfUkpzS1pHcTFvU1Rvb3N1NzRGV2dtdTB3V3IxamEtRjRDQWROM1BJR0RmTjdyLUJuWWt0c0Q3WVBOOEdGLXRNdGc?oc=5",
+                  "engagement": 1726,
+                  "upvotes": 992,
+                  "comments": 217
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_l4pl",
+              "topic": "Apple says it is releasing updates early in response to AI cybersecurity concern",
+              "keywords": [
+                "apple",
+                "says",
+                "releasing",
+                "updates",
+                "early"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 92,
+              "velocityScore": 27,
+              "viralScore": 83,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Ich habe \"Apple says it is releasing updates early in respon\" getestet — hier die ehrliche Wahrheit",
+              "contentIdeas": [
+                "\"Apple says it is releasing updates early\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Apple says it is releasing updates early\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Apple says it is releasing updates early\" nach 30 Tagen",
+                "\"Apple says it is releasing updates early\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Apple says it is releasing updates early\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "Apple says it is releasing updates early in response to AI cybersecurity concerns - Reuters",
+                  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQS1dqel8tXzhpYzZWUlBPSVFZUUs4SXBZaFhSa3BYSEduQUlUdHpnWUthMXEtOV9zNzFnSElUUXY3OUxTci0yS0RKVzZWNzZPbm5ZV0RaS3FSUllGWmp0Q05HNTRCSEthY0Mwa1ZhNUNOa09LUURBVnlGSi15cG9kQlBzUmhfRG0wdnFxVlpsb21DVlkzbElsdmpNWUFqaksyVFZFdVhTdE1kUVlQUzMzM1Z3ZmpTWWhMSUFkeQ?oc=5",
+                  "engagement": 1644,
+                  "upvotes": 986,
+                  "comments": 183
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_cz4j",
+              "topic": "Leaker outlines iPhone lineup for next year, with six new models coming - 9to5Ma",
+              "keywords": [
+                "leaker",
+                "outlines",
+                "iphone",
+                "lineup",
+                "next"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 84,
+              "velocityScore": 23,
+              "viralScore": 82,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Niemand zeigt dir wie mächtig \"Leaker outlines iPhone lineup for next year, with \" wirklich ist",
+              "contentIdeas": [
+                "\"Leaker outlines iPhone lineup for next y\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Leaker outlines iPhone lineup for next y\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Leaker outlines iPhone lineup for next y\" nach 30 Tagen",
+                "\"Leaker outlines iPhone lineup for next y\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Leaker outlines iPhone lineup for next y\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "Leaker outlines iPhone lineup for next year, with six new models coming - 9to5Mac",
+                  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZFQzbFlqZkVLcmh4RThPc0NUaVpsM3VZQjlOc0xZWG9wTEJYWFJweG91MFQtQk1ldUZVYnF3VGMzVHBqUEd5d0NjblV1M0U2NVFWb1UzNXV2bk1fWVNELTZ3N3JNMmdEbmhRbWVjVFhNTzBoUTE1U3NKbUhUUjFKckpwMkhTNU5Wc1pIbENBMmQzVnNyV0xBTjIyaC1yMWNMcy1BSA?oc=5",
+                  "engagement": 1628,
+                  "upvotes": 568,
+                  "comments": 212
+                }
+              ],
+              "topCreators": [
+                {
+                  "platform": "tiktok",
+                  "username": "wesleyywang",
+                  "displayName": "wesss",
+                  "profileUrl": "https://tiktok.com/@wesleyywang",
+                  "followers": 246,
+                  "avgViews": 29,
+                  "avgLikes": 22800,
+                  "engagementRate": 78620.7,
+                  "postingFrequency": "3–4×/Woche",
+                  "whyItWorks": "Extrem hohe Engagement-Rate (~78621%) — starke Community-Bindung durch authentischen Content und konsistente Nischen-Positionierung.",
+                  "hookStyle": "Provokante Aussage die dem Zuschauer widerspricht — erzeugt sofortige Reaktion.",
+                  "videoLength": "20–45 Sekunden",
+                  "hashtags": [
+                    "#trending",
+                    "#viral",
+                    "#foryou",
+                    "#fyp",
+                    "#tipps"
+                  ]
+                },
+                {
+                  "platform": "tiktok",
+                  "username": "wisdom.kaye",
+                  "displayName": "wisdomkaye2",
+                  "profileUrl": "https://tiktok.com/@wisdom.kaye",
+                  "followers": 7,
+                  "avgViews": 1,
+                  "avgLikes": 0,
+                  "engagementRate": 0,
+                  "postingFrequency": "3–4×/Woche",
+                  "whyItWorks": "Reichweiten-Kanal mit 0% Engagement — primärer Hebel ist Volumen und SEO-Optimierung der Titel.",
+                  "hookStyle": "Direkte Frage oder Statement das Neugier erzeugt — \"Das wusstest du nicht...\"",
+                  "videoLength": "30–60 Sekunden",
+                  "hashtags": [
+                    "#trending",
+                    "#viral",
+                    "#foryou",
+                    "#fyp",
+                    "#tipps"
+                  ]
+                },
+                {
+                  "platform": "tiktok",
+                  "username": "erikakullberg",
+                  "displayName": "Erika Kullberg",
+                  "profileUrl": "https://tiktok.com/@erikakullberg",
+                  "followers": 8800000,
+                  "avgViews": 1512006,
+                  "avgLikes": 285019,
+                  "engagementRate": 18.9,
+                  "postingFrequency": "täglich",
+                  "whyItWorks": "Extrem hohe Engagement-Rate (~19%) — starke Community-Bindung durch authentischen Content und konsistente Nischen-Positionierung.",
+                  "hookStyle": "Provokante Aussage die dem Zuschauer widerspricht — erzeugt sofortige Reaktion.",
+                  "videoLength": "15–30 Sekunden (maximale Retention)",
+                  "hashtags": [
+                    "#trending",
+                    "#viral",
+                    "#foryou",
+                    "#fyp",
+                    "#tipps"
+                  ]
+                },
+                {
+                  "platform": "tiktok",
+                  "username": "camerondallas",
+                  "displayName": "Cameron Dallas",
+                  "profileUrl": "https://tiktok.com/@camerondallas",
+                  "followers": 17100000,
+                  "avgViews": 2343502,
+                  "avgLikes": 1826705,
+                  "engagementRate": 77.9,
+                  "postingFrequency": "täglich",
+                  "whyItWorks": "Extrem hohe Engagement-Rate (~78%) — starke Community-Bindung durch authentischen Content und konsistente Nischen-Positionierung.",
+                  "hookStyle": "Schweigen + visuelle Handlung — kein Wort nötig, Bild erzählt die Story in 2 Sek.",
+                  "videoLength": "15–30 Sekunden (maximale Retention)",
+                  "hashtags": [
+                    "#trending",
+                    "#viral",
+                    "#foryou",
+                    "#fyp",
+                    "#tipps"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trend_1782774548819_gncx",
+              "topic": "TIDAL cracks down on AI music by cutting off monetization - TechCrunch",
+              "keywords": [
+                "tidal",
+                "cracks",
+                "down",
+                "music",
+                "cutting"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 83,
+              "velocityScore": 21,
+              "viralScore": 82,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Niemand zeigt dir wie mächtig \"TIDAL cracks down on AI music by cutting off monet\" wirklich ist",
+              "contentIdeas": [
+                "\"TIDAL cracks down on AI music by cutting\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"TIDAL cracks down on AI music by cutting\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"TIDAL cracks down on AI music by cutting\" nach 30 Tagen",
+                "\"TIDAL cracks down on AI music by cutting\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"TIDAL cracks down on AI music by cutting\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "TIDAL cracks down on AI music by cutting off monetization - TechCrunch",
+                  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNQlQxRE5kQTF3R0tfellwWHRlMUYyaUhJTGVyNGhBTkZrMHlVR2FiakNITTc4a1ZiUFJzanEwRWtzdkZfd1RVWWpfN3dremRvYm1WSnU2dVRkeUpaRlcyVVBBRVN6dkNTLWcwYzhiTGJpajUzQXNzWURyT0h5RmQ5TjRIMUNRQTdHb2Vibkk5Vi0zZjdHU3RB?oc=5",
+                  "engagement": 2485,
+                  "upvotes": 681,
+                  "comments": 89
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_8woi",
+              "topic": "Artifacts dating back 400,000 years, found in cave, show ‘complex and rich’ pre-",
+              "keywords": [
+                "artifacts",
+                "dating",
+                "back",
+                "years",
+                "found"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 83,
+              "velocityScore": 26,
+              "viralScore": 76,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Artifacts dating back 400,000 years, found in cave — das musst du wissen",
+              "contentIdeas": [
+                "\"Artifacts dating back 400,000 years, fou\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Artifacts dating back 400,000 years, fou\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Artifacts dating back 400,000 years, fou\" nach 30 Tagen",
+                "\"Artifacts dating back 400,000 years, fou\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Artifacts dating back 400,000 years, fou\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Science)",
+                  "title": "Artifacts dating back 400,000 years, found in cave, show ‘complex and rich’ pre-human society - Yahoo News UK",
+                  "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0tV3dCRE9IR2pSR1JIa1Jqa0N2NXp2R2dYdDRKQ18tZm1HTldpTlAwUkN2THYxRUdaN1ZvVUt3eEQtdkZkT2FHM1JTOU1tQUh3bmdZQ1ZRTEp5ZVdaT3gwc2ExcV9TOXBDMkR2Rm95X1VXcVkxdlV6MXRB?oc=5",
+                  "engagement": 948,
+                  "upvotes": 997,
+                  "comments": 169
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_t422",
+              "topic": "Aide who planned JFK Jr.'s secret wedding says Taylor Swift and Travis Kelce's r",
+              "keywords": [
+                "aide",
+                "planned",
+                "secret",
+                "wedding",
+                "says"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 82,
+              "velocityScore": 26,
+              "viralScore": 79,
+              "competition": "medium",
+              "monetization": "high",
+              "hook": "Aide who planned JFK Jr.'s secret wedding says Tay verändert alles — und niemand redet drüber",
+              "contentIdeas": [
+                "\"Aide who planned JFK Jr.'s secret weddin\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Aide who planned JFK Jr.'s secret weddin\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Aide who planned JFK Jr.'s secret weddin\" nach 30 Tagen",
+                "\"Aide who planned JFK Jr.'s secret weddin\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Aide who planned JFK Jr.'s secret weddin\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "Aide who planned JFK Jr.'s secret wedding says Taylor Swift and Travis Kelce's rumored MSG plans could be a decoy - CBS News",
+                  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbjNsSy1DdWRNNlRnSFBQVUE2c2tDUTdjR3BvUHhyZFlHNDNfWGxxLUVoZzUzZGhocHRfblpCY05ZWGFDZko5enJJSGRtT2x3ZGhzZFRkZ3VpTzBnSlZ2clh5RzNxQnVhbE5ZeGtIZXpHWG8zOVI3aF94ZHpzSm9JNWtDVHpLcTlhdkdlY1A0Y2w4TllneEU5WTV4b0Rldw?oc=5",
+                  "engagement": 1104,
+                  "upvotes": 1164,
+                  "comments": 69
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_ltex",
+              "topic": "Qwen 3.6 27B is the sweet spot for local development",
+              "keywords": [
+                "qwen",
+                "sweet",
+                "spot",
+                "local",
+                "development"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Hacker"
+              ],
+              "opportunityScore": 81,
+              "velocityScore": 27,
+              "viralScore": 78,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"Qwen 3.6 27B is the sweet spot for local developme\" — ich schon",
+              "contentIdeas": [
+                "\"Qwen 3.6 27B is the sweet spot for local\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Qwen 3.6 27B is the sweet spot for local\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Qwen 3.6 27B is the sweet spot for local\" nach 30 Tagen",
+                "\"Qwen 3.6 27B is the sweet spot for local\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Qwen 3.6 27B is the sweet spot for local\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Hacker News",
+                  "title": "Qwen 3.6 27B is the sweet spot for local development",
+                  "url": "https://quesma.com/blog/qwen-36-is-awesome/",
+                  "engagement": 1872,
+                  "upvotes": 513,
+                  "comments": 453
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_1vek",
+              "topic": "Dow Jones Futures Rise On U.S.-Iran News, S&P 500 To Reclaim Key Level; Tesla, J",
+              "keywords": [
+                "jones",
+                "futures",
+                "rise",
+                "iran",
+                "news"
+              ],
+              "category": "Business / Finance",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 81,
+              "velocityScore": 21,
+              "viralScore": 77,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Dow Jones Futures Rise On U.S.-Iran News, S&P 500 : Die Methode die kaum jemand kennt",
+              "contentIdeas": [
+                "\"Dow Jones Futures Rise On U.S.-Iran News\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Dow Jones Futures Rise On U.S.-Iran News\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Dow Jones Futures Rise On U.S.-Iran News\" nach 30 Tagen",
+                "\"Dow Jones Futures Rise On U.S.-Iran News\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Dow Jones Futures Rise On U.S.-Iran News\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#business",
+                "#sidehustle",
+                "#geldverdienen",
+                "#finanztipps",
+                "#entrepreneur",
+                "#passiveseinkommen"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Business News)",
+                  "title": "Dow Jones Futures Rise On U.S.-Iran News, S&P 500 To Reclaim Key Level; Tesla, Jobs Report Loom. - Investor's Business Daily",
+                  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWDNMaFJMX3hmdWRlMm9TaDBuSlRRa2hrUER5bC1EbnRuUkR3cTByR1h3TDlndDhfcUFETW5CZUlXaFVta09fZ3lheDJMNkJjdHV0cHlITG1Pb05jV1FYZV9vajUyYlRQRmlpb1MyUVRUVkJscjdKVjV6eGpXelV3WWR2X2RuNW9NZFFBNGxVeTAtSEJud0ktTlhnQnZYdURZeUdLQk1lZ2Y2MDVTQ0RFaHVlTVQ?oc=5",
+                  "engagement": 1285,
+                  "upvotes": 384,
+                  "comments": 245
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_s9dx",
+              "topic": "Drone Strikes JetBlue Flight Landing at Kennedy Airport, Pilot Says - The New Yo",
+              "keywords": [
+                "drone",
+                "strikes",
+                "jetblue",
+                "flight",
+                "landing"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 80,
+              "velocityScore": 20,
+              "viralScore": 82,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Niemand zeigt dir wie mächtig \"Drone Strikes JetBlue Flight Landing at Kennedy Ai\" wirklich ist",
+              "contentIdeas": [
+                "\"Drone Strikes JetBlue Flight Landing at \" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Drone Strikes JetBlue Flight Landing at \" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Drone Strikes JetBlue Flight Landing at \" nach 30 Tagen",
+                "\"Drone Strikes JetBlue Flight Landing at \" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Drone Strikes JetBlue Flight Landing at \" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Business News)",
+                  "title": "Drone Strikes JetBlue Flight Landing at Kennedy Airport, Pilot Says - The New York Times",
+                  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVUVJQVpRcEJKa3BRM1ByemN0LV9xcmJUV29raDZiVktmcDdXWDIzRURRR0lYX2pwZTBnY05KWUFVUUhpNE9tTlNobkdwOUlEdVlXaGlGQndaZXRLa3U0U3ZKSVEwQ3IxdFZJMmVFTE5qYWxkLV9jQmR2dldsamxOb1pEbEs?oc=5",
+                  "engagement": 1957,
+                  "upvotes": 518,
+                  "comments": 141
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_7t42",
+              "topic": "T-Mobile retires legacy plans, prompting price hikes and customer backlash - And",
+              "keywords": [
+                "mobile",
+                "retires",
+                "legacy",
+                "plans",
+                "prompting"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 80,
+              "velocityScore": 25,
+              "viralScore": 78,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"T-Mobile retires legacy plans, prompting price hik\" — ich schon",
+              "contentIdeas": [
+                "\"T-Mobile retires legacy plans, prompting\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"T-Mobile retires legacy plans, prompting\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"T-Mobile retires legacy plans, prompting\" nach 30 Tagen",
+                "\"T-Mobile retires legacy plans, prompting\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"T-Mobile retires legacy plans, prompting\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "T-Mobile retires legacy plans, prompting price hikes and customer backlash - Android Police",
+                  "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOWnlET2UwdHctWVB6MUJ5eG5PNFl1OWlrSEdJUkdzVms0SHg4VndlbUd4VEstWW9XYUp0NGxSMnlpbFF1VUlWek1hdXFIUnV2TjFkOHlqbk9zdUNiZVE3M0NQNjZXRlZjRlA3R2FRQTZlVVBoRk1hTXh4SnVUd3pjdXpmbFFTejBXZkpHS0JMX2o1LVltWTVrUHRQTGJ6OFVvbkN0Yi1KWQ?oc=5",
+                  "engagement": 1696,
+                  "upvotes": 837,
+                  "comments": 184
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_29yg",
+              "topic": "Strawberry Moon to shine tonight: Here's when to catch it - WGAL",
+              "keywords": [
+                "strawberry",
+                "moon",
+                "shine",
+                "tonight",
+                "here"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 80,
+              "velocityScore": 25,
+              "viralScore": 73,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"Strawberry Moon to shine tonight: Here's when to c\" — ich schon",
+              "contentIdeas": [
+                "\"Strawberry Moon to shine tonight: Here's\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Strawberry Moon to shine tonight: Here's\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Strawberry Moon to shine tonight: Here's\" nach 30 Tagen",
+                "\"Strawberry Moon to shine tonight: Here's\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Strawberry Moon to shine tonight: Here's\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Science)",
+                  "title": "Strawberry Moon to shine tonight: Here's when to catch it - WGAL",
+                  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcmxfbXJpYlpVUlVBaGI1VlpkTVRibWZBbFNTaE9UaU5Wblo4MmQ1STFXYzRMSk9GeXdobnVjX09sQ3VENTJuOWRNZVU3RkxwUHZHQ09aNFJ3T05hMTFyUmNnZVhqNktjMXFNZWFtQWlJVTVwS3VvX05GYWpKbUc4MUd0RWY0R085?oc=5",
+                  "engagement": 977,
+                  "upvotes": 875,
+                  "comments": 161
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_1g1b",
+              "topic": "MacBook Ultra rumors: What to expect including the touchscreen, chips, release d",
+              "keywords": [
+                "macbook",
+                "ultra",
+                "rumors",
+                "what",
+                "expect"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 80,
+              "velocityScore": 20,
+              "viralScore": 72,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Ich habe \"MacBook Ultra rumors: What to expect including the\" getestet — hier die ehrliche Wahrheit",
+              "contentIdeas": [
+                "\"MacBook Ultra rumors: What to expect inc\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"MacBook Ultra rumors: What to expect inc\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"MacBook Ultra rumors: What to expect inc\" nach 30 Tagen",
+                "\"MacBook Ultra rumors: What to expect inc\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"MacBook Ultra rumors: What to expect inc\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "MacBook Ultra rumors: What to expect including the touchscreen, chips, release date and more - Engadget",
+                  "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1UUG45QWdUbEVYdEpBVkRQZC1Gd241Q0RfdXlneGE1N1hDb0w0bHpiMGlyczJnVS1EcTNqeGtpcTBhN28xR1k4c0dVSmMtR1BveTdfTWZaTkJBUjdUZTVCU3B3bGw?oc=5",
+                  "engagement": 848,
+                  "upvotes": 369,
+                  "comments": 212
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548819_fgmq",
+              "topic": "She Was Half Ape, Half Human—and She May Hold the Secret to What Makes Us Who We",
+              "keywords": [
+                "half",
+                "half",
+                "human",
+                "hold",
+                "secret"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 78,
+              "velocityScore": 23,
+              "viralScore": 75,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "She Was Half Ape, Half Human—and She May Hold the  — das musst du wissen",
+              "contentIdeas": [
+                "\"She Was Half Ape, Half Human—and She May\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"She Was Half Ape, Half Human—and She May\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"She Was Half Ape, Half Human—and She May\" nach 30 Tagen",
+                "\"She Was Half Ape, Half Human—and She May\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"She Was Half Ape, Half Human—and She May\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Science)",
+                  "title": "She Was Half Ape, Half Human—and She May Hold the Secret to What Makes Us Who We Are - Yahoo",
+                  "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQT3FVajlkT1RQbHRMOEV1WlpQYUxpNlFLN2luNjRZVjAyVjE3UDZjd1p5RUNMQS1TNU5ZTk41bEduN2FNTmJGVkc5VUQwa0FGNjNGTXRnZmc1MkZERjNNX1JVSjVJczZrTmxfUDByMnB5dDZrVjVTRHZ3bDl2RlYtX3pJSklrajVUWXc?oc=5",
+                  "engagement": 2484,
+                  "upvotes": 673,
+                  "comments": 193
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_gf2c",
+              "topic": "Ford rehires experienced engineers after AI misses the mark - Fox Business",
+              "keywords": [
+                "ford",
+                "rehires",
+                "experienced",
+                "engineers",
+                "after"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 78,
+              "velocityScore": 25,
+              "viralScore": 74,
+              "competition": "medium",
+              "monetization": "high",
+              "hook": "Niemand zeigt dir wie mächtig \"Ford rehires experienced engineers after AI misses\" wirklich ist",
+              "contentIdeas": [
+                "\"Ford rehires experienced engineers after\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Ford rehires experienced engineers after\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Ford rehires experienced engineers after\" nach 30 Tagen",
+                "\"Ford rehires experienced engineers after\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Ford rehires experienced engineers after\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Business News)",
+                  "title": "Ford rehires experienced engineers after AI misses the mark - Fox Business",
+                  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdm1FT093SnJ0bklVeTVxbU8xektacFJKRFpuTUFDQWFVYnZFbHUtc2NPbFk1M05KamZVTjhvSWluX1VRb1pjYU9DbGFNdEVtbzk4OWEwYVBLeVRwN3FMRkVIVmNMVDZhN0k5eXFmbWVPejVNTGFCTjlTeFBBSEN0cVdmc2NDaXAzb0ROVzhVU0ZKQURVSG04cS130gGfAUFVX3lxTE40NDFpZFJtV2dmaHUwYm9CUTdqT1d5MUM2bW0yb2RUSGNaX2ZIa3ZXZTBzX2hfVDlZY3lZLTlLbUp5dDhIZzdfNlBkWk9idnZMUFJ6LUZiSVRLRjFKV0FnR3d1NV95ajJSY3RLeHM0bEdfUFJOYnpVc3JSakNrd3k5VUhQX21RalRrRS1nbTZtMm0tZGZQNkVpS3hPWGJsSQ?oc=5",
+                  "engagement": 1548,
+                  "upvotes": 1008,
+                  "comments": 73
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_8occ",
+              "topic": "Amanda Batula Leaving ‘Summer House’ After 10 Seasons in Wake of #Scamanda Contr",
+              "keywords": [
+                "amanda",
+                "batula",
+                "leaving",
+                "summer",
+                "house"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 77,
+              "velocityScore": 24,
+              "viralScore": 71,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Amanda Batula Leaving ‘Summer House’ After 10 Seas — das musst du wissen",
+              "contentIdeas": [
+                "\"Amanda Batula Leaving ‘Summer House’ Aft\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Amanda Batula Leaving ‘Summer House’ Aft\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Amanda Batula Leaving ‘Summer House’ Aft\" nach 30 Tagen",
+                "\"Amanda Batula Leaving ‘Summer House’ Aft\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Amanda Batula Leaving ‘Summer House’ Aft\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "Amanda Batula Leaving ‘Summer House’ After 10 Seasons in Wake of #Scamanda Controversy - Variety",
+                  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRjVvc0o3al91V1NPdkNUcEVOQnNVd0lYSi1KenZGeHJDbnBFYUVLVnhuRDNUM3dBU0Z1dmN4c3NZYjdGRXNrQk03N3UwV3VUR2pfcm9RTHFoUlAzQTVqeW00T3RyYWRlVFlrMWpnMFRFS3o1MUZZaEF3bzgxVGZUbjJpa2tTMzlnS0RJSEFNT3BFN2gwN2g4b0RTTQ?oc=5",
+                  "engagement": 2336,
+                  "upvotes": 769,
+                  "comments": 146
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_in06",
+              "topic": "First ever dinosaur fossil discovered on Antarctica identified as a titanosaur -",
+              "keywords": [
+                "first",
+                "ever",
+                "dinosaur",
+                "fossil",
+                "discovered"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 77,
+              "velocityScore": 25,
+              "viralScore": 72,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"First ever dinosaur fossil discovered on Antarctic\" — ich schon",
+              "contentIdeas": [
+                "\"First ever dinosaur fossil discovered on\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"First ever dinosaur fossil discovered on\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"First ever dinosaur fossil discovered on\" nach 30 Tagen",
+                "\"First ever dinosaur fossil discovered on\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"First ever dinosaur fossil discovered on\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Science)",
+                  "title": "First ever dinosaur fossil discovered on Antarctica identified as a titanosaur - Natural History Museum",
+                  "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQbFJmYlk0WEp1ejdjTFJxZjYwZHBJZTdtRDczX3EzMHExM3diQktpR1pfNXRFOUFNdXFsSmJRQmUxN2RPZ1duLU54QmJ5R3J4RElvYV9pZUZtbG5adnJVNFFxdjBpdVZ1R1oxd1hicTYzd0k2UHJqMlpPd2Y0cDVSb3IzV3ExdTJVZVRxRlZvMGxMQjNNalprUS1tdUR6WkNvRnJ1TzMydVRLbzB3YWh1Mk9MTUx3dw?oc=5",
+                  "engagement": 1369,
+                  "upvotes": 767,
+                  "comments": 213
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_5j15",
+              "topic": "NBCUniversal & Sky “Fit Well Together And Are Set Up For Success” After Comcast ",
+              "keywords": [
+                "nbcuniversal",
+                "well",
+                "together",
+                "success",
+                "after"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 77,
+              "velocityScore": 25,
+              "viralScore": 71,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"NBCUniversal & Sky “Fit Well Together And Are Set \" — ich schon",
+              "contentIdeas": [
+                "\"NBCUniversal & Sky “Fit Well Together An\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"NBCUniversal & Sky “Fit Well Together An\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"NBCUniversal & Sky “Fit Well Together An\" nach 30 Tagen",
+                "\"NBCUniversal & Sky “Fit Well Together An\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"NBCUniversal & Sky “Fit Well Together An\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Business News)",
+                  "title": "NBCUniversal & Sky “Fit Well Together And Are Set Up For Success” After Comcast Split, Mike Cavanagh Says - Deadline",
+                  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOdEI4eW1mNjZmYnR4emNiUFNmcXdzLWZITWFpRjVzcUsyc2FFMDRMVC1uZU52cFlBbGwtdzBEMEFsVmFfbWZnc3NrclNuZkdRRUQyUnk4NTd1MW1MTnpDcWJQZkl4c0ZLaGg5T0lHRzhhWWtzdDc3Z0VETnRKMmVkUDkzSVJoWkZFLUxmUG9n?oc=5",
+                  "engagement": 963,
+                  "upvotes": 757,
+                  "comments": 245
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_7i44",
+              "topic": "Bill Maher Praises Trump as He Receives Mark Twain Prize at Kennedy Center - TV ",
+              "keywords": [
+                "bill",
+                "maher",
+                "praises",
+                "trump",
+                "receives"
+              ],
+              "category": "KI / Tech",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 76,
+              "velocityScore": 19,
+              "viralScore": 73,
+              "competition": "low",
+              "monetization": "high",
+              "hook": "Ich habe \"Bill Maher Praises Trump as He Receives Mark Twain\" getestet — hier die ehrliche Wahrheit",
+              "contentIdeas": [
+                "\"Bill Maher Praises Trump as He Receives \" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Bill Maher Praises Trump as He Receives \" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Bill Maher Praises Trump as He Receives \" nach 30 Tagen",
+                "\"Bill Maher Praises Trump as He Receives \" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Bill Maher Praises Trump as He Receives \" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#ki",
+                "#ai",
+                "#chatgpt",
+                "#aitools",
+                "#automation",
+                "#ki2025",
+                "#techhacks"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "Bill Maher Praises Trump as He Receives Mark Twain Prize at Kennedy Center - TV Insider",
+                  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQmtwblBYNldva1VUOTMwbFdfRFhleU9EYXBGWk90Vnp3Wk1wQ3ZMX1BIWG1ROVh2OE5hMGMyU1I0LWctUjV1azByNWpxTlJoLUl5bFBMV0xnUVZ0aEFyN3VrVHhOSTY1RDc3cXozc0Z0QXlBVy1qWDhVZjBRMzhDdWNtUUdFN2JmSy11OTJMdkpxSVYwXzc4Z1RUYzRnakFwVDlIX1NzcWxOMHdLN1E?oc=5",
+                  "engagement": 1692,
+                  "upvotes": 300,
+                  "comments": 211
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_wjan",
+              "topic": "WhatsApp usernames launch ‘later this year’ – here’s how to get yours now - 9to5",
+              "keywords": [
+                "whatsapp",
+                "usernames",
+                "launch",
+                "later",
+                "this"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 75,
+              "velocityScore": 19,
+              "viralScore": 73,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"WhatsApp usernames launch ‘later this year’ – here\" — ich schon",
+              "contentIdeas": [
+                "\"WhatsApp usernames launch ‘later this ye\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"WhatsApp usernames launch ‘later this ye\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"WhatsApp usernames launch ‘later this ye\" nach 30 Tagen",
+                "\"WhatsApp usernames launch ‘later this ye\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"WhatsApp usernames launch ‘later this ye\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Tech News)",
+                  "title": "WhatsApp usernames launch ‘later this year’ – here’s how to get yours now - 9to5Google",
+                  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOSC1CYk5OMkZmS0xvbE1QNEd1OE1BYjBBZ3NqMndfaE13WTg0RTdhNEk5Zlo5aS1KWml4aEcxU0dLV1MzZUd5dnFnMElLRE02WS1xUjBuclVMYl9icmFTX3ZUMVlKZ0tmbkhxVk02U1lJaFA5YXhhaGdDV3ZtOHNqY1pkOU10V3VvUGVlcHVWTnlFX19rQ2VpZXFKNXZYcS1tV2E5UVV3?oc=5",
+                  "engagement": 1025,
+                  "upvotes": 568,
+                  "comments": 69
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_daeq",
+              "topic": "Lauryn Hill honored, Janet Jackson stuns Teyana Taylor and Druski makes history ",
+              "keywords": [
+                "lauryn",
+                "hill",
+                "honored",
+                "janet",
+                "jackson"
+              ],
+              "category": "Entertainment",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 74,
+              "velocityScore": 19,
+              "viralScore": 70,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Alle reden über \"Lauryn Hill honored, Janet Jackson stuns Teyana Ta\" — hier ist warum",
+              "contentIdeas": [
+                "\"Lauryn Hill honored, Janet Jackson stuns\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Lauryn Hill honored, Janet Jackson stuns\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Lauryn Hill honored, Janet Jackson stuns\" nach 30 Tagen",
+                "\"Lauryn Hill honored, Janet Jackson stuns\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Lauryn Hill honored, Janet Jackson stuns\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#entertainment",
+                "#netflix",
+                "#viral",
+                "#trending",
+                "#filme"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "Lauryn Hill honored, Janet Jackson stuns Teyana Taylor and Druski makes history at BET Awards - NBC News",
+                  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOek9pNHRaTUYtMl8yVmxzOHVWOGptWGZtMzNkdmY4UWVwSWJNaklibHU0YnktQlMtWWxrdmlYcFFBMWl6WHptRENoSlRBb1RXU2pfOF9RUXFJRnlsb3B5ZFJ1Q256cFB0WXFZeXJ2ZFV2RlpPaDhfWG1rLTRzME9TeDVyaVFKTUthdTl4LWMwTzJVR3ZlcTZBZjdVRFVoSlhxZ0xoRGl5YWNsR3hZNzQ2VE5Ba0R6NmpoNnc?oc=5",
+                  "engagement": 736,
+                  "upvotes": 412,
+                  "comments": 155
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_zuo3",
+              "topic": "Eli Lilly, Regeneron among first companies selected for FDA initiative to speed ",
+              "keywords": [
+                "lilly",
+                "regeneron",
+                "among",
+                "first",
+                "companies"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 73,
+              "velocityScore": 28,
+              "viralScore": 72,
+              "competition": "medium",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"Eli Lilly, Regeneron among first companies selecte\" — ich schon",
+              "contentIdeas": [
+                "\"Eli Lilly, Regeneron among first compani\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Eli Lilly, Regeneron among first compani\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Eli Lilly, Regeneron among first compani\" nach 30 Tagen",
+                "\"Eli Lilly, Regeneron among first compani\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Eli Lilly, Regeneron among first compani\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Business News)",
+                  "title": "Eli Lilly, Regeneron among first companies selected for FDA initiative to speed review of new manufacturing facilities - CNBC",
+                  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVDhYOGZPSGdVZUEySGNlMW9xekNweVpFdzY4dm9lblFBbHRtWkRvRGZiRzVsT2N1ams3bEF0WEgzRTVucEFqcS1JVGJOZW5jWVFucGJEcXFfSnNZc29xQ0hOM1oyQ1o3WERYSlJtLWhINi0xdkJDbjYtNHZldTNNaHFaUDRLWWwyQy1FRTNSVy1mQnNaako2dTdB0gGfAUFVX3lxTE9BdVp0LW9vS3IyeTlIQWRmN1owblN2RUpKSFRxR01vVlk3SWM0WEJyZzc5RmRMak12RmZjZkw1UGZmaGpoa1h3bXllY21Nb0hpeUFTaW9BdHdwT2pvQmQyUnVZcUlRbXFQNEdMdTB0Q052SEpMSVlaaDJKMHpNM0ZiQjM3OUtJcFJYaWhfWHJJWmtnZjFHRF94SUtLU0tQSQ?oc=5",
+                  "engagement": 1824,
+                  "upvotes": 1213,
+                  "comments": 128
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_epi7",
+              "topic": "'Supergirl' Bombs at the Box Office, Will Lose $125M - Deadline",
+              "keywords": [
+                "supergirl",
+                "bombs",
+                "office",
+                "will",
+                "lose"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 73,
+              "velocityScore": 19,
+              "viralScore": 72,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"'Supergirl' Bombs at the Box Office, Will Lose $12\" — ich schon",
+              "contentIdeas": [
+                "\"'Supergirl' Bombs at the Box Office, Wil\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"'Supergirl' Bombs at the Box Office, Wil\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"'Supergirl' Bombs at the Box Office, Wil\" nach 30 Tagen",
+                "\"'Supergirl' Bombs at the Box Office, Wil\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"'Supergirl' Bombs at the Box Office, Wil\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "'Supergirl' Bombs at the Box Office, Will Lose $125M - Deadline",
+                  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5HNHVhWTcwVlR6cmwxZWJCY3BWaFJUYl96X3M1cUh5ZmhrOFk3Q0MwRXUxY0tDMnNONUZlV1ZBQ0ZLT24wV2hnMEdFTWlmVm55d1VqeWhiMFFKTFBsT1pMZGlESVRyaUo4cmZDVnVJQnpYbUE?oc=5",
+                  "engagement": 1581,
+                  "upvotes": 447,
+                  "comments": 129
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_o2j7",
+              "topic": "Clive Davis funeral draws stars to honor music legend - USA Today",
+              "keywords": [
+                "clive",
+                "davis",
+                "funeral",
+                "draws",
+                "stars"
+              ],
+              "category": "Entertainment",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 73,
+              "velocityScore": 19,
+              "viralScore": 74,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Alle reden über \"Clive Davis funeral draws stars to honor music leg\" — hier ist warum",
+              "contentIdeas": [
+                "\"Clive Davis funeral draws stars to honor\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Clive Davis funeral draws stars to honor\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Clive Davis funeral draws stars to honor\" nach 30 Tagen",
+                "\"Clive Davis funeral draws stars to honor\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Clive Davis funeral draws stars to honor\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#entertainment",
+                "#netflix",
+                "#viral",
+                "#trending",
+                "#filme"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "Clive Davis funeral draws stars to honor music legend - USA Today",
+                  "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQkVpb0NQV2lWdVBtQk91TzNfdDUwWWVrZDNnaTJvWmVvRllFY3JHV3ptSjdvbGJablRrX3NOdUNQUGtBMHBDYW0xTlFlbWNnZkpJUnU4U3dNT3NyZ0hkX1pKWV9ULWt2SFdPR1RqZXIzakVDNjBfWVZxRUlocUxGQlFzNFBkNHU3MkhySmR1VDd5VFRQRDVUcmwxYnFIRENmYWtiNlJ1WGNpVUFPWlQ1REFPV2JLbmI4ZHBEODhLRnBMZWc?oc=5",
+                  "engagement": 1299,
+                  "upvotes": 336,
+                  "comments": 189
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_hu7c",
+              "topic": "Warsh's Fed debut: Worse than a World Cup without Italy? (US2Y:) - Seeking Alpha",
+              "keywords": [
+                "warsh",
+                "debut",
+                "worse",
+                "than",
+                "world"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 73,
+              "velocityScore": 26,
+              "viralScore": 73,
+              "competition": "medium",
+              "monetization": "medium",
+              "hook": "Warsh's Fed debut: Worse than a World Cup without  — das musst du wissen",
+              "contentIdeas": [
+                "\"Warsh's Fed debut: Worse than a World Cu\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Warsh's Fed debut: Worse than a World Cu\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Warsh's Fed debut: Worse than a World Cu\" nach 30 Tagen",
+                "\"Warsh's Fed debut: Worse than a World Cu\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Warsh's Fed debut: Worse than a World Cu\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Business News)",
+                  "title": "Warsh's Fed debut: Worse than a World Cup without Italy? (US2Y:) - Seeking Alpha",
+                  "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPZkNkQkUzejRpSTItUUNod2lBX05TbU5WdXIyYXRKaVVqQ0wyZllIVjNUZUlmeEtTRXltcmlwYU1SQmlNNUo1NzFpWHduNzZlS25Bc2dfUWpueGlRSHBWUjF6Um1tb3dpNGNOajNVY0N6THBOYUdjcmstN3J2alBtOFJUNGJ6YUFKRkhUUWwyclZFa3pWa0E?oc=5",
+                  "engagement": 1084,
+                  "upvotes": 1030,
+                  "comments": 136
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548819_hrwv",
+              "topic": "Jeremy Allen White Knew ‘The Bear’ Ending for Two Years - The Hollywood Reporter",
+              "keywords": [
+                "jeremy",
+                "allen",
+                "white",
+                "knew",
+                "bear"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 72,
+              "velocityScore": 27,
+              "viralScore": 68,
+              "competition": "medium",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"Jeremy Allen White Knew ‘The Bear’ Ending for Two \" — ich schon",
+              "contentIdeas": [
+                "\"Jeremy Allen White Knew ‘The Bear’ Endin\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Jeremy Allen White Knew ‘The Bear’ Endin\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Jeremy Allen White Knew ‘The Bear’ Endin\" nach 30 Tagen",
+                "\"Jeremy Allen White Knew ‘The Bear’ Endin\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Jeremy Allen White Knew ‘The Bear’ Endin\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Entertainment)",
+                  "title": "Jeremy Allen White Knew ‘The Bear’ Ending for Two Years - The Hollywood Reporter",
+                  "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWVZXb3k3NkFGbXlKb3hQX05HUFpLS251R29FakVBY3k1ZnctOXNSeFNxWkFJSVEtdVEtMGt3cmZiYkM2NjFsdFpRZ3F0UjlEbEJkNUFjOFJ1ZjB2V1hELTVxS3k4VnZwTGhOQ3Z2TmZ1cDlzS1JqZW80VUtSdXZyaUxWN1l3QUxzdTVXYUUzOUIzZlNUQmZmOGRzTW5HejZGRjNPdGFiUXZKN3hWUDJtbkhTX1l6VzE2?oc=5",
+                  "engagement": 2382,
+                  "upvotes": 1138,
+                  "comments": 140
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_opxj",
+              "topic": "US Supreme Court rules geofence warrants require constitutional protections",
+              "keywords": [
+                "supreme",
+                "court",
+                "rules",
+                "geofence",
+                "warrants"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Hacker"
+              ],
+              "opportunityScore": 72,
+              "velocityScore": 19,
+              "viralScore": 72,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"US Supreme Court rules geofence warrants require c\" — ich schon",
+              "contentIdeas": [
+                "\"US Supreme Court rules geofence warrants\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"US Supreme Court rules geofence warrants\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"US Supreme Court rules geofence warrants\" nach 30 Tagen",
+                "\"US Supreme Court rules geofence warrants\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"US Supreme Court rules geofence warrants\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Hacker News",
+                  "title": "US Supreme Court rules geofence warrants require constitutional protections",
+                  "url": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision",
+                  "engagement": 906,
+                  "upvotes": 378,
+                  "comments": 176
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_zz7i",
+              "topic": "Rocketlab acquires Iridium",
+              "keywords": [
+                "rocketlab",
+                "acquires",
+                "iridium"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Hacker"
+              ],
+              "opportunityScore": 71,
+              "velocityScore": 20,
+              "viralScore": 65,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Niemand redet über \"Rocketlab acquires Iridium\" — ich schon",
+              "contentIdeas": [
+                "\"Rocketlab acquires Iridium\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Rocketlab acquires Iridium\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Rocketlab acquires Iridium\" nach 30 Tagen",
+                "\"Rocketlab acquires Iridium\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Rocketlab acquires Iridium\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Hacker News",
+                  "title": "Rocketlab acquires Iridium",
+                  "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully",
+                  "engagement": 950,
+                  "upvotes": 332,
+                  "comments": 206
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_w3b1",
+              "topic": "Samsung, SK Hynix, Micron Sued in US over Memory Price Fixing",
+              "keywords": [
+                "samsung",
+                "hynix",
+                "micron",
+                "sued",
+                "over"
+              ],
+              "category": "Allgemein",
+              "platforms": [
+                "Hacker"
+              ],
+              "opportunityScore": 68,
+              "velocityScore": 18,
+              "viralScore": 68,
+              "competition": "low",
+              "monetization": "medium",
+              "hook": "Samsung, SK Hynix, Micron Sued in US over Memory P — das musst du wissen",
+              "contentIdeas": [
+                "\"Samsung, SK Hynix, Micron Sued in US ove\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"Samsung, SK Hynix, Micron Sued in US ove\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"Samsung, SK Hynix, Micron Sued in US ove\" nach 30 Tagen",
+                "\"Samsung, SK Hynix, Micron Sued in US ove\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"Samsung, SK Hynix, Micron Sued in US ove\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#trending",
+                "#viral",
+                "#foryou",
+                "#fyp",
+                "#tipps"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Hacker News",
+                  "title": "Samsung, SK Hynix, Micron Sued in US over Memory Price Fixing",
+                  "url": "https://en.sedaily.com/international/2026/06/29/samsung-sk-hynix-micron-sued-in-us-over-memory-price-fixing",
+                  "engagement": 796,
+                  "upvotes": 328,
+                  "comments": 156
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548819_g5gd",
+              "topic": "This Famously Weird 'Pink Planet' May Have Salty Clouds, Study Finds - ScienceAl",
+              "keywords": [
+                "this",
+                "famously",
+                "weird",
+                "pink",
+                "planet"
+              ],
+              "category": "Science",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 67,
+              "velocityScore": 26,
+              "viralScore": 69,
+              "competition": "medium",
+              "monetization": "low",
+              "hook": "Neue Studie: \"This Famously Weird 'Pink Planet' May Have Salty C\" überrascht Wissenschaftler",
+              "contentIdeas": [
+                "\"This Famously Weird 'Pink Planet' May Ha\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"This Famously Weird 'Pink Planet' May Ha\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"This Famously Weird 'Pink Planet' May Ha\" nach 30 Tagen",
+                "\"This Famously Weird 'Pink Planet' May Ha\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"This Famously Weird 'Pink Planet' May Ha\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#science",
+                "#nasa",
+                "#space",
+                "#wissen",
+                "#forschung"
+              ],
+              "trendStatus": "growing",
+              "sources": [
+                {
+                  "platform": "Google News (Science)",
+                  "title": "This Famously Weird 'Pink Planet' May Have Salty Clouds, Study Finds - ScienceAlert",
+                  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWTZpZ0RQYXBnalRQd3VudHNqV2lsbC1LRUJYc2pndXh6ODlIblJMeW91Z1lpSlhJaEh4MkhTTUJWOVp5MEM4M3RYVjVCTHFZX0R3aktZY0FwZXVfaG9BOXhTZmtBUzhaWXBEcHFncGo3Nm55bWlwSnZiU0pVTHkyTnNuZlAyWEJHY3lQZFJRZ2Z0eEdJbENJNXRB?oc=5",
+                  "engagement": 2439,
+                  "upvotes": 1113,
+                  "comments": 93
+                }
+              ],
+              "topCreators": []
+            },
+            {
+              "id": "trend_1782774548820_xost",
+              "topic": "NASA to launch rescue mission June 30 to save Swift space telescope from burning",
+              "keywords": [
+                "nasa",
+                "launch",
+                "rescue",
+                "mission",
+                "june"
+              ],
+              "category": "Science",
+              "platforms": [
+                "Google"
+              ],
+              "opportunityScore": 67,
+              "velocityScore": 21,
+              "viralScore": 61,
+              "competition": "low",
+              "monetization": "low",
+              "hook": "\"NASA to launch rescue mission June 30 to save Swif\" — das verändert was wir zu wissen glauben",
+              "contentIdeas": [
+                "\"NASA to launch rescue mission June 30 to\" erklärt in 60 Sekunden",
+                "3 Dinge zu \"NASA to launch rescue mission June 30 to\" die du sofort wissen musst",
+                "Meine ehrliche Meinung zu \"NASA to launch rescue mission June 30 to\" nach 30 Tagen",
+                "\"NASA to launch rescue mission June 30 to\" — Vorteile & Nachteile (niemand zeigt beide Seiten)",
+                "So nutze ich \"NASA to launch rescue mission June 30 to\" für mein Business / Content"
+              ],
+              "hashtags": [
+                "#science",
+                "#nasa",
+                "#space",
+                "#wissen",
+                "#forschung"
+              ],
+              "trendStatus": "emerging",
+              "sources": [
+                {
+                  "platform": "Google News (Science)",
+                  "title": "NASA to launch rescue mission June 30 to save Swift space telescope from burning up in Earth's atmosphere - Space",
+                  "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQTVZYS09ZQzkyaldHM0pCblg1dGM4bFZPa3FHanNla3FnYVNzYUFLYS1oM1BCZ05KS1VtOWdRcFJiTWtwV2xoc3h2c1lQMTV1eVVzR0dLckx4Y0ZMZVZoMWNtMmdlUGVjWXc0bEMxakxZWWxVVFhBOFhwSWJlQXBRM21SSTBuX0NIbUMxczZYaTJSREFDWUVuZEhLNnQ2Z0VKc1F4SGFoN2ExOGdINXBHcTNwMlVvSjNOczVuRnZtVTJCMUxpV2RiZ0dRQkhfLWxwUE9IX3N3dzZHWV9sclJEdGJ1aGRmRDl5T0xB?oc=5",
+                  "engagement": 1529,
+                  "upvotes": 377,
+                  "comments": 243
+                }
+              ],
+              "topCreators": []
+            }
+          ],
+          "predictions": [
+            {
+              "event": "Amazon Prime Day 2026",
+              "date": "2026-07-15",
+              "category": "Business / Finance",
+              "expectedHypeStart": "2026-07-05",
+              "expectedPeak": "2026-07-16",
+              "estimatedDuration": "2 Wochen",
+              "viralPotential": 82,
+              "opportunityScore": 80,
+              "recommendedProductionDate": "2026-06-28",
+              "contentAngles": [
+                "Prime Day 2026 — nur diese Deals lohnen sich",
+                "Meine Prime Day Strategie",
+                "Prime Day Hidden Gems"
+              ],
+              "platforms": [
+                "TikTok",
+                "YouTube Shorts"
+              ],
+              "id": "pred_1782774550244_knht7",
+              "daysUntil": 16
+            },
+            {
+              "event": "Sommer 2026 — Travel Season",
+              "date": "2026-06-21",
+              "category": "Travel / Lifestyle",
+              "expectedHypeStart": "2026-05-15",
+              "expectedPeak": "2026-07-01",
+              "estimatedDuration": "2 Monate",
+              "viralPotential": 78,
+              "opportunityScore": 76,
+              "recommendedProductionDate": "2026-05-01",
+              "contentAngles": [
+                "Günstig reisen Sommer 2026",
+                "Diese Destinations gehen 2026 viral",
+                "Solo Travel Sommer Guide"
+              ],
+              "platforms": [
+                "TikTok",
+                "Instagram",
+                "YouTube"
+              ],
+              "id": "pred_1782774550244_xj0ac",
+              "daysUntil": -8
+            }
+          ],
+          "notifications": [
+            {
+              "id": "notif_top_1782774550244",
+              "type": "high_opportunity",
+              "emoji": "⭐",
+              "title": "High-Opportunity Trend erkannt",
+              "message": "\"GTA 6 Won’t Be On A Disc, Not At Launch Or Months After, Rep\" hat einen Opportunity Score von 92. Jetzt Content produzieren!",
+              "urgency": "high",
+              "timestamp": "2026-06-29T23:09:10.244Z"
+            },
+            {
+              "id": "notif_fast_1782774550245",
+              "type": "growing_fast",
+              "emoji": "🚀",
+              "title": "Trend wächst außergewöhnlich schnell",
+              "message": "\"GTA 6 Won’t Be On A Disc, Not At Launch Or Months After\" gewinnt gerade stark an Aufmerksamkeit — Velocity Score: 27/30",
+              "urgency": "high",
+              "timestamp": "2026-06-29T23:09:10.244Z"
+            },
+            {
+              "id": "notif_emerge_1782774550245",
+              "type": "new_trend",
+              "emoji": "🔥",
+              "title": "Neuer Trend mit niedriger Konkurrenz",
+              "message": "\"GTA 6 Won’t Be On A Disc, Not At Launch Or Months After\" — niedrige Konkurrenz, hohe Monetarisierung. Früher Einstieg empfohlen!",
+              "urgency": "medium",
+              "timestamp": "2026-06-29T23:09:10.244Z"
+            },
+            {
+              "id": "notif_event_1782774550245",
+              "type": "predicted_event",
+              "emoji": "📅",
+              "title": "Nächstes virales Event in 16 Tagen",
+              "message": "\"Amazon Prime Day 2026\" startet am 2026-07-15. Empfohlener Produktionsstart: 2026-06-28",
+              "urgency": "medium",
+              "timestamp": "2026-06-29T23:09:10.244Z"
+            },
+            {
+              "id": "notif_ai_1782774550245",
+              "type": "new_trend",
+              "emoji": "📈",
+              "title": "KI/Tech Trend im Aufwärtstrend",
+              "message": "Suchinteresse für \"Apple says it is releasing updates early in r\" steigt stark — Opportunity Score: 92",
+              "urgency": "medium",
+              "timestamp": "2026-06-29T23:09:10.244Z"
+            }
+          ],
+          "meta": {
+            "fetchedAt": "2026-06-29T23:09:10.245Z",
+            "sourcesScanned": [
+              "Reddit (23 Subreddits)",
+              "Hacker News",
+              "Google News",
+              "Product Hunt",
+              "YouTube",
+              "TikTok"
+            ],
+            "totalTrends": 30,
+            "topCategory": "Allgemein"
+          }
+        }
+      },
+      {
+        "agentSlug": "competitor-agent",
+        "agentName": "Competitor Analyst",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:10.259Z] Competitor Analyst gestartet",
+          "[2026-06-29T23:09:10.559Z] ✅ Competitor Analyst fertig (292ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:10.256Z",
+        "completedAt": "2026-06-29T23:09:10.553Z",
+        "durationMs": 292,
+        "output": {
+          "profiles": [
+            {
+              "username": "",
+              "platform": "instagram",
+              "displayName": "",
+              "followers": 23400,
+              "following": 891,
+              "totalVideos": 156,
+              "bio": "💰 Online Geld verdienen",
+              "verified": false,
+              "avgViews": 12400,
+              "avgLikes": 890,
+              "engagementRate": 3.8,
+              "postingFrequency": "~4x / Woche",
+              "topVideos": [
+                {
+                  "id": "1",
+                  "title": "3 Side Hustles ohne Startkapital 💸",
+                  "views": 89200,
+                  "likes": 4210,
+                  "comments": 312,
+                  "url": "https://instagram.com/p/example",
+                  "hashtags": [
+                    "#sidehustle"
+                  ]
+                }
+              ],
+              "topHashtags": [
+                "#sidehustle",
+                "#geld",
+                "#onlinebusiness"
+              ],
+              "bestPostingTimes": [
+                "11:00–13:00",
+                "19:00–21:00"
+              ],
+              "nicheScore": 65,
+              "dataSource": "mock",
+              "analysis": {
+                "niche": "Finance / Side Hustle",
+                "contentStyle": "Reels mit starkem Hook in Sek. 1, Karussell-Posts",
+                "hookPatterns": [
+                  "\"X Tipps die dein Leben verändern\"",
+                  "\"POV: Du weißt endlich wie...\""
+                ],
+                "viralFormula": "Problem ansprechen → emotionale Reaktion → Lösung → Konkreter CTA",
+                "monetizationPotential": "Sehr hoch (Affiliate, Kurse, Coaching)",
+                "competitionLevel": "medium",
+                "growthPotential": "high",
+                "recommendation": "Fokus auf \"Finance / Side Hustle\" mit konsequentem Posting (5–7x/Woche). Kopiere die bewährtesten Formate und mache sie besser.",
+                "copyStrategy": [
+                  "Analysiere die Top-5 Videos und rekreiere denselben Aufbau",
+                  "Nutze diese Hashtags: #sidehustle",
+                  "Poste zur Primetime des Kanals",
+                  "Führe eine eigene Perspektive ein — nicht 1:1 kopieren"
+                ]
+              }
+            }
+          ],
+          "webTrends": [],
+          "overallNiche": "Finance / Side Hustle",
+          "topHashtagsAcrossPlatforms": [
+            "#sidehustle",
+            "#geld",
+            "#onlinebusiness"
+          ],
+          "viralHooks": [
+            "\"X Tipps die dein Leben verändern\"",
+            "\"POV: Du weißt endlich wie...\""
+          ],
+          "contentCalendar": [
+            "Mo: Hook-Video — \"X Tipps die dein Leben verändern\"",
+            "Di: Tutorial / How-To — Schritt-für-Schritt",
+            "Mi: Trend-Reaktion in \"Finance / Side Hustle\"",
+            "Do: Persönliche Story / Behind the Scenes",
+            "Fr: Kontroverse Meinung / \"Unpopular Opinion\"",
+            "Sa: Q&A oder Community-Post",
+            "So: Best-of Compilation / Recap"
+          ],
+          "summary": "@ ist ein Instagram-Kanal in der \"Finance / Side Hustle\"-Nische. 23.400 Follower · ? Gesamt-Likes · Ø 12.400 Views · 3.8% Engagement. ⚠️ Demo-Daten",
+          "niche": "Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic",
+          "dataSource": "mock"
+        }
+      },
+      {
+        "agentSlug": "knowledge-agent",
+        "agentName": "Knowledge Base",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:10.566Z] Knowledge Base gestartet",
+          "[2026-06-29T23:09:10.571Z] ✅ Knowledge Base fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:10.562Z",
+        "completedAt": "2026-06-29T23:09:10.568Z",
+        "durationMs": 0,
+        "output": {
+          "isDuplicate": false,
+          "usedTopics": [
+            "Luxury Lifestyle Motivation"
+          ],
+          "topHooks": [
+            "Das haben sie dir nie gesagt."
+          ],
+          "topHashtags": [
+            "#luxury",
+            "#motivation",
+            "#success",
+            "#lifestyle",
+            "#mindset",
+            "#discipline",
+            "#wealthy",
+            "#luxurylifestyle",
+            "#cinematic",
+            "#reels"
+          ],
+          "topKeywords": [
+            "cinematic dark moody",
+            "golden hour slow motion",
+            "rain on glass cinematic",
+            "luxury car night"
+          ],
+          "topLearnings": [
+            "Cinematic Hook",
+            "Dark Luxury Aesthetic",
+            "Motivational Voiceover",
+            "Behind-the-scenes Luxury Routine",
+            "Millionaire Morning Routine"
+          ],
+          "topPrompts": [
+            "Create a 30-45 second cinematic luxury lifestyle video in 9:16 vertical format.\n\nStyle: Dark luxury aesthetic, similar to @69perception. Cinematic quality.\nLook: Deep shadows, golden highlights, film grain, smooth slow-motion.\nCuts: Fast but smooth — beat-synced cuts, speed ramping on key moments.\nText: Minimal overlays — powerful single-line statements, high-end typography.\nMood: Aspirational, motivational, nostalgic — makes viewer feel something.\nMusic: Nostalgic Lo-Fi — warm, vintage, ruhig\nHook: Das haben sie dir nie gesagt.\nTopic: Luxury Lifestyle Motivation\n\nVisual sequence:\n1. Lamborghini bei Sonnenuntergang — cinematic establishing shot\n2. Rooftop-Pool mit Stadtblick — emotional connection moment\n3. Privatjet Cockpit bei Sonnenaufgang — luxury lifestyle peak visual\n4. Super-8 Film-Look alter Kindheitsmomente — aspirational closing image\n5. CTA overlay: \"Follow for more\" — minimal, elegant\n\nFormat: MP4, 9:16, 1080x1920, 30fps\nEffects: Film grain overlay, subtle vignette, color grade (Teal & Orange or Dark & Moody)\nSubtitles: Dynamic captions, bold sans-serif, white with dark outline"
+          ],
+          "totalTopics": 1,
+          "totalHooks": 1,
+          "lastUpdated": "2026-06-29T22:31:11.756Z",
+          "recommendation": "Empfohlener Hook: \"Das haben sie dir nie gesagt.\""
+        }
+      },
+      {
+        "agentSlug": "script-agent",
+        "agentName": "Script Writer",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:10.575Z] Script Writer gestartet",
+          "[2026-06-29T23:09:10.579Z] ✅ Script Writer fertig (1ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:10.573Z",
+        "completedAt": "2026-06-29T23:09:10.577Z",
+        "durationMs": 1,
+        "output": {
+          "topic": "AI replacing jobs",
+          "niche": "Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic",
+          "hook": "Die Version von dir, die du sein könntest.",
+          "fullScript": "[HOOK — 0:00–0:02]\nDie Version von dir, die du sein könntest.\n\n[SCENE 1 — 0:02–0:07]\nDubai Skyline bei Nacht — kein Text, nur Musik und Atmosphäre.\nSlow Motion. Dark Luxury Grading.\n\n[SCENE 2 — 0:07–0:15]\nVOICEOVER / TEXT-OVERLAY:\n\"AI replacing jobs — die meisten sehen das Ergebnis. Nicht den Weg.\"\n\n[SCENE 3 — 0:15–0:25]\nMUSIK-DROP — stärkstes Visual: Luxury-Moment (Auto / Jet / Rooftop).\nTEXT: \"Disziplin ist keine Option. Es ist die einzige Option.\"\n\n[SCENE 4 — 0:25–0:33]\nNostalgie-Moment — Film Grain, warme Farben, Erinnerungen.\nTEXT: \"Du weißt bereits, wer du sein könntest.\"\n\n[CTA — 0:33–0:37]\nTEXT: \"Follow für tägliche Inspiration ↗\"\nEleganter Fade-Out mit Logo/Handle.\n\n---\nCompetitor-Insights: @ ist ein Instagram-Kanal in der \"Finance / Side Hustle\"-Nische. 23.400 Follower · ? Gesamt-Likes · Ø 12.400 Views · 3.8% Engagement. ⚠️ Demo-Daten\nGesamtlänge: ~37 Sekunden | Format: 9:16 | Plattform: IG/TT/YT-Shorts",
+          "videoPrompt": "Create a 30-45 second cinematic luxury lifestyle video in 9:16 vertical format.\n\nStyle: Dark luxury aesthetic, Cinematic, dark luxury quality — smooth cuts, film grain, moody.\nLook: Deep shadows, golden highlights, film grain, smooth slow-motion.\nCuts: Fast but smooth — beat-synced cuts, speed ramping on key moments.\nText: Minimal overlays — powerful single-line statements, high-end typography.\nMood: Aspirational, motivational, nostalgic — makes viewer feel something.\nMusic: Epic Orchestra + Bass — maximale Wirkung\nHook: Die Version von dir, die du sein könntest.\nTopic: AI replacing jobs\n\nVisual sequence:\n1. Lamborghini bei Sonnenuntergang — cinematic establishing shot\n2. Rooftop-Pool mit Stadtblick — emotional connection moment\n3. Privatjet Cockpit bei Sonnenaufgang — luxury lifestyle peak visual\n4. Super-8 Film-Look alter Kindheitsmomente — aspirational closing image\n5. CTA overlay: \"Follow for more\" — minimal, elegant\n\nFormat: MP4, 9:16, 1080x1920, 30fps\nEffects: Film grain overlay, subtle vignette, color grade (Teal & Orange or Dark & Moody)\nSubtitles: Dynamic captions, bold sans-serif, white with dark outline",
+          "musicStyle": "Epic Orchestra + Bass — maximale Wirkung",
+          "sceneKeywords": [
+            "cinematic dark moody",
+            "golden hour slow motion",
+            "rain on glass cinematic",
+            "luxury b-roll",
+            "dark aesthetic",
+            "luxury lifestyle aesthetic",
+            "millionaire lifestyle",
+            "success motivation"
+          ],
+          "sceneVisuals": [
+            "Lamborghini bei Sonnenuntergang",
+            "Rooftop-Pool mit Stadtblick",
+            "Privatjet Cockpit bei Sonnenaufgang",
+            "Super-8 Film-Look alter Kindheitsmomente"
+          ],
+          "isDuplicate": false,
+          "scamDetected": false,
+          "ctaText": "Follow für tägliche Inspiration ↗",
+          "thumbnailIdea": "AI replacing jobs — cinematic dark overlay mit goldenem Text",
+          "seoKeywords": [
+            "luxury lifestyle",
+            "motivation 2024",
+            "success mindset",
+            "millionaire lifestyle",
+            "billionaire aesthetic",
+            "cinematic edit",
+            "luxury cars",
+            "private jet lifestyle"
+          ],
+          "warnings": []
+        }
+      },
+      {
+        "agentSlug": "seo-agent",
+        "agentName": "SEO Optimizer",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:10.582Z] SEO Optimizer gestartet",
+          "[2026-06-29T23:09:10.586Z] ✅ SEO Optimizer fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:10.580Z",
+        "completedAt": "2026-06-29T23:09:10.583Z",
+        "durationMs": 0,
+        "output": {
+          "youtubeTitle": "AI replacing jobs 🔥 Die Version von dir, die du sein könntes #Shorts",
+          "description": "AI replacing jobs — Luxury Lifestyle, Motivation & Erfolg.\n\nDie Version von dir, die du sein könntest.\n\n📲 Folge uns für tägliche Inspiration.\n\n#luxury #motivation #success #lifestyle #mindset #discipline #cinematic",
+          "tiktokCaption": "Die Version von dir, die du sein könntest. ✨ #fyp #luxurylifestyle #motivation #viral #cinematicedit #success",
+          "instagramCaption": "Die Version von dir, die du sein könntest.\n\nLuxus · Disziplin · Erfolg\n\n.\n.\n.\n#luxurylifestyle #cinematic #reels #motivation2024 #millionairemindset #aesthetic",
+          "hashtags": [
+            "#luxury",
+            "#motivation",
+            "#success",
+            "#lifestyle",
+            "#mindset",
+            "#discipline",
+            "#wealthy",
+            "#luxurylifestyle",
+            "#cinematic",
+            "#reels",
+            "#motivation2024",
+            "#millionairemindset",
+            "#aesthetic",
+            "#fyp",
+            "#viral",
+            "#luxurylife",
+            "#motivational",
+            "#successmindset",
+            "#cinematicedit",
+            "#richlife"
+          ],
+          "keywords": [
+            "luxury lifestyle",
+            "motivation 2024",
+            "success mindset",
+            "millionaire lifestyle",
+            "billionaire aesthetic",
+            "cinematic edit",
+            "luxury cars",
+            "private jet lifestyle",
+            "wealth mindset",
+            "discipline",
+            "hustle motivation",
+            "luxury travel",
+            "nostalgia aesthetic",
+            "dark luxury",
+            "empire mindset"
+          ],
+          "alternativeTitles": [
+            "AI replacing jobs — Der Unterschied den niemand sieht #Shorts",
+            "Das Geheimnis hinter AI replacing jobs 🔥 #LuxuryLifestyle",
+            "AI replacing jobs: Was die Erfolgreichen wirklich tun"
+          ]
+        }
+      },
+      {
+        "agentSlug": "brand-agent",
+        "agentName": "Brand Consistency",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:10.590Z] Brand Consistency gestartet",
+          "[2026-06-29T23:09:10.593Z] ✅ Brand Consistency fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:10.587Z",
+        "completedAt": "2026-06-29T23:09:10.591Z",
+        "durationMs": 0,
+        "output": {
+          "brandScore": 20,
+          "passed": false,
+          "matchedValues": [
+            "Disziplin",
+            "Nostalgie"
+          ],
+          "forbiddenFound": [],
+          "issues": [],
+          "suggestions": [
+            "Mehr Luxury/Motivation/Disziplin Begriffe einbauen",
+            "CTA prüfen"
+          ],
+          "summary": "❌ Brand-Probleme (20/100)"
+        }
+      },
+      {
+        "agentSlug": "asset-manager-agent",
+        "agentName": "Asset Manager",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:10.596Z] Asset Manager gestartet",
+          "[2026-06-29T23:09:11.189Z] ✅ Asset Manager fertig (585ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:10.594Z",
+        "completedAt": "2026-06-29T23:09:11.182Z",
+        "durationMs": 585,
+        "output": {
+          "totalAssets": 15,
+          "scenes": [
+            {
+              "id": "pexels_7231664",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/7231664/",
+              "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "MART  PRODUCTION",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 15,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_36708258",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/36708258/",
+              "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Cemrecan Yurtman",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 16,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_35088565",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/35088565/",
+              "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "khezez  | خزاز",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 44,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_34451675",
+              "scene": "golden hour slow motion",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/34451675/",
+              "downloadUrl": "https://videos.pexels.com/video-files/34451675/14598814_360_640_24fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/34451675/beach-coast-coastal-coastline-34451675.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Mario Krimer",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "golden hour slow motion",
+              "duration": 16,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 40,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_36223942",
+              "scene": "golden hour slow motion",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/36223942/",
+              "downloadUrl": "https://videos.pexels.com/video-files/36223942/15362124_360_640_24fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/36223942/calm-calmness-cinematic-gentle-36223942.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Mario Krimer",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "golden hour slow motion",
+              "duration": 22,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 40,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_32599724",
+              "scene": "golden hour slow motion",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/32599724/",
+              "downloadUrl": "https://videos.pexels.com/video-files/32599724/13901183_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/32599724/pexels-photo-32599724.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Efrem  Efre",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "golden hour slow motion",
+              "duration": 15,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 40,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_34786652",
+              "scene": "rain on glass cinematic",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/34786652/",
+              "downloadUrl": "https://videos.pexels.com/video-files/34786652/14748705_360_640_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/34786652/after-rain-black-and-white-video-calm-atmosphere-cinematic-video-34786652.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Sonila Emini",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "rain on glass cinematic",
+              "duration": 10,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_8549582",
+              "scene": "rain on glass cinematic",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/8549582/",
+              "downloadUrl": "https://videos.pexels.com/video-files/8549582/8549582-hd_720_1280_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/8549582/pexels-photo-8549582.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Taryn Elliott",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "rain on glass cinematic",
+              "duration": 33,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_35170756",
+              "scene": "rain on glass cinematic",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/35170756/",
+              "downloadUrl": "https://videos.pexels.com/video-files/35170756/14900140_360_640_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/35170756/some-nights-feel-like-a-test-rain-on-the-glass-a-cold-road-ahead-and-a-silence-that-says-everything-35170756.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Gaber Magdi",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "rain on glass cinematic",
+              "duration": 29,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_16120798",
+              "scene": "luxury car night",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/16120798/",
+              "downloadUrl": "https://videos.pexels.com/video-files/16120798/16120798-hd_720_1280_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/16120798/amg-amg63-amggang-amggt-16120798.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "paashuu",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "luxury car night",
+              "duration": 6,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_6873503",
+              "scene": "luxury car night",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/6873503/",
+              "downloadUrl": "https://videos.pexels.com/video-files/6873503/6873503-hd_1080_1920_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/6873503/pexels-photo-6873503.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Tima Miroshnichenko",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "luxury car night",
+              "duration": 18,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_16244863",
+              "scene": "luxury car night",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/16244863/",
+              "downloadUrl": "https://videos.pexels.com/video-files/16244863/16244863-hd_1080_1920_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/16244863/pexels-photo-16244863.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "paashuu",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "luxury car night",
+              "duration": 5,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_7231664",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/7231664/",
+              "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "MART  PRODUCTION",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 15,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_36708258",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/36708258/",
+              "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Cemrecan Yurtman",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 16,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_35088565",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/35088565/",
+              "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "khezez  | خزاز",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 44,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            }
+          ],
+          "assets": [
+            {
+              "id": "pexels_7231664",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/7231664/",
+              "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "MART  PRODUCTION",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 15,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_36708258",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/36708258/",
+              "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Cemrecan Yurtman",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 16,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_35088565",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/35088565/",
+              "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "khezez  | خزاز",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 44,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_34451675",
+              "scene": "golden hour slow motion",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/34451675/",
+              "downloadUrl": "https://videos.pexels.com/video-files/34451675/14598814_360_640_24fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/34451675/beach-coast-coastal-coastline-34451675.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Mario Krimer",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "golden hour slow motion",
+              "duration": 16,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 40,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_36223942",
+              "scene": "golden hour slow motion",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/36223942/",
+              "downloadUrl": "https://videos.pexels.com/video-files/36223942/15362124_360_640_24fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/36223942/calm-calmness-cinematic-gentle-36223942.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Mario Krimer",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "golden hour slow motion",
+              "duration": 22,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 40,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_32599724",
+              "scene": "golden hour slow motion",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/32599724/",
+              "downloadUrl": "https://videos.pexels.com/video-files/32599724/13901183_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/32599724/pexels-photo-32599724.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Efrem  Efre",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "golden hour slow motion",
+              "duration": 15,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 40,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_34786652",
+              "scene": "rain on glass cinematic",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/34786652/",
+              "downloadUrl": "https://videos.pexels.com/video-files/34786652/14748705_360_640_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/34786652/after-rain-black-and-white-video-calm-atmosphere-cinematic-video-34786652.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Sonila Emini",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "rain on glass cinematic",
+              "duration": 10,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_8549582",
+              "scene": "rain on glass cinematic",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/8549582/",
+              "downloadUrl": "https://videos.pexels.com/video-files/8549582/8549582-hd_720_1280_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/8549582/pexels-photo-8549582.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Taryn Elliott",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "rain on glass cinematic",
+              "duration": 33,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_35170756",
+              "scene": "rain on glass cinematic",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/35170756/",
+              "downloadUrl": "https://videos.pexels.com/video-files/35170756/14900140_360_640_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/35170756/some-nights-feel-like-a-test-rain-on-the-glass-a-cold-road-ahead-and-a-silence-that-says-everything-35170756.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Gaber Magdi",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "rain on glass cinematic",
+              "duration": 29,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_16120798",
+              "scene": "luxury car night",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/16120798/",
+              "downloadUrl": "https://videos.pexels.com/video-files/16120798/16120798-hd_720_1280_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/16120798/amg-amg63-amggang-amggt-16120798.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "paashuu",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "luxury car night",
+              "duration": 6,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_6873503",
+              "scene": "luxury car night",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/6873503/",
+              "downloadUrl": "https://videos.pexels.com/video-files/6873503/6873503-hd_1080_1920_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/6873503/pexels-photo-6873503.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Tima Miroshnichenko",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "luxury car night",
+              "duration": 18,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_16244863",
+              "scene": "luxury car night",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/16244863/",
+              "downloadUrl": "https://videos.pexels.com/video-files/16244863/16244863-hd_1080_1920_30fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/16244863/pexels-photo-16244863.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "paashuu",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "luxury car night",
+              "duration": 5,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 65,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_7231664",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/7231664/",
+              "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "MART  PRODUCTION",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 15,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_36708258",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/36708258/",
+              "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "Cemrecan Yurtman",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 16,
+              "width": 2160,
+              "height": 3840,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            },
+            {
+              "id": "pexels_35088565",
+              "scene": "cinematic dark moody",
+              "type": "video",
+              "source": "pexels",
+              "url": "https://www.pexels.com/video/35088565/",
+              "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+              "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+              "creator": "khezez  | خزاز",
+              "license": "pexels",
+              "commercialUse": true,
+              "attributionRequired": false,
+              "copyrightRisk": "none",
+              "keyword": "cinematic dark moody",
+              "duration": 44,
+              "width": 1080,
+              "height": 1920,
+              "format": "mp4",
+              "luxuryScore": 50,
+              "nostalgiaScore": 20,
+              "cinematicScore": 85,
+              "aspectRatio916": false
+            }
+          ],
+          "licenseStatus": "clean",
+          "blockedScenes": [],
+          "attributions": [],
+          "sources": [
+            "pexels"
+          ],
+          "usedKeywords": [
+            "cinematic dark moody",
+            "golden hour slow motion",
+            "rain on glass cinematic",
+            "luxury car night",
+            "cinematic dark moody"
+          ],
+          "manifest": {
+            "totalAssets": 15,
+            "scenes": [
+              {
+                "id": "pexels_7231664",
+                "scene": "cinematic dark moody",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/7231664/",
+                "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "MART  PRODUCTION",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "cinematic dark moody",
+                "duration": 15,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_36708258",
+                "scene": "cinematic dark moody",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/36708258/",
+                "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Cemrecan Yurtman",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "cinematic dark moody",
+                "duration": 16,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_35088565",
+                "scene": "cinematic dark moody",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/35088565/",
+                "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "khezez  | خزاز",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "cinematic dark moody",
+                "duration": 44,
+                "width": 1080,
+                "height": 1920,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_34451675",
+                "scene": "golden hour slow motion",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/34451675/",
+                "downloadUrl": "https://videos.pexels.com/video-files/34451675/14598814_360_640_24fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/34451675/beach-coast-coastal-coastline-34451675.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Mario Krimer",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "golden hour slow motion",
+                "duration": 16,
+                "width": 1080,
+                "height": 1920,
+                "format": "mp4",
+                "luxuryScore": 65,
+                "nostalgiaScore": 40,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_36223942",
+                "scene": "golden hour slow motion",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/36223942/",
+                "downloadUrl": "https://videos.pexels.com/video-files/36223942/15362124_360_640_24fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/36223942/calm-calmness-cinematic-gentle-36223942.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Mario Krimer",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "golden hour slow motion",
+                "duration": 22,
+                "width": 1080,
+                "height": 1920,
+                "format": "mp4",
+                "luxuryScore": 65,
+                "nostalgiaScore": 40,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_32599724",
+                "scene": "golden hour slow motion",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/32599724/",
+                "downloadUrl": "https://videos.pexels.com/video-files/32599724/13901183_360_640_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/32599724/pexels-photo-32599724.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Efrem  Efre",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "golden hour slow motion",
+                "duration": 15,
+                "width": 1080,
+                "height": 1920,
+                "format": "mp4",
+                "luxuryScore": 65,
+                "nostalgiaScore": 40,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_34786652",
+                "scene": "rain on glass cinematic",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/34786652/",
+                "downloadUrl": "https://videos.pexels.com/video-files/34786652/14748705_360_640_30fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/34786652/after-rain-black-and-white-video-calm-atmosphere-cinematic-video-34786652.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Sonila Emini",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "rain on glass cinematic",
+                "duration": 10,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_8549582",
+                "scene": "rain on glass cinematic",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/8549582/",
+                "downloadUrl": "https://videos.pexels.com/video-files/8549582/8549582-hd_720_1280_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/8549582/pexels-photo-8549582.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Taryn Elliott",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "rain on glass cinematic",
+                "duration": 33,
+                "width": 1080,
+                "height": 1920,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_35170756",
+                "scene": "rain on glass cinematic",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/35170756/",
+                "downloadUrl": "https://videos.pexels.com/video-files/35170756/14900140_360_640_30fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/35170756/some-nights-feel-like-a-test-rain-on-the-glass-a-cold-road-ahead-and-a-silence-that-says-everything-35170756.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Gaber Magdi",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "rain on glass cinematic",
+                "duration": 29,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_16120798",
+                "scene": "luxury car night",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/16120798/",
+                "downloadUrl": "https://videos.pexels.com/video-files/16120798/16120798-hd_720_1280_30fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/16120798/amg-amg63-amggang-amggt-16120798.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "paashuu",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "luxury car night",
+                "duration": 6,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 65,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_6873503",
+                "scene": "luxury car night",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/6873503/",
+                "downloadUrl": "https://videos.pexels.com/video-files/6873503/6873503-hd_1080_1920_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/6873503/pexels-photo-6873503.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Tima Miroshnichenko",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "luxury car night",
+                "duration": 18,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 65,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_16244863",
+                "scene": "luxury car night",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/16244863/",
+                "downloadUrl": "https://videos.pexels.com/video-files/16244863/16244863-hd_1080_1920_30fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/16244863/pexels-photo-16244863.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "paashuu",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "luxury car night",
+                "duration": 5,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 65,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_7231664",
+                "scene": "cinematic dark moody",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/7231664/",
+                "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "MART  PRODUCTION",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "cinematic dark moody",
+                "duration": 15,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_36708258",
+                "scene": "cinematic dark moody",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/36708258/",
+                "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "Cemrecan Yurtman",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "cinematic dark moody",
+                "duration": 16,
+                "width": 2160,
+                "height": 3840,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              },
+              {
+                "id": "pexels_35088565",
+                "scene": "cinematic dark moody",
+                "type": "video",
+                "source": "pexels",
+                "url": "https://www.pexels.com/video/35088565/",
+                "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+                "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+                "creator": "khezez  | خزاز",
+                "license": "pexels",
+                "commercialUse": true,
+                "attributionRequired": false,
+                "copyrightRisk": "none",
+                "keyword": "cinematic dark moody",
+                "duration": 44,
+                "width": 1080,
+                "height": 1920,
+                "format": "mp4",
+                "luxuryScore": 50,
+                "nostalgiaScore": 20,
+                "cinematicScore": 85,
+                "aspectRatio916": false
+              }
+            ],
+            "licenseStatus": "clean",
+            "blockedScenes": [],
+            "attributions": []
+          },
+          "warnings": [],
+          "hasPexels": true,
+          "hasPixabay": false,
+          "hasMixkit": false,
+          "avgLuxuryScore": 56
+        }
+      },
+      {
+        "agentSlug": "video-agent",
+        "agentName": "InVideo AI",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.196Z] InVideo AI gestartet",
+          "[2026-06-29T23:09:11.208Z] ✅ InVideo AI fertig (7ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.192Z",
+        "completedAt": "2026-06-29T23:09:11.205Z",
+        "durationMs": 7,
+        "output": {
+          "videoUrl": "/videos/demo_video.mp4",
+          "videoPath": "public/videos/demo_video.mp4",
+          "prompt": "Create a cinematic short-form video (30 seconds, 9:16 vertical format) in the style of aesthetic Instagram Reels.\n\nTopic: AI replacing jobs\nNiche: Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic\nHook: Die Version von dir, die du sein könntest.\n\nStyle: Dark, moody, cinematic. Smooth transitions. Warm color grading. Fast cuts synced to beat. Text overlays with motivational quotes. No talking heads. Pure montage style — pure cinematic montage style.\n\nScript content:\n[HOOK — 0:00–0:02]\nDie Version von dir, die du sein könntest.\n\n[SCENE 1 — 0:02–0:07]\nDubai Skyline bei Nacht — kein Text, nur Musik und Atmosphäre.\nSlow Motion. Dark Luxury Grading.\n\n[SCENE 2 — 0:07–0:15]\nVOICEOVER / TEXT-OVERLAY:\n\"AI replacing jobs — die meisten sehen das Ergebnis. Nicht den Weg.\"\n\n[SCENE 3 — 0:15–0:25]\nMUSIK-DROP — stärkstes Visual: Luxury-Moment (Auto / Jet / Rooftop).\nTEXT: \"Disziplin ist keine Option. Es ist die einzige Option.\"\n\n[SCENE 4 — 0:25–0:33]\nNostalgie-Moment — Film Grain, warme Farben, Erinnerungen.\nTEXT: \"Du weißt bereits, wer du sein könntest.\"\n\n[CTA — 0:33–0:37]\nTEXT: \"Follow für tägliche Inspiration ↗\"\nEleganter Fade-Out mit Logo/Handle.\n\n---\nCompetitor-Insights: @ ist ein Instagram-Kanal in der \"Finance / Side Hustle\"-Nische. 23.400 Follower · ? Gesamt-Likes · Ø 12.400 Views · 3.8% Engagement. ⚠️ Demo-Daten\nGesamtlänge: ~37 Sekunden | Format: 9:16 | Plattform: IG/TT/YT-Shorts\n\nUse cinematic stock footage or AI-generated clips showing: urban environments, luxury lifestyle, fashion details, travel moments, golden hour shots. Add trending background music. Include captions/subtitles. Export as 9:16 vertical video for Instagram Reels and TikTok.",
+          "style": "Cinematic Dark Luxury Montage",
+          "resolution": "1080x1920 (9:16)",
+          "duration": "30s",
+          "platform": "Instagram Reels / TikTok / YouTube Shorts",
+          "generatedBy": "InVideo AI (Demo Mode)",
+          "note": "Fehler bei InVideo Automatisierung — Mock-Daten werden verwendet",
+          "error": "spawn Unknown system error -88"
+        }
+      },
+      {
+        "agentSlug": "qc-agent",
+        "agentName": "QC Inspector",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.212Z] QC Inspector gestartet",
+          "[2026-06-29T23:09:11.218Z] ✅ QC Inspector fertig (1ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.209Z",
+        "completedAt": "2026-06-29T23:09:11.215Z",
+        "durationMs": 1,
+        "output": {
+          "report": {
+            "passed": true,
+            "overallScore": 91,
+            "blockers": [],
+            "warnings": [],
+            "improvements": [],
+            "dimensions": {
+              "noScamLanguage": {
+                "score": 100,
+                "pass": true,
+                "reason": "Keine Scam-Sprache gefunden"
+              },
+              "hookStrength": {
+                "score": 90,
+                "pass": true,
+                "reason": "Hook stark (42 Zeichen)"
+              },
+              "scriptQuality": {
+                "score": 100,
+                "pass": true,
+                "reason": "Script strukturiert"
+              },
+              "luxuryAesthetic": {
+                "score": 80,
+                "pass": true,
+                "reason": "5 Luxury-Signale gefunden"
+              },
+              "brandConsistency": {
+                "score": 64,
+                "pass": true,
+                "reason": "2/10 Marken-Werte im Content"
+              },
+              "licenseClean": {
+                "score": 100,
+                "pass": true,
+                "reason": "Alle 15 Assets lizenzrein (Pexels/Pixabay/Mixkit)"
+              },
+              "platformOptimization": {
+                "score": 100,
+                "pass": true,
+                "reason": "Format:✅ CTA:✅ Untertitel:✅"
+              },
+              "aspectRatio": {
+                "score": 85,
+                "pass": true,
+                "reason": "9:16 Video von InVideo AI erstellt"
+              },
+              "resolution": {
+                "score": 90,
+                "pass": true,
+                "reason": "1080x1920 (InVideo AI Standard)"
+              },
+              "audioSync": {
+                "score": 85,
+                "pass": true,
+                "reason": "Beat-synced Cuts durch InVideo AI"
+              }
+            }
+          },
+          "passed": true,
+          "overallScore": 91,
+          "blockers": [],
+          "warnings": [],
+          "canUpload": true,
+          "summary": "✅ QC bestanden (91/100) — Upload freigegeben"
+        }
+      },
+      {
+        "agentSlug": "calendar-agent",
+        "agentName": "Content Calendar",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.222Z] Content Calendar gestartet",
+          "[2026-06-29T23:09:11.226Z] ✅ Content Calendar fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.219Z",
+        "completedAt": "2026-06-29T23:09:11.223Z",
+        "durationMs": 0,
+        "output": {
+          "scheduledTime": "2026-07-01T17:00:00.000Z",
+          "scheduledAt": "2026-07-01T17:00:00.000Z",
+          "platforms": [
+            {
+              "platform": "instagram",
+              "time": "morgen 19:00",
+              "timezone": "Europe/Berlin"
+            },
+            {
+              "platform": "tiktok",
+              "time": "morgen 11:00",
+              "timezone": "Europe/Berlin"
+            },
+            {
+              "platform": "youtube",
+              "time": "morgen 15:00",
+              "timezone": "Europe/Berlin"
+            }
+          ],
+          "expectedReach": "Hoch (QC sehr gut)",
+          "bestTimeReason": "Abends 18–21 Uhr: höchste Reichweite in DE/AT/CH",
+          "timezone": "Europe/Berlin"
+        }
+      },
+      {
+        "agentSlug": "upload-agent",
+        "agentName": "Upload Bot",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.229Z] Upload Bot gestartet",
+          "[2026-06-29T23:09:11.232Z] ✅ Upload Bot fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.227Z",
+        "completedAt": "2026-06-29T23:09:11.230Z",
+        "durationMs": 0,
+        "output": {
+          "attempted": true,
+          "videoUrl": "/videos/demo_video.mp4",
+          "title": "AI replacing jobs 🔥 Die Version von dir, die du sein könntes #Shorts",
+          "youtubeUrl": "https://youtube.com/shorts/[pending_1782774551230]",
+          "instagramUrl": null,
+          "tiktokUrl": null,
+          "status": {
+            "youtube": "queued",
+            "instagram": "api_key_missing",
+            "tiktok": "api_key_missing"
+          },
+          "note": "Upload-API-Keys fehlen — konfiguriere YOUTUBE_CLIENT_ID, META_APP_ID, TIKTOK_CLIENT_KEY in .env"
+        }
+      },
+      {
+        "agentSlug": "analytics-agent",
+        "agentName": "Analytics Brain",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.236Z] Analytics Brain gestartet",
+          "[2026-06-29T23:09:11.239Z] ✅ Analytics Brain fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.233Z",
+        "completedAt": "2026-06-29T23:09:11.237Z",
+        "durationMs": 0,
+        "output": {
+          "hasData": true,
+          "platforms": [
+            "youtube"
+          ],
+          "views": 0,
+          "watchTime": 0,
+          "retention": 0,
+          "ctr": 0,
+          "likes": 0,
+          "comments": 0,
+          "shares": 0,
+          "saves": 0,
+          "followerGain": 0,
+          "winningPatterns": [
+            "Cinematic Hook",
+            "Dark Luxury Aesthetic",
+            "Motivational Voiceover"
+          ],
+          "alerts": [
+            "Video live — Analytics in 24–48h verfügbar"
+          ],
+          "recommendations": [
+            "Poste täglich zur besten Zeit",
+            "Teste verschiedene Hooks",
+            "Analysiere Retention-Kurve"
+          ],
+          "measuredAt": "2026-06-29T23:09:11.237Z",
+          "summary": "Video hochgeladen — Analytics werden nach 24h verfügbar"
+        }
+      },
+      {
+        "agentSlug": "engagement-agent",
+        "agentName": "Engagement Analyzer",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.242Z] Engagement Analyzer gestartet",
+          "[2026-06-29T23:09:11.245Z] ✅ Engagement Analyzer fertig (0ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.240Z",
+        "completedAt": "2026-06-29T23:09:11.243Z",
+        "durationMs": 0,
+        "output": {
+          "platform": "all",
+          "faqDetected": [],
+          "contentIdeas": [
+            "Behind-the-scenes Luxury Routine",
+            "Millionaire Morning Routine",
+            "5 Dinge die Erfolgreiche täglich tun"
+          ],
+          "seriesOpportunities": [
+            "Luxury Lifestyle Series",
+            "Discipline Chronicles"
+          ],
+          "communityMood": "aspirational",
+          "topEmotions": [
+            "Inspiration",
+            "Motivation",
+            "Nostalgie"
+          ],
+          "responseTemplates": [
+            "Danke für dein Support 🙏",
+            "Mehr davon kommt bald 🔥"
+          ],
+          "winningTopics": [
+            "Disziplin",
+            "Luxusautos",
+            "Erfolg Mindset"
+          ],
+          "summary": "Engagement Analyzer — wartet auf Post-Upload Daten"
+        }
+      },
+      {
+        "agentSlug": "learning-agent",
+        "agentName": "Learning Agent",
+        "status": "completed",
+        "retryCount": 0,
+        "logs": [
+          "[2026-06-29T23:09:11.248Z] Learning Agent gestartet",
+          "[2026-06-29T23:09:11.254Z] ✅ Learning Agent fertig (3ms)"
+        ],
+        "startedAt": "2026-06-29T23:09:11.246Z",
+        "completedAt": "2026-06-29T23:09:11.252Z",
+        "durationMs": 3,
+        "output": {
+          "topicsTracked": 2,
+          "hooksInLibrary": 2,
+          "hashtagsInLib": 10,
+          "assetKeywordsLib": 4,
+          "learningsTotal": 6,
+          "learningsAdded": 6,
+          "lastUpdated": "2026-06-29T23:09:11.252Z",
+          "message": "✅ Alle Learnings aus erfolgreichem Job gespeichert"
+        }
+      }
+    ],
+    "currentStep": 13,
+    "totalSteps": 14,
+    "retryCount": 0,
+    "triggeredBy": "manual",
+    "startedAt": "2026-06-29T23:09:00.477Z",
+    "completedAt": "2026-06-29T23:09:11.255Z",
+    "videoUrl": "/videos/demo_video.mp4",
+    "qcScore": 91,
+    "qcPassed": true,
+    "uploadUrls": {
+      "youtube": "https://youtube.com/shorts/[pending_1782774551230]",
+      "instagram": null,
+      "tiktok": null
+    }
   }
 ]

@@ -10,9 +10,14 @@ export default function SEOPage() {
   const run = async () => {
     setLoading(true); setData(null)
     try {
-      const tRes  = await fetch('/api/trends', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ niche:'Luxury Lifestyle + Nostalgie + Motivation' }) })
-      const tData = await tRes.json()
-      const topic = tData?.trends?.[0]?.title || 'Luxury Lifestyle'
+      let topic = 'Luxury Lifestyle Mindset'
+      try {
+        const tRes = await fetch('/api/trends')
+        if (tRes.ok) {
+          const tData = await tRes.json()
+          topic = tData?.trends?.[0]?.title || topic
+        }
+      } catch(_) { /* Fallback bleibt */ }
       const sRes  = await fetch('/api/seo', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ topic, niche:'Luxury Lifestyle + Nostalgie + Motivation', platforms:['instagram','tiktok','youtube'] }) })
       setData(await sRes.json())
     } catch(e) { setData({ error: String(e) }) }

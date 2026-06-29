@@ -8,15 +8,13 @@ export async function POST(req: NextRequest) {
   const body = await req.json()
   const { topic, hook, niche, platform, competitorContext } = body
 
-  if (!topic) {
-    return NextResponse.json({ error: 'Topic fehlt' }, { status: 400 })
-  }
+  const finalTopic = topic || 'Luxury Lifestyle Mindset'
 
   const agent = new ScriptAgent()
   const result = await agent.run({
-    topic,
+    topic: finalTopic,
     hook,
-    niche: niche || 'Allgemein',
+    niche: niche || 'Luxury Lifestyle + Nostalgie + Motivation',
     platform: platform || 'TikTok / YouTube Shorts',
     competitorContext: competitorContext as CompetitorContext | undefined,
   })

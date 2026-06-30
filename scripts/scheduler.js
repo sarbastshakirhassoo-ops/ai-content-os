@@ -15,7 +15,17 @@
 //   CRON_SECRET=dein-geheimer-token
 // ─────────────────────────────────────────────────────────────────────────────
 
-require('dotenv').config({ path: '.env.local' })
+// Lese .env ohne externe Abhängigkeiten
+const _fs = require('fs'), _path = require('path')
+for (const _f of ['.env.local', '.env']) {
+  const _fp = _path.resolve(process.cwd(), _f)
+  if (!_fs.existsSync(_fp)) continue
+  _fs.readFileSync(_fp, 'utf8').split('\n').forEach(_line => {
+    const _m = _line.match(/^([A-Z_][A-Z0-9_]*)="?([^"#\n]*)"?\s*$/)
+    if (_m && !process.env[_m[1]]) process.env[_m[1]] = _m[2].trim()
+  })
+}
+
 
 const APP_URL  = process.env.APP_URL       || 'http://localhost:3001'
 const SECRET   = process.env.CRON_SECRET   || ''
@@ -134,9 +144,12 @@ async function triggerPipeline(topic) {
         waited += poll
 
         try {
-          const statusRes = await fetch(`${APP_URL}/api/jobs?id=${jobId}`)
+          // Korrekter Endpoint: /api/jobs/:id (nicht ?id=)
+          const statusRes = await fetch(`${APP_URL}/api/jobs/${jobId}`)
           if (statusRes.ok) {
-            const job = await statusRes.json()
+            const body = await statusRes.json()
+            // Response-Struktur: { job: { status, qcScore, uploadUrls, error } }
+            const job = body.job || body
             if (job.status === 'completed') {
               log(`✅ Job ${jobId} abgeschlossen — QC: ${job.qcScore}/100`, 'SUCCESS')
               if (job.uploadUrls?.youtube) {
@@ -147,7 +160,8 @@ async function triggerPipeline(topic) {
               log(`❌ Job ${jobId} fehlgeschlagen: ${job.error}`, 'ERROR')
               break
             } else {
-              log(`   Job ${jobId}: ${job.status} (${Math.round(waited / 1000)}s)`)
+              const step = job.currentStep !== undefined ? ` | Step ${job.currentStep}/13` : ''
+              log(`   Job ${jobId}: ${job.status}${step} (${Math.round(waited / 1000)}s)`)
             }
           }
         } catch (pollErr) {
@@ -197,7 +211,8 @@ function tick() {
 // ── Sofort-Modus: --now Flag ──────────────────────────────────────────────────
 
 if (process.argv.includes('--now')) {
-  const topic = process.argv[process.argv.indexOf('--topic') + 1] || TOPICS[0]
+  const topicFlagIdx = process.argv.indexOf('--topic')
+  const topic = (topicFlagIdx >= 0 && process.argv[topicFlagIdx + 1]) ? process.argv[topicFlagIdx + 1] : TOPICS[0]
   log(`🔥 Sofort-Modus: "${topic}"`)
   triggerPipeline(topic).then(() => {
     log('Sofort-Run abgeschlossen')

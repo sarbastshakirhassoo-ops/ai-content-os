@@ -15,12 +15,30 @@
 const http    = require('http')
 const https   = require('https')
 const url     = require('url')
+const fs      = require('fs')
+const path    = require('path')
 const { execSync } = require('child_process')
 
-require('dotenv').config({ path: '.env.local' })
+// Lese .env Dateien ohne dotenv-Abhängigkeit
+function loadEnv() {
+  const env = {}
+  const files = ['.env.local', '.env']
+  for (const file of files) {
+    const filePath = path.resolve(process.cwd(), file)
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8')
+      content.split('\n').forEach(line => {
+        const m = line.match(/^([A-Z_][A-Z0-9_]*)="?([^"#\n]*)"?\s*$/)
+        if (m && !env[m[1]]) env[m[1]] = m[2].trim()
+      })
+    }
+  }
+  return env
+}
 
-const CLIENT_ID     = process.env.YOUTUBE_CLIENT_ID
-const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET
+const envVars = loadEnv()
+const CLIENT_ID     = process.env.YOUTUBE_CLIENT_ID     || envVars.YOUTUBE_CLIENT_ID
+const CLIENT_SECRET = process.env.YOUTUBE_CLIENT_SECRET || envVars.YOUTUBE_CLIENT_SECRET
 const REDIRECT_URI  = 'http://localhost:8080/callback'
 const PORT          = 8080
 

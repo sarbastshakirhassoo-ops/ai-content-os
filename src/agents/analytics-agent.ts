@@ -69,7 +69,7 @@ async function getYouTubeVideoAnalytics(
     'views',
     'estimatedMinutesWatched',
     'averageViewPercentage',
-    'cardClickThroughRate',
+    'averageViewDuration',
     'likes',
     'comments',
     'shares',

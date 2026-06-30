@@ -23,6 +23,7 @@ export type TransitionType = 'crossfade' | 'cut' | 'zoom' | 'slide' | 'wipe'
 export interface VideoAsset {
   type: 'video' | 'image' | 'audio'
   url: string
+  downloadUrl?: string        // Direkter Download-Link (Pexels/Pixabay)
   source: 'pexels' | 'pixabay' | 'mixkit' | 'openverse' | 'unsplash' | 'wikimedia' | 'local'
   license: string
   title?: string

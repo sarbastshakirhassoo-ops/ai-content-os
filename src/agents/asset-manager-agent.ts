@@ -14,9 +14,10 @@ async function searchPexels(query: string, type: 'video' | 'image' = 'video'): P
   const key = process.env.PEXELS_API_KEY
   if (!key) return []
   try {
+    // portrait + medium/large für bessere Qualität
     const endpoint = type === 'video'
-      ? `https://api.pexels.com/videos/search?query=${encodeURIComponent(query)}&per_page=4&orientation=portrait`
-      : `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=4&orientation=portrait`
+      ? `https://api.pexels.com/videos/search?query=${encodeURIComponent(query)}&per_page=6&size=medium`
+      : `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=6&orientation=portrait&size=large`
     const res  = await fetch(endpoint, { headers: { Authorization: key } })
     if (!res.ok) return []
     const data = await res.json() as Record<string, unknown>
@@ -25,10 +26,12 @@ async function searchPexels(query: string, type: 'video' | 'image' = 'video'): P
       ? (data.videos as Record<string, unknown>[])
       : (data.photos as Record<string, unknown>[])) || []
 
-    return items.slice(0, 3).map((item, i): Asset => {
+    return items.slice(0, 4).map((item, i): Asset => {
       const id = String(item.id || i)
       const videoFiles = (item.video_files as Record<string, unknown>[]) || []
+      // Bevorzuge HD, dann Full HD, dann was auch immer verfügbar ist
       const hd = videoFiles.find((f: Record<string, unknown>) => (f.quality as string) === 'hd')
+                 || videoFiles.find((f: Record<string, unknown>) => (f.quality as string) === 'sd')
                  || videoFiles[0]
       const url = type === 'video'
         ? String((hd as Record<string, unknown>)?.link || item.url || '')
@@ -164,13 +167,21 @@ export class AssetManagerAgent extends BaseAgent {
       const topic         = input.topic  as string || 'luxury lifestyle'
       const sceneKeywords = (input.sceneKeywords as string[]) || Object.values(ASSET_KEYWORDS).flat().slice(0, 6)
 
-      // Wähle Top-5 Keywords aus allen Nischen-Keywords + scene-spezifischen
+      // Rotiere durch alle Kategorien — inkl. Challenge für project50-Viralität
+      const shuffle = <T>(arr: readonly T[]): T[] => [...arr].sort(() => Math.random() - 0.5)
+      const allPool = shuffle([
+        shuffle(ASSET_KEYWORDS.luxury_cars)[0],
+        shuffle(ASSET_KEYWORDS.cities)[0],
+        shuffle(ASSET_KEYWORDS.cinematic)[0],
+        shuffle(ASSET_KEYWORDS.lifestyle)[0],
+        shuffle(ASSET_KEYWORDS.motivation)[0],
+        shuffle(ASSET_KEYWORDS.challenge)[0],
+        shuffle(ASSET_KEYWORDS.travel)[0],
+      ])
       const allKeywords = [
-        ...sceneKeywords.slice(0, 3),
-        ...ASSET_KEYWORDS.luxury_cars.slice(0, 1),
-        ...ASSET_KEYWORDS.cinematic.slice(0, 1),
-        ...ASSET_KEYWORDS.cities.slice(0, 1),
-      ].slice(0, 5)
+        ...allPool.slice(0, 4),
+        ...sceneKeywords.slice(0, 1),
+      ].filter((k): k is string => Boolean(k)).slice(0, 5)
 
       const allAssets: Asset[]     = []
       const blockedScenes: string[] = []

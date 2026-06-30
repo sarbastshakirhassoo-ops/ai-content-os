@@ -1,0 +1,743 @@
+{
+  "_version": "2.0",
+  "_generator": "AI Content OS — Video Manifest Composer",
+  "_createdAt": "2026-06-30T16:03:58.166Z",
+  "_instructions": "Dieses JSON beschreibt das Video vollständig. Es kann von FFmpeg, CapCut, Premiere oder DaVinci Resolve verwendet werden.",
+  "metadata": {
+    "title": "Disziplin Mindset — Was erfolgreiche Menschen täglich tun",
+    "hook": "Wenn du das siehst, ändert sich alles.",
+    "platform": "instagram-reels",
+    "format": "9:16",
+    "resolution": "1080x1920",
+    "targetDuration": 30,
+    "colorLook": "cinematic-dark",
+    "musicStyle": "Trap Beat — langsam, schwer, cinematic",
+    "hashtags": [],
+    "effects": [
+      "filmGrain",
+      "vignette"
+    ],
+    "transitions": "crossfade"
+  },
+  "scenes": [],
+  "assets": {
+    "video": [
+      {
+        "id": "pexels_7231664",
+        "scene": "cinematic dark moody",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/7231664/",
+        "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "MART  PRODUCTION",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "cinematic dark moody",
+        "duration": 15,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_36708258",
+        "scene": "cinematic dark moody",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/36708258/",
+        "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Cemrecan Yurtman",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "cinematic dark moody",
+        "duration": 16,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_35088565",
+        "scene": "cinematic dark moody",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/35088565/",
+        "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "khezez  | خزاز",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "cinematic dark moody",
+        "duration": 44,
+        "width": 1080,
+        "height": 1920,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_34451675",
+        "scene": "golden hour slow motion",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/34451675/",
+        "downloadUrl": "https://videos.pexels.com/video-files/34451675/14598814_360_640_24fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/34451675/beach-coast-coastal-coastline-34451675.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Mario Krimer",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "golden hour slow motion",
+        "duration": 16,
+        "width": 1080,
+        "height": 1920,
+        "format": "mp4",
+        "luxuryScore": 65,
+        "nostalgiaScore": 40,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_36223942",
+        "scene": "golden hour slow motion",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/36223942/",
+        "downloadUrl": "https://videos.pexels.com/video-files/36223942/15362124_360_640_24fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/36223942/calm-calmness-cinematic-gentle-36223942.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Mario Krimer",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "golden hour slow motion",
+        "duration": 22,
+        "width": 1080,
+        "height": 1920,
+        "format": "mp4",
+        "luxuryScore": 65,
+        "nostalgiaScore": 40,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_32599724",
+        "scene": "golden hour slow motion",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/32599724/",
+        "downloadUrl": "https://videos.pexels.com/video-files/32599724/13901183_360_640_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/32599724/pexels-photo-32599724.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Efrem  Efre",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "golden hour slow motion",
+        "duration": 15,
+        "width": 1080,
+        "height": 1920,
+        "format": "mp4",
+        "luxuryScore": 65,
+        "nostalgiaScore": 40,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_34786652",
+        "scene": "rain on glass cinematic",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/34786652/",
+        "downloadUrl": "https://videos.pexels.com/video-files/34786652/14748705_360_640_30fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/34786652/after-rain-black-and-white-video-calm-atmosphere-cinematic-video-34786652.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Sonila Emini",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "rain on glass cinematic",
+        "duration": 10,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_8549582",
+        "scene": "rain on glass cinematic",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/8549582/",
+        "downloadUrl": "https://videos.pexels.com/video-files/8549582/8549582-hd_720_1280_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/8549582/pexels-photo-8549582.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Taryn Elliott",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "rain on glass cinematic",
+        "duration": 33,
+        "width": 1080,
+        "height": 1920,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_35170756",
+        "scene": "rain on glass cinematic",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/35170756/",
+        "downloadUrl": "https://videos.pexels.com/video-files/35170756/14900140_360_640_30fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/35170756/some-nights-feel-like-a-test-rain-on-the-glass-a-cold-road-ahead-and-a-silence-that-says-everything-35170756.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Gaber Magdi",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "rain on glass cinematic",
+        "duration": 29,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_16120798",
+        "scene": "luxury car night",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/16120798/",
+        "downloadUrl": "https://videos.pexels.com/video-files/16120798/16120798-hd_720_1280_30fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/16120798/amg-amg63-amggang-amggt-16120798.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "paashuu",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "luxury car night",
+        "duration": 6,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 65,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_6873503",
+        "scene": "luxury car night",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/6873503/",
+        "downloadUrl": "https://videos.pexels.com/video-files/6873503/6873503-hd_1080_1920_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/6873503/pexels-photo-6873503.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Tima Miroshnichenko",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "luxury car night",
+        "duration": 18,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 65,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_16244863",
+        "scene": "luxury car night",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/16244863/",
+        "downloadUrl": "https://videos.pexels.com/video-files/16244863/16244863-hd_1080_1920_30fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/16244863/pexels-photo-16244863.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "paashuu",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "luxury car night",
+        "duration": 5,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 65,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_7231664",
+        "scene": "cinematic dark moody",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/7231664/",
+        "downloadUrl": "https://videos.pexels.com/video-files/7231664/7231664-hd_720_1280_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/7231664/pexels-photo-7231664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "MART  PRODUCTION",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "cinematic dark moody",
+        "duration": 15,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_36708258",
+        "scene": "cinematic dark moody",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/36708258/",
+        "downloadUrl": "https://videos.pexels.com/video-files/36708258/15559599_360_640_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/36708258/abstract-aesthetic-background-blue-tones-36708258.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "Cemrecan Yurtman",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "cinematic dark moody",
+        "duration": 16,
+        "width": 2160,
+        "height": 3840,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      },
+      {
+        "id": "pexels_35088565",
+        "scene": "cinematic dark moody",
+        "type": "video",
+        "source": "pexels",
+        "url": "https://www.pexels.com/video/35088565/",
+        "downloadUrl": "https://videos.pexels.com/video-files/35088565/14864598_360_640_25fps.mp4",
+        "thumbnailUrl": "https://images.pexels.com/videos/35088565/pexels-photo-35088565.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=630",
+        "creator": "khezez  | خزاز",
+        "license": "pexels",
+        "commercialUse": true,
+        "attributionRequired": false,
+        "copyrightRisk": "none",
+        "keyword": "cinematic dark moody",
+        "duration": 44,
+        "width": 1080,
+        "height": 1920,
+        "format": "mp4",
+        "luxuryScore": 50,
+        "nostalgiaScore": 20,
+        "cinematicScore": 85,
+        "aspectRatio916": false
+      }
+    ],
+    "image": [],
+    "audio": [],
+    "music": {
+      "recommended": {
+        "title": "Mixkit - Tech House Vibes",
+        "url": "https://cdn.mixkit.co/music/preview/mixkit-tech-house-vibes-130-short.mp3",
+        "bpm": 128
+      },
+      "volume": 0.3,
+      "fadeIn": 1,
+      "fadeOut": 2
+    }
+  },
+  "colorGrading": {
+    "look": "cinematic-dark",
+    "settings": {
+      "brightness": -0.08,
+      "contrast": 1.25,
+      "saturation": 0.75,
+      "shadows": -0.15,
+      "vignette": 0.35,
+      "filmGrain": 0.4,
+      "rgb": {
+        "r": 0.95,
+        "g": 0.95,
+        "b": 1
+      }
+    },
+    "effects": [
+      {
+        "type": "filmGrain",
+        "intensity": 0.4
+      },
+      {
+        "type": "vignette",
+        "intensity": 0.3
+      }
+    ]
+  },
+  "textLayers": [
+    {
+      "id": "hook",
+      "text": "Wenn du das siehst, ändert sich alles.",
+      "startTime": 0.5,
+      "endTime": 3.5,
+      "style": {
+        "fontSize": 48,
+        "fontWeight": 800,
+        "color": "#FFFFFF",
+        "textShadow": "2px 2px 10px rgba(0,0,0,0.9)",
+        "animation": {
+          "in": "fadeInUp",
+          "out": "fadeOut",
+          "duration": 0.4
+        }
+      },
+      "position": {
+        "x": "50%",
+        "y": "76%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-0",
+      "text": "[HOOK — 0:00–0:02]\nWenn du das",
+      "startTime": 0,
+      "endTime": 2.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-1",
+      "text": "siehst, ändert sich alles.\n\n[SCENE 1",
+      "startTime": 2.5,
+      "endTime": 5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-2",
+      "text": "— 0:02–0:07]\nDubai Skyline bei Nacht",
+      "startTime": 5,
+      "endTime": 7.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-3",
+      "text": "— kein Text, nur Musik",
+      "startTime": 7.5,
+      "endTime": 10,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-4",
+      "text": "und Atmosphäre.\nSlow Motion. Dark Luxury",
+      "startTime": 10,
+      "endTime": 12.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-5",
+      "text": "Grading.\n\n[SCENE 2 — 0:07–0:15]\nVOICEOVER /",
+      "startTime": 12.5,
+      "endTime": 15,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-6",
+      "text": "TEXT-OVERLAY:\n\"Disziplin Mindset — Was erfolgreiche",
+      "startTime": 15,
+      "endTime": 17.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-7",
+      "text": "Menschen täglich tun — die",
+      "startTime": 17.5,
+      "endTime": 20,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-8",
+      "text": "meisten sehen das Ergebnis. Nicht",
+      "startTime": 20,
+      "endTime": 22.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-9",
+      "text": "den Weg.\"\n\n[SCENE 3 — 0:15–0:25]\nMUSIK-DROP",
+      "startTime": 22.5,
+      "endTime": 25,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-10",
+      "text": "— stärkstes Visual: Luxury-Moment (Auto",
+      "startTime": 25,
+      "endTime": 27.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-11",
+      "text": "/ Jet / Rooftop).\nTEXT: \"Disziplin",
+      "startTime": 27.5,
+      "endTime": 30,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-12",
+      "text": "ist keine Option. Es ist",
+      "startTime": 30,
+      "endTime": 32.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-13",
+      "text": "die einzige Option.\"\n\n[SCENE 4 —",
+      "startTime": 32.5,
+      "endTime": 35,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    },
+    {
+      "id": "subtitle-14",
+      "text": "0:25–0:33]\nNostalgie-Moment — Film Grain, warme",
+      "startTime": 35,
+      "endTime": 37.5,
+      "style": {
+        "fontSize": 32,
+        "fontWeight": 600,
+        "color": "#FFFFFF",
+        "backgroundColor": "rgba(0,0,0,0.6)",
+        "padding": "6px 14px",
+        "borderRadius": 4
+      },
+      "position": {
+        "x": "50%",
+        "y": "88%",
+        "anchor": "center"
+      }
+    }
+  ],
+  "exportSettings": {
+    "format": "mp4",
+    "codec": "h264",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "videoBitrate": "6M",
+    "audioBitrate": "192k",
+    "audioCodec": "aac",
+    "colorSpace": "yuv420p",
+    "faststart": true
+  },
+  "ffmpegCommand": "# Schritt 1: Hintergrundmusik herunterladen\ncurl -o music.mp3 \"https://cdn.mixkit.co/music/preview/mixkit-tech-house-vibes-130-short.mp3\"\n\n# Schritt 2: Assets herunterladen (für jedes Asset in der assets-Liste)\n# curl -o asset_0.mp4 \"[asset.url]\"\n# curl -o asset_1.mp4 \"[asset.url]\"\n# ...\n\n# Schritt 3: Concat-Datei erstellen\n# echo \"file 'asset_0.mp4'\" > concat.txt\n# echo \"duration Infinity\" >> concat.txt\n# ... (für jedes Asset wiederholen)\n\n# Schritt 4: Video rendern\nffmpeg -y -f concat -safe 0 -i concat.txt -i music.mp3 \\\n  -vf \"scale=1080:1920:force_original_aspect_ratio=decrease,\\\n  pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1,fps=30,\\\n  zoompan=z='if(lte(zoom,1.0),1.05,zoom-0.001)':d=150:s=1080x1920,\\\n  eq=brightness=-0.08:contrast=1.25:saturation=0.75,vignette=PI/4,drawtext=text='Wenn du das siehst, ändert sich alles.':fontsize=46:fontcolor=white:x=(w-text_w)/2:y=h*0.76:enable='between(t,0.5,3.5)':box=1:boxcolor=black@0.55:boxborderw=10\" \\\n  -map 0:v -map 1:a \\\n  -af \"afade=t=in:st=0:d=1,afade=t=out:st=28:d=2,volume=0.3\" \\\n  -c:v libx264 -preset medium -crf 22 -pix_fmt yuv420p \\\n  -c:a aac -b:a 128k -ar 44100 -movflags +faststart \\\n  -t 30 output_video.mp4",
+  "capCutImport": {
+    "steps": [
+      "1. Lade alle Assets aus der \"assets\" Sektion herunter",
+      "2. Öffne CapCut und erstelle neues Projekt (9:16)",
+      "3. Importiere Video-/Bild-Assets in der Reihenfolge der Szenen",
+      "4. Wende Color Look \"cinematic-dark\" an (Filters → Cinematic)",
+      "5. Füge Hook-Text als erstes Text-Element ein (0.5s - 3.5s)",
+      "6. Musik hinzufügen: Mixkit - Tech House Vibes (https://cdn.mixkit.co/music/preview/mixkit-tech-house-vibes-130-short.mp3)",
+      "7. Exportiere als 1080x1920, 30fps, H.264"
+    ]
+  }
+}

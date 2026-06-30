@@ -64,12 +64,18 @@ function downloadFile(url: string, dest: string): Promise<void> {
 }
 
 // ── Color Grade Filter Strings ────────────────────────────────────────────────
+// Ästhetik: 982unlocked / Monaco Night / Old Money European Luxury
 const COLOR_GRADES: Record<string, string> = {
-  'cinematic-dark': 'eq=brightness=-0.08:contrast=1.25:saturation=0.75,vignette=PI/4',
-  'warm-golden':    'eq=brightness=0.05:contrast=1.1:saturation=1.3,colorbalance=rs=0.15:gs=0.05:bs=-0.1,vignette=PI/6',
-  'cool-blue':      'eq=brightness=0:contrast=1.15:saturation=0.85,colorbalance=rs=-0.1:gs=0:bs=0.15',
-  'vintage':        'eq=brightness=-0.05:contrast=0.9:saturation=0.6,vignette=PI/3,noise=c0s=6:allf=t',
-  'clean':          'eq=brightness=0.05:contrast=1.05:saturation=1.15',
+  // Standard: Monaco Night  -  kühles Blau, hoher Kontrast, exklusiv dunkel
+  'cinematic-dark': 'eq=brightness=-0.06:contrast=1.3:saturation=0.65,colorbalance=rs=-0.06:gs=-0.02:bs=0.12,vignette=PI/3.5',
+  // Warm-Gold für Golden Hour Content
+  'warm-golden':    'eq=brightness=0.03:contrast=1.15:saturation=1.1,colorbalance=rs=0.1:gs=0.03:bs=-0.08,vignette=PI/5',
+  // Teal & Orange  -  standard Hollywood Cinematic Look
+  'cool-blue':      'eq=brightness=-0.04:contrast=1.25:saturation=0.7,colorbalance=rs=-0.08:gs=0.02:bs=0.18,vignette=PI/4',
+  // Vintage Film  -  für Nostalgie-Content
+  'vintage':        'eq=brightness=-0.03:contrast=0.95:saturation=0.55,colorbalance=rs=0.05:gs=0.02:bs=-0.05,vignette=PI/3,noise=c0s=8:allf=t',
+  // Clean Luxury  -  minimalistisch hell
+  'clean':          'eq=brightness=0.04:contrast=1.1:saturation=0.9,vignette=PI/6',
 }
 
 // ── Musik URLs (kostenlos via Mixkit CDN) ─────────────────────────────────────
@@ -84,7 +90,7 @@ const MUSIC_URLS: Record<string, string> = {
 export class FFmpegGenerator implements VideoGenerator {
   readonly id = 'ffmpeg'
   readonly name = 'FFmpeg Local Renderer'
-  readonly description = 'Lokale Video-Erstellung aus Assets — kein API Key nötig. Ken Burns, Übergänge, Untertitel, Color Grading, Film Grain.'
+  readonly description = 'Lokale Video-Erstellung aus Assets  -  kein API Key nötig. Ken Burns, Übergänge, Untertitel, Color Grading, Film Grain.'
   readonly type = 'local' as const
   readonly priority = 1
   readonly cost = 'free' as const
@@ -135,7 +141,8 @@ export class FFmpegGenerator implements VideoGenerator {
         const ext = asset.type === 'video' ? '.mp4' : '.jpg'
         const dest = path.join(tmpDir, `asset-${i}${ext}`)
         try {
-          await downloadFile(asset.url, dest)
+          const dlUrl = asset.downloadUrl || asset.url
+          await downloadFile(dlUrl, dest)
           if (fs.existsSync(dest) && fs.statSync(dest).size > 1000) {
             downloaded.push(dest)
           }
@@ -145,7 +152,7 @@ export class FFmpegGenerator implements VideoGenerator {
       }
 
       if (downloaded.length === 0) {
-        throw new Error('Keine Assets heruntergeladen — überprüfe Asset-URLs im Asset Manager')
+        throw new Error('Keine Assets heruntergeladen  -  überprüfe Asset-URLs im Asset Manager')
       }
 
       // ── Musik herunterladen ─────────────────────────────────────────────────
@@ -157,24 +164,34 @@ export class FFmpegGenerator implements VideoGenerator {
         await downloadFile(musicUrl, musicFile)
         hasMusicFile = fs.existsSync(musicFile) && fs.statSync(musicFile).size > 5000
       } catch {
-        console.warn('[FFmpegGenerator] Musik-Download fehlgeschlagen — ohne Musik')
+        console.warn('[FFmpegGenerator] Musik-Download fehlgeschlagen  -  ohne Musik')
       }
 
-      // ── Untertitel/Hook Text ────────────────────────────────────────────────
-      const hookEscaped = (params.hook || '')
-        .substring(0, 55)
-        .replace(/'/g, "’")
-        .replace(/:/g, '\\:')
-        .replace(/\[/g, '\\[')
-        .replace(/\]/g, '\\]')
+      // ── Text-Overlay via Python/Pillow (kein libfreetype nötig) ───────────
+      const hookText    = (params.hook || '').substring(0, 60).trim()
+      const overlayFile = path.join(tmpDir, 'text_overlay.png')
+      let hasTextOverlay = false
 
-      const hookFilter = hookEscaped
-        ? `,drawtext=text='${hookEscaped}':fontsize=46:fontcolor=white:x=(w-text_w)/2:y=h*0.76:enable='between(t,0.5,3.5)':box=1:boxcolor=black@0.55:boxborderw=10:font='Arial Bold'`
-        : ''
+      if (hookText) {
+        try {
+          const scriptPath = path.join(process.cwd(), 'scripts', 'create_text_overlay.py')
+          const safeText   = hookText.replace(/"/g, '\\"')
+          await execAsync(
+            `python3 "${scriptPath}" "${safeText}" ${format.w} ${format.h} "${overlayFile}"`,
+            { timeout: 15000 }
+          )
+          hasTextOverlay = fs.existsSync(overlayFile) && fs.statSync(overlayFile).size > 1000
+          console.log(`[FFmpegGenerator] Text-Overlay: ${hasTextOverlay ? 'OK' : 'FEHLER'} "${hookText}"`)
+        } catch (e) {
+          console.warn('[FFmpegGenerator] Text-Overlay fehlgeschlagen:', e instanceof Error ? e.message : e)
+        }
+      }
 
-      // ── Film Grain Overlay ──────────────────────────────────────────────────
+      // drawtext-Filter deaktiviert (kein libfreetype auf Mac Homebrew FFmpeg)
+      const hookFilter  = ''
+      // ── Film Grain ─────────────────────────────────────────────────────────
       const grainFilter = params.effects.includes('filmGrain')
-        ? ',noise=c0s=5:c0f=u+t'
+        ? ',noise=c0s=4:c0f=u+t'
         : ''
 
       // ── FFmpeg Command wählen ───────────────────────────────────────────────
@@ -182,19 +199,26 @@ export class FFmpegGenerator implements VideoGenerator {
       let cmd: string
 
       if (useVideos) {
-        cmd = this.buildVideoCommand(downloaded, outputFile, format, sceneLen, params, colorFilter, hookFilter, grainFilter, hasMusicFile ? musicFile : null)
+        cmd = this.buildVideoCommand(downloaded, outputFile, format, sceneLen, params, colorFilter, hookFilter, grainFilter, hasMusicFile ? musicFile : null, hasTextOverlay ? overlayFile : null)
       } else {
         cmd = this.buildImageCommand(downloaded, outputFile, format, sceneLen, params, colorFilter, hookFilter, grainFilter, hasMusicFile ? musicFile : null)
       }
 
-      console.log(`[FFmpegGenerator] Render startet — ${downloaded.length} Assets, ${format.w}x${format.h}`)
-      await execAsync(cmd, { timeout: 300_000, maxBuffer: 50 * 1024 * 1024 })
+      console.log(`[FFmpegGenerator] Render startet  -  ${downloaded.length} Assets, ${format.w}x${format.h}`)
+      console.log(`[FFmpegGenerator] CMD: ${cmd.slice(0, 300)}`)
+      try {
+        await execAsync(cmd, { timeout: 300_000, maxBuffer: 50 * 1024 * 1024 })
+      } catch (ffmpegErr) {
+        const e = ffmpegErr as { message?: string; stderr?: string; stdout?: string }
+        console.error('[FFmpegGenerator] FFmpeg stderr:', e.stderr?.slice(-2000) || e.message)
+        throw ffmpegErr
+      }
 
       // ── Cleanup ─────────────────────────────────────────────────────────────
       fs.rmSync(tmpDir, { recursive: true, force: true })
 
       if (!fs.existsSync(outputFile)) {
-        throw new Error('FFmpeg Output-Datei nicht gefunden — Render fehlgeschlagen')
+        throw new Error('FFmpeg Output-Datei nicht gefunden  -  Render fehlgeschlagen')
       }
 
       return {
@@ -233,7 +257,8 @@ export class FFmpegGenerator implements VideoGenerator {
     files: string[], out: string, fmt: { w: number; h: number },
     sceneLen: number, params: VideoGenerationParams,
     colorFilter: string, hookFilter: string, grainFilter: string,
-    musicFile: string | null
+    musicFile: string | null,
+    textOverlayFile: string | null
   ): string {
     const concatFile = path.join(path.dirname(out), `concat-${Date.now()}.txt`)
     const concatContent = files.map(f =>
@@ -241,20 +266,45 @@ export class FFmpegGenerator implements VideoGenerator {
     ).join('\n')
     fs.writeFileSync(concatFile, concatContent)
 
-    const audioInput = musicFile ? `-i "${musicFile}"` : ''
-    const audioMap = musicFile
-      ? `-map 0:v -map 1:a -af "afade=t=in:st=0:d=1,afade=t=out:st=${params.targetDuration - 2}:d=2,volume=0.3"`
-      : '-an'
+    const hasOverlay  = textOverlayFile && fs.existsSync(textOverlayFile)
+    const audioInput  = musicFile ? `-i "${musicFile}"` : ''
+    const overlayInput = hasOverlay ? `-i "${textOverlayFile}"` : ''
 
-    return `ffmpeg -y -f concat -safe 0 -i "${concatFile}" ${audioInput} \
--vf "scale=${fmt.w}:${fmt.h}:force_original_aspect_ratio=decrease,\
-pad=${fmt.w}:${fmt.h}:(ow-iw)/2:(oh-ih)/2:black,\
-setsar=1,fps=30,\
-zoompan=z='if(lte(zoom,1.0),1.05,zoom-0.001)':d=150:s=${fmt.w}x${fmt.h},\
-${colorFilter}${hookFilter}${grainFilter}" \
-${audioMap} \
--c:v libx264 -preset medium -crf 22 -pix_fmt yuv420p \
--c:a aac -b:a 128k -ar 44100 \
+    // Input-Indices: 0=video, 1=music(optional), 2=overlay(optional)
+    const musicIdx   = musicFile ? 1 : -1
+    const overlayIdx = hasOverlay ? (musicFile ? 2 : 1) : -1
+
+    const vfBase = [
+      `scale=${fmt.w}:${fmt.h}:force_original_aspect_ratio=decrease`,
+      `pad=${fmt.w}:${fmt.h}:(ow-iw)/2:(oh-ih)/2:black`,
+      `setsar=1`,
+      `fps=30`,
+      colorFilter.replace(/,+$/, ''),
+      grainFilter.replace(/^,+/, '') || '',
+    ].filter(Boolean).join(',')
+
+    let filterComplex: string
+    let videoMap: string
+
+    if (hasOverlay) {
+      // Mit Text-Overlay: filter_complex für composite
+      filterComplex = `-filter_complex "[0:v]${vfBase}[base];[base][${overlayIdx}:v]overlay=0:0[out]"`
+      videoMap = '-map "[out]"'
+    } else {
+      filterComplex = `-vf "${vfBase}"`
+      videoMap = '-map 0:v'
+    }
+
+    const audioMap   = musicFile ? `-map ${musicIdx}:a` : '-an'
+    const audioCodec = musicFile
+      ? `-c:a aac -b:a 128k -ar 44100 -af "afade=t=in:st=0:d=0.5,afade=t=out:st=${params.targetDuration - 2}:d=2,volume=0.25"`
+      : ''
+
+    return `ffmpeg -y -f concat -safe 0 -i "${concatFile}" ${audioInput} ${overlayInput} \
+${filterComplex} \
+${videoMap} ${audioMap} \
+${audioCodec} \
+-c:v libx264 -preset fast -crf 20 -pix_fmt yuv420p \
 -movflags +faststart \
 -t ${params.targetDuration} "${out}"`
   }

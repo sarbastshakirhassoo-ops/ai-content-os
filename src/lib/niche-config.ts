@@ -72,30 +72,93 @@ export const VISUAL_THEMES = [
 
 // ── Asset Keywords für Suchanfragen ──────────────────────────────────────────
 
+// ── Asset Keywords — optimiert für Pexels, die tatsächlich HD-Footage liefern ──
+// Ästhetik: 982unlocked / SOM Studios / Barletta Network
+// Europäisch, Wien/Monaco/Paris — DISZIPLIN + CHALLENGE + DARK CINEMATIC
+// Kein Dubai-Gold, kein Lamborghini-Protz — geerdet, exklusiv, real
 export const ASSET_KEYWORDS = {
-  luxury_cars: ['luxury car night', 'sports car rain', 'lamborghini cinematic', 'ferrari golden hour', 'luxury automobile'],
-  travel: ['private jet interior', 'yacht luxury', 'first class flight', 'luxury villa pool', 'penthouse rooftop view'],
-  cities: ['dubai skyline night', 'new york city night', 'miami neon lights', 'monaco luxury', 'tokyo neon street'],
-  lifestyle: ['luxury lifestyle aesthetic', 'millionaire lifestyle', 'success motivation', 'billionaire aesthetic', 'luxury fashion'],
-  cinematic: ['cinematic dark moody', 'golden hour slow motion', 'rain on glass cinematic', 'luxury b-roll', 'dark aesthetic'],
-  nostalgia: ['film grain vintage', 'super 8 film', 'nostalgic light leak', 'retro cinematic', 'analog aesthetic'],
+  luxury_cars: [
+    'porsche rain night road',    // Europäisches Fahrgefühl — geerdet
+    'car driving rain road',      // Nasse Straße, Lichtreflexe
+    'classic car wet street',     // Old Money Cars in Europastil
+    'car headlights fog night',   // Mystisch, cinematisch
+    'black car city night',       // Minimalistisch, dunkel
+  ],
+  travel: [
+    'sailing boat ocean sunset',  // Meer, Freiheit, Weite
+    'mountain road aerial drone', // Europäische Berglandschaft
+    'train window landscape',     // Nostalgie, Reise, Gedanken
+    'airplane window clouds',     // Perspektive von oben
+    'harbor boats morning fog',   // Ruhig, exklusiv, europäisch
+  ],
+  cities: [
+    'vienna city night rain',     // Wien — Barletta Network HQ
+    'paris street night lights',  // Europäische Großstadt
+    'city rain night reflections', // Nasse Straßen, Lichtreflexe
+    'london street night fog',    // Dark, europäisch, mystisch
+    'city lights aerial night',   // Skyline — cinematic
+  ],
+  lifestyle: [
+    'man walking alone city night', // Lone wolf / project50 vibe
+    'person working desk night',   // Disziplin, Hustle, Nacht
+    'morning routine cold water',  // Challenge-Ästhetik (project50)
+    'coffee table books luxury',   // Old money interior
+    'handshake business deal',     // Erfolg, Netzwerk, Founder
+  ],
+  cinematic: [
+    'slow motion rain drops glass', // Atmosphäre — SOM Studios Style
+    'cinematic dark moody forest',  // Mystisch, europäisch
+    'fog mountain road cinematic',  // Weite, Einsamkeit, Stärke
+    'dramatic clouds sunset field', // Epische Stimmung
+    'candlelight dark room',        // Exklusiv, intim, dunkel
+  ],
+  motivation: [
+    'silhouette mountain summit',  // Mann gegen Horizont — aspirational
+    'running alone early morning', // Disziplin, project50 Challenge
+    'boxing training alone gym',   // Harte Arbeit, kein Publikum
+    'writing journal morning',     // Reflexion, Mindset, Growth
+    'cold shower discipline',      // Challenge-Content (viral)
+  ],
+  // nostalgia-Alias für Script-Agent Kompatibilität
+  nostalgia: [
+    'super 8 film grain road',    // Film-Ästhetik wie SOM Studios
+    'retro cinematic summer',     // Nostalgie, Erinnerung
+    'analog film photography',    // Vintage Look
+    'old home video family',      // Emotionale Nostalgie
+    'kodak film grain sunset',    // Warmer Nostalgie-Ton
+  ],
+  // Challenge-Format — viral wie project50days (148K follower)
+  challenge: [
+    'cold water plunge morning',  // Project50-Style Challenge
+    'morning run sunrise city',   // 5am Club Ästhetik
+    'discipline workout alone',   // No audience, just work
+    'journal writing sunrise',    // Reflection & growth
+    'fasting meditation silence', // Mental discipline
+  ],
 } as const
 
 // ── Hook-Bibliothek ───────────────────────────────────────────────────────────
 
 export const HOOK_TEMPLATES = [
-  'Das haben sie dir nie gesagt über {topic}...',
-  'Wenn du das siehst, ändert sich alles.',
-  'Die Version von dir, die du sein könntest.',
-  '{number} Dinge, die reiche Menschen täglich tun.',
-  'Das ist der Unterschied zwischen arm und reich.',
-  'In {number} Jahren wirst du dir wünschen, das früher gewusst zu haben.',
-  'Die meisten träumen davon. Wenige tun es.',
-  'Das echte Leben des {topic}.',
-  'Niemand zeigt dir die wahre Seite von {topic}.',
-  'Dieser Moment änderte alles.',
-  '{number} Sekunden, die dein Leben verändern können.',
+  // Challenge-Format (project50days-Stil — viral)
+  '{number} Tage. Kein Alkohol. Kein Social Media. Jeden Tag 5 Uhr aufstehen.',
+  'Was passiert, wenn du {number} Tage lang keine Abkürzungen nimmst?',
+  'Die meisten geben nach {number} Tagen auf. Schaffst du es bis Tag 50?',
+  // Lone-Wolf / Disziplin (982unlocked-Stil)
   'Das ist kein Zufall. Das ist Disziplin.',
+  'Die Version von dir, die du sein könntest.',
+  'Niemand sieht es. Du tust es trotzdem.',
+  'Um 5 Uhr morgens, während alle schlafen.',
+  // Europäisch-geerdet (SOM Studios / Barletta-Stil)
+  'Manche bauen Empires. Andere scrollen.',
+  'Nicht jeder ist gemacht dafür. Du weißt, zu welcher Gruppe du gehörst.',
+  'Die Leute, die du bewunderst — sie fangen auch gerade wieder von vorn an.',
+  // Nostalgie + Emotion
+  'In {number} Jahren wirst du froh sein, heute angefangen zu haben.',
+  'Dieser Moment änderte alles.',
+  // Klassische Hooks
+  'Die meisten träumen davon. Wenige tun es.',
+  'In {number} Jahren wirst du dir wünschen, das früher gewusst zu haben.',
 ] as const
 
 // ── Script-Struktur ───────────────────────────────────────────────────────────

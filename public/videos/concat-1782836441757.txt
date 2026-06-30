@@ -1,0 +1,10 @@
+file '/Users/sarbast/Library/Application Support/Claude/local-agent-mode-sessions/41d54a93-44c3-412b-ae0f-05f06b6fdfdb/4783434a-d570-4a90-b5d9-4bf1283671be/local_71a0efe7-e905-4fd6-b29a-c4ae73b878e3/outputs/ai-content-os/tmp/vgen-job-1782836440533/asset-0.mp4'
+duration 6.00
+file '/Users/sarbast/Library/Application Support/Claude/local-agent-mode-sessions/41d54a93-44c3-412b-ae0f-05f06b6fdfdb/4783434a-d570-4a90-b5d9-4bf1283671be/local_71a0efe7-e905-4fd6-b29a-c4ae73b878e3/outputs/ai-content-os/tmp/vgen-job-1782836440533/asset-1.mp4'
+duration 6.00
+file '/Users/sarbast/Library/Application Support/Claude/local-agent-mode-sessions/41d54a93-44c3-412b-ae0f-05f06b6fdfdb/4783434a-d570-4a90-b5d9-4bf1283671be/local_71a0efe7-e905-4fd6-b29a-c4ae73b878e3/outputs/ai-content-os/tmp/vgen-job-1782836440533/asset-2.mp4'
+duration 6.00
+file '/Users/sarbast/Library/Application Support/Claude/local-agent-mode-sessions/41d54a93-44c3-412b-ae0f-05f06b6fdfdb/4783434a-d570-4a90-b5d9-4bf1283671be/local_71a0efe7-e905-4fd6-b29a-c4ae73b878e3/outputs/ai-content-os/tmp/vgen-job-1782836440533/asset-3.mp4'
+duration 6.00
+file '/Users/sarbast/Library/Application Support/Claude/local-agent-mode-sessions/41d54a93-44c3-412b-ae0f-05f06b6fdfdb/4783434a-d570-4a90-b5d9-4bf1283671be/local_71a0efe7-e905-4fd6-b29a-c4ae73b878e3/outputs/ai-content-os/tmp/vgen-job-1782836440533/asset-4.mp4'
+duration 6.00

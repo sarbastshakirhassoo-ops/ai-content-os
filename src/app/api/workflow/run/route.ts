@@ -27,7 +27,7 @@ import { EngagementAgent }   from '@/agents/engagement-agent'
 import { LearningAgent }     from '@/agents/learning-agent'
 
 export const dynamic     = 'force-dynamic'
-export const maxDuration = 600
+export const maxDuration = 60  // Route antwortet sofort — Pipeline läuft im Background
 
 const MAX_RETRIES = 2
 const RETRY_DELAY = 1500
@@ -83,42 +83,38 @@ async function runStep(
   return result.data
 }
 
-export async function POST(req: NextRequest) {
-  const body        = await req.json().catch(() => ({}))
-  const jobId       = body.jobId as string | undefined
-  const niche       = (body.niche       as string) || NICHE
-  const topic       = (body.topic       as string) || ''
-  const triggeredBy = (body.triggeredBy as 'manual' | 'scheduled' | 'auto') || 'manual'
-
-  // Use existing job if jobId provided, otherwise create new one
-  let job = jobId ? (await import('@/lib/job-store').then(m => m.getJob(jobId))) ?? null : null
-  if (!job) job = createJob({ niche, topic, triggeredBy })
-  updateJob(job.id, { status: 'running', startedAt: new Date().toISOString() })
-
+// ── Background-Pipeline (wird ohne await gestartet) ───────────────────────────
+async function runPipeline(
+  jobId: string,
+  niche: string,
+  topic: string,
+): Promise<void> {
   const ctx: Record<string, unknown> = { niche, topic }
 
   try {
+    updateJob(jobId, { status: 'running', startedAt: new Date().toISOString() })
+
     // Step 0 — Trend Scout
-    const trendData = await runStep(job.id, 0, PIPELINE_AGENTS[0].name, async () => {
+    const trendData = await runStep(jobId, 0, PIPELINE_AGENTS[0].name, async () => {
       const r = await new TrendAgent().run({ niche, topic }); return r.data || {}
     })
     Object.assign(ctx, trendData)
 
     // Step 1 — Competitor Analyst
-    const competitorData = await runStep(job.id, 1, PIPELINE_AGENTS[1].name, async () => {
+    const competitorData = await runStep(jobId, 1, PIPELINE_AGENTS[1].name, async () => {
       const r = await new CompetitorAgent().run({ niche, ...ctx }); return r.data || {}
     })
     Object.assign(ctx, competitorData)
 
     // Step 2 — Knowledge Base
-    const knowledgeData = await runStep(job.id, 2, PIPELINE_AGENTS[2].name, async () => {
+    const knowledgeData = await runStep(jobId, 2, PIPELINE_AGENTS[2].name, async () => {
       const r = await new KnowledgeAgent().run({ niche, topic: (ctx.topTrend as string) || topic, ...ctx })
       return r.data || {}
     })
     Object.assign(ctx, knowledgeData)
 
     // Step 3 — Script Writer
-    const scriptData = await runStep(job.id, 3, PIPELINE_AGENTS[3].name, async () => {
+    const scriptData = await runStep(jobId, 3, PIPELINE_AGENTS[3].name, async () => {
       const r = await new ScriptAgent().run({
         niche,
         topic:      (ctx.topTrend as string) || topic || 'Luxury Lifestyle Motivation',
@@ -131,19 +127,19 @@ export async function POST(req: NextRequest) {
     Object.assign(ctx, scriptData)
 
     // Step 4 — SEO Optimizer
-    const seoData = await runStep(job.id, 4, PIPELINE_AGENTS[4].name, async () => {
+    const seoData = await runStep(jobId, 4, PIPELINE_AGENTS[4].name, async () => {
       const r = await new SEOAgent().run({ niche, ...scriptData }); return r.data || {}
     })
     Object.assign(ctx, seoData)
 
     // Step 5 — Brand Consistency
-    const brandData = await runStep(job.id, 5, PIPELINE_AGENTS[5].name, async () => {
+    const brandData = await runStep(jobId, 5, PIPELINE_AGENTS[5].name, async () => {
       const r = await new BrandAgent().run({ niche, ...scriptData, ...seoData }); return r.data || {}
     })
     Object.assign(ctx, brandData)
 
     // Step 6 — Asset Manager
-    const assetData = await runStep(job.id, 6, PIPELINE_AGENTS[6].name, async () => {
+    const assetData = await runStep(jobId, 6, PIPELINE_AGENTS[6].name, async () => {
       const r = await new AssetManagerAgent().run({
         niche,
         topic:         (scriptData.topic     as string) || topic,
@@ -155,8 +151,8 @@ export async function POST(req: NextRequest) {
     })
     Object.assign(ctx, assetData)
 
-    // Step 7 — InVideo AI
-    const videoData = await runStep(job.id, 7, PIPELINE_AGENTS[7].name, async () => {
+    // Step 7 — Video Engine (FFmpeg)
+    const videoData = await runStep(jobId, 7, PIPELINE_AGENTS[7].name, async () => {
       const r = await new VideoAgent().run({
         niche,
         topic:         (scriptData.topic      as string) || topic,
@@ -172,7 +168,7 @@ export async function POST(req: NextRequest) {
     Object.assign(ctx, videoData)
 
     // Step 8 — QC Inspector
-    const qcData = await runStep(job.id, 8, PIPELINE_AGENTS[8].name, async () => {
+    const qcData = await runStep(jobId, 8, PIPELINE_AGENTS[8].name, async () => {
       const r = await new QCAgent().run({
         niche,
         topic:         (scriptData.topic     as string) || topic,
@@ -190,10 +186,10 @@ export async function POST(req: NextRequest) {
     const qcScore  = (qcReport?.overallScore ?? 0) as number
     const qcPassed = (qcReport?.passed ?? false)   as boolean
 
-    // Step 9 — Content Calendar (blockiert wenn QC failed)
-    const calendarData = await runStep(job.id, 9, PIPELINE_AGENTS[9].name, async () => {
+    // Step 9 — Content Calendar
+    const calendarData = await runStep(jobId, 9, PIPELINE_AGENTS[9].name, async () => {
       if (!qcPassed) {
-        updateJobStep(job.id, 9, { status: 'blocked' })
+        updateJobStep(jobId, 9, { status: 'blocked' })
         return { skipped: true, reason: `QC Score ${qcScore} — Upload blockiert` }
       }
       const r = await new CalendarAgent().run({ niche, topic: scriptData.topic as string || topic, platforms: ['instagram','tiktok','youtube'], qcScore })
@@ -201,10 +197,10 @@ export async function POST(req: NextRequest) {
     })
     Object.assign(ctx, calendarData)
 
-    // Step 10 — Upload Bot (blockiert wenn QC failed)
-    const uploadData = await runStep(job.id, 10, PIPELINE_AGENTS[10].name, async () => {
+    // Step 10 — Upload Bot
+    const uploadData = await runStep(jobId, 10, PIPELINE_AGENTS[10].name, async () => {
       if (!qcPassed) {
-        updateJobStep(job.id, 10, { status: 'blocked' })
+        updateJobStep(jobId, 10, { status: 'blocked' })
         return { skipped: true, reason: 'Kein Upload ohne QC-Freigabe' }
       }
       const r = await new UploadAgent().run({
@@ -224,26 +220,26 @@ export async function POST(req: NextRequest) {
     Object.assign(ctx, uploadData)
 
     // Step 11 — Analytics Brain
-    const analyticsData = await runStep(job.id, 11, PIPELINE_AGENTS[11].name, async () => {
+    const analyticsData = await runStep(jobId, 11, PIPELINE_AGENTS[11].name, async () => {
       const r = await new AnalyticsAgent().run({ niche, ...uploadData }); return r.data || {}
     })
     Object.assign(ctx, analyticsData)
 
     // Step 12 — Engagement Analyzer
-    const engagementData = await runStep(job.id, 12, PIPELINE_AGENTS[12].name, async () => {
+    const engagementData = await runStep(jobId, 12, PIPELINE_AGENTS[12].name, async () => {
       const r = await new EngagementAgent().run({ niche, ...uploadData, ...analyticsData }); return r.data || {}
     })
     Object.assign(ctx, engagementData)
 
     // Step 13 — Learning Agent
-    await runStep(job.id, 13, PIPELINE_AGENTS[13].name, async () => {
+    await runStep(jobId, 13, PIPELINE_AGENTS[13].name, async () => {
       const r = await new LearningAgent().run({ niche, scriptData, seoData, assetData, qcData, analyticsData, engagementData, qcScore, qcPassed })
       return r.data || {}
     })
 
     // Job abschließen
     const urls = uploadData as { youtubeUrl?: string; instagramUrl?: string; tiktokUrl?: string }
-    completeJob(job.id, {
+    completeJob(jobId, {
       videoUrl:   videoData.videoUrl as string | undefined,
       qcScore, qcPassed,
       uploadUrls: { youtube: urls.youtubeUrl, instagram: urls.instagramUrl, tiktok: urls.tiktokUrl },
@@ -256,7 +252,7 @@ export async function POST(req: NextRequest) {
       const vPath = path.join(process.cwd(), 'data', 'videos.json')
       const existing = fs.existsSync(vPath) ? JSON.parse(fs.readFileSync(vPath, 'utf-8')) : []
       const newVideo = {
-        id: `v_${Date.now()}`, jobId: job.id,
+        id: `v_${Date.now()}`, jobId,
         title: (seoData.youtubeTitle as string) || (scriptData.topic as string) || topic,
         topic: (scriptData.topic as string) || topic,
         niche,
@@ -278,17 +274,38 @@ export async function POST(req: NextRequest) {
       fs.writeFileSync(vPath, JSON.stringify([newVideo, ...existing].slice(0, 100), null, 2))
     } catch { /* nicht kritisch */ }
 
-    return NextResponse.json({
-      ok: true, jobId: job.id, status: 'completed',
-      qcScore, qcPassed,
-      videoUrl: videoData.videoUrl || null,
-      uploadUrls: urls,
-      stepsCompleted: 14,
-    })
-
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e)
-    failJob(job.id, msg)
-    return NextResponse.json({ ok: false, jobId: job.id, error: msg }, { status: 500 })
+    failJob(jobId, msg)
+    console.error(`[workflow] Pipeline fehlgeschlagen: ${msg}`)
   }
+}
+
+// ── POST /api/workflow/run ────────────────────────────────────────────────────
+// Erstellt Job sofort, startet Pipeline im Background, gibt jobId zurück
+export async function POST(req: NextRequest) {
+  const body        = await req.json().catch(() => ({}))
+  const niche       = (body.niche       as string) || NICHE
+  const topic       = (body.topic       as string) || ''
+  const triggeredBy = (body.triggeredBy as 'manual' | 'scheduled' | 'auto') || 'manual'
+
+  // Job sofort erstellen → jobId steht bereit
+  const job = createJob({ niche, topic, triggeredBy })
+
+  // Pipeline im Background starten — NICHT awaiten
+  runPipeline(job.id, niche, topic).catch(e =>
+    console.error(`[workflow] Unerwarteter Fehler: ${e instanceof Error ? e.message : e}`)
+  )
+
+  // Sofort antworten — Pipeline läuft im Hintergrund
+  return NextResponse.json({
+    ok:          true,
+    jobId:       job.id,
+    status:      'queued',
+    topic,
+    niche,
+    triggeredBy,
+    startedAt:   new Date().toISOString(),
+    pollUrl:     `/api/jobs/${job.id}`,
+  })
 }

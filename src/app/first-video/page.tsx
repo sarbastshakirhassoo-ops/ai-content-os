@@ -39,7 +39,7 @@ export default function FirstVideoPage() {
       {/* Header */}
       <div>
         <h1 className="text-xl font-bold text-white">🎬 Erste 3 Videos — Fertig zur Produktion</h1>
-        <p className="text-xs text-muted mt-0.5">Wochenplan automatisch generiert · InVideo AI Prompts bereit</p>
+        <p className="text-xs text-muted mt-0.5">Wochenplan automatisch generiert · Video Engine bereit</p>
       </div>
 
       {/* Wochenplan Tabs */}

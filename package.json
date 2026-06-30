@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "db:push": "prisma db push",
-    "db:studio": "prisma studio"
+    "db:studio": "prisma studio",
+    "scheduler": "node scripts/scheduler.js",
+    "scheduler:now": "node scripts/scheduler.js --now",
+    "youtube:token": "node scripts/get-youtube-token.js",
+    "dev:full": "concurrently \"npm run dev\" \"sleep 5 && npm run scheduler\""
   },
   "dependencies": {
     "@xyflow/react": "^12.0.0",

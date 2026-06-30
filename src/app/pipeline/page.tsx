@@ -11,7 +11,7 @@ const STEPS = [
   { i:4,  name:'SEO Optimizer',     icon:'🔍', href:'/seo',        desc:'Titel, Captions, Hashtags' },
   { i:5,  name:'Brand Consistency', icon:'🎨', href:'/brand',      desc:'Forbidden Phrases Check' },
   { i:6,  name:'Asset Manager',     icon:'🎬', href:'/assets',     desc:'Pexels -> Pixabay -> Mixkit' },
-  { i:7,  name:'InVideo AI',        icon:'🎥', href:'/video',      desc:'Video-Generierung' },
+  { i:7,  name:'Video Engine',        icon:'⚙️', href:'/video',      desc:'Video-Generierung' },
   { i:8,  name:'QC Inspector',      icon:'🔬', href:'/qc',         desc:'10 Qualitaetsdimensionen' },
   { i:9,  name:'Content Calendar',  icon:'📅', href:'/calendar',   desc:'Optimaler Post-Zeitpunkt' },
   { i:10, name:'Upload Bot',        icon:'🚀', href:'/upload',     desc:'IG + TikTok + YouTube' },

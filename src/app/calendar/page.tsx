@@ -13,7 +13,8 @@ const PLATFORM_STYLE: Record<string, { bg: string; border: string; text: string;
   youtube:        { bg: 'bg-rose-500/10',    border: 'border-rose-500/30',    text: 'text-rose-300',    icon: '📺' },
 }
 
-function fmt(n: number): string {
+function fmt(n: number | undefined | null): string {
+  if (n == null || isNaN(Number(n))) return '0'
   return n >= 1000 ? `${(n / 1000).toFixed(0)}K` : n.toString()
 }
 

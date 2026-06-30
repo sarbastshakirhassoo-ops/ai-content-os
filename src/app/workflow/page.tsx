@@ -11,7 +11,7 @@ const NODES = [
   { id:4,  name:'SEO Optimizer',   icon:'🔎', x:160, y:400,  color:'#10b981', href:'/seo' },
   { id:5,  name:'Brand Check',     icon:'🎨', x:640, y:400,  color:'#10b981', href:'/brand' },
   { id:6,  name:'Asset Manager',   icon:'🎬', x:160, y:520,  color:'#f59e0b', href:'/assets' },
-  { id:7,  name:'InVideo AI',      icon:'🎥', x:640, y:520,  color:'#f59e0b', href:'/video' },
+  { id:7,  name:'Video Engine',    icon:'⚙️', x:640, y:520,  color:'#6366f1', href:'/video' },
   { id:8,  name:'QC Inspector',    icon:'🔬', x:400, y:640,  color:'#ef4444', href:'/qc' },
   { id:9,  name:'Calendar',        icon:'📅', x:160, y:760,  color:'#ec4899', href:'/calendar' },
   { id:10, name:'Upload Bot',      icon:'🚀', x:640, y:760,  color:'#ec4899', href:'/upload' },

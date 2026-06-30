@@ -50,9 +50,9 @@ export const AGENT_DEFINITIONS: AgentDef[] = [
     status: 'idle', errorCount: 0, color: '#6366f1', position: { x: 710, y: 280 },
   },
   {
-    id: 'agent-8', slug: 'video-agent', name: 'InVideo AI', icon: '🎥',
-    description: 'InVideo AI erstellt das 9:16 Luxury-Cinematic-Video. Erhält Script, Assets, Musikstil, Color Grade und Prompt. Produziert Beat-synced Cuts, Film Grain, Dark Luxury Look.',
-    input: 'Script, Assets, Musikstil, Color Grade, Prompt', output: 'MP4 9:16, Video-URL, Render-Status',
+    id: 'agent-8', slug: 'video-agent', name: 'Video Generation Engine', icon: '⚙️',
+    description: 'Modulare Video Engine — wählt automatisch den besten verfügbaren Generator: FFmpeg (lokal) → Shotstack (API) → Manifest Fallback. Ken Burns, Crossfade, Color Grade, Film Grain, Untertitel.',
+    input: 'Script, Assets, Musikstil, Color Look, Format', output: 'MP4 9:16, Video-URL, Render-Stats, Generator-Info',
     status: 'idle', errorCount: 0, color: '#ef4444', position: { x: 50, y: 480 },
   },
   {

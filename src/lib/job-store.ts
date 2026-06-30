@@ -19,7 +19,7 @@ export const PIPELINE_AGENTS: { slug: string; name: string }[] = [
   { slug: 'seo-agent',         name: 'SEO Optimizer'       },
   { slug: 'brand-agent',       name: 'Brand Consistency'   },
   { slug: 'asset-manager-agent', name: 'Asset Manager'     },
-  { slug: 'video-agent',       name: 'InVideo AI'          },
+  { slug: 'video-agent',       name: 'Video Generation Engine' },
   { slug: 'qc-agent',          name: 'QC Inspector'        },
   { slug: 'calendar-agent',    name: 'Content Calendar'    },
   { slug: 'upload-agent',      name: 'Upload Bot'          },

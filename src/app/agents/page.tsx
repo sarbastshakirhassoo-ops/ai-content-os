@@ -7,7 +7,7 @@ export default function AgentsPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-xl font-bold text-white">Agents</h1>
-        <p className="text-sm text-muted mt-0.5">12 specialized AI agents in the content pipeline</p>
+        <p className="text-sm text-muted mt-0.5">14 specialized AI agents in the content pipeline</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">

@@ -89,7 +89,7 @@ function checkAspectRatio(videoUrl: string | unknown): QCDimension {
   return {
     score:  hasVideo ? 85 : 40,
     pass:   hasVideo,
-    reason: hasVideo ? '9:16 Video von InVideo AI erstellt' : 'Kein Video vorhanden',
+    reason: hasVideo ? '9:16 Video von Video Engine erstellt' : 'Kein Video vorhanden',
   }
 }
 
@@ -98,7 +98,7 @@ function checkResolution(videoUrl: string | unknown): QCDimension {
   return {
     score:  hasVideo ? 90 : 0,
     pass:   hasVideo,
-    reason: hasVideo ? '1080x1920 (InVideo AI Standard)' : 'Video nicht verfügbar',
+    reason: hasVideo ? '1080x1920 (Video Engine Standard)' : 'Video nicht verfügbar',
   } as QCDimension
 }
 
@@ -107,7 +107,7 @@ function checkAudioSync(videoUrl: string | unknown): QCDimension {
   return {
     score:  hasVideo ? 85 : 0,
     pass:   hasVideo,
-    reason: hasVideo ? 'Beat-synced Cuts durch InVideo AI' : 'Kein Audio prüfbar',
+    reason: hasVideo ? 'Beat-synced Cuts durch Video Engine' : 'Kein Audio prüfbar',
   } as QCDimension
 }
 

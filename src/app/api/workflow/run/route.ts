@@ -209,10 +209,11 @@ export async function POST(req: NextRequest) {
       }
       const r = await new UploadAgent().run({
         niche,
-        videoUrl:      videoData.videoUrl,
+        videoPath:     (videoData.outputPath as string) || undefined,
+        videoUrl:      (videoData.videoUrl   as string) || undefined,
         title:         (seoData.youtubeTitle      as string) || (scriptData.topic as string) || topic,
         description:   (seoData.description       as string) || '',
-        hashtags:      (seoData.hashtags           as string[]) || [],
+        tags:          (seoData.hashtags           as string[]) || [],
         tiktokCaption: (seoData.tiktokCaption      as string) || '',
         igCaption:     (seoData.instagramCaption   as string) || '',
         scheduledTime: calendarData.scheduledTime,

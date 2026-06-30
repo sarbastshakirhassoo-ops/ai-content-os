@@ -35,7 +35,7 @@ const NAV_SECTIONS: NavSection[] = [
     title: 'Produktion',
     items: [
       { href: '/assets',  label: 'Asset Library',   icon: '◫'  },
-      { href: '/video',   label: 'Video Composer',  icon: '🎬' },
+      { href: '/video',   label: 'Video Engine',    icon: '⚙️' },
       { href: '/content', label: 'Video Projects',  icon: '▶'  },
     ],
   },

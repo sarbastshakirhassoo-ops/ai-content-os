@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-06-29T23:34:47Z",
+  "topic": "Der Unterschied zwischen reich aussehen und reich sein",
+  "hook": "Ich habe 3 Jahre gebraucht um das zu verstehen — du in 60 Sekunden.",
+  "niche": "Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic",
+  "fullScript": "[HOOK — 0:00–0:02]\nIch habe 3 Jahre gebraucht um das zu verstehen — du in 60 Sekunden.\n\n[SCENE 1 — 0:02–0:08]\nLuxusauto. Günstiges Apartment. Kamera schwenkt langsam.\n\n[VOICEOVER 1 — 0:08–0:22]\nReich aussehen kostet dich Geld.\nReich sein — bringt dir welches.\nDas klingt simpel. Ist es aber nicht.\nWeil unser Gehirn konditioniert ist auf Signale.\nTeure Uhr. Neues Auto. Urlaub auf Instagram.\nDas sind Signale. Keine Realität.\n\n[SCENE 2 — 0:22–0:35]\nDesigner-Kleidung. Warteschlange. Kontrast.\nText: \"Aussehen kostet. Sein verdient.\"\n\n[VOICEOVER 2 — 0:35–0:50]\nDie Menschen die ich kenne — die wirklich Vermögen haben —\ntragen keine Logos.\nSie haben keine teuren Autos auf Kredit.\nSie besitzen Assets.\nUnd sie schlafen ruhig.\n\n[SCENE 3 — 0:50–1:05]\nLeeres Penthouse. Stille. Ein Stuhl. Stadtblick.\n\n[VOICEOVER 3 — 1:05–1:12]\nEchter Reichtum ist unsichtbar.\nWeil er nicht zeigen muss.\n\n[CTA — 1:12–1:15]\nFollow. Täglich 7:00 Uhr.",
+  "invideoPrompt": "Create a 75-second cinematic short for TikTok/Reels/Shorts.\n\nHOOK: \"Ich habe 3 Jahre gebraucht um das zu verstehen — du in 60 Sekunden.\"\nTOPIC: Der Unterschied zwischen reich aussehen und reich sein\nNICHE: Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic\n\nVISUAL STYLE:\n- Dark luxury aesthetic with strong contrasts\n- Teal-orange color grade, deep shadows\n- Slow motion 50% speed\n- NO text except: \"Aussehen kostet. Sein verdient.\" in gold at 0:22\n\nMUSIC: Dark Luxury Trap — slow, bass-heavy, emotional build\nStart minimal, build through scene 3, peak at 1:05\n\nSCENES:\n1. (0:00-0:08) Luxury car parked outside cheap apartment, contrast shot\n2. (0:08-0:22) Person in designer clothes in line, ironic lighting\n3. (0:22-0:35) Empty penthouse, single chair, city view\n4. (0:35-0:50) Hands: cash vs laptop — split aesthetic\n5. (0:50-1:05) Person walking alone in suit, empty rain street\n6. (1:05-1:15) Bank screen blurred, subtle smile\n\nVOICEOVER: Deep, slow, German. Pause between sentences.\nASPECT RATIO: 9:16 | RESOLUTION: 4K | DURATION: 75s",
+  "musicStyle": "Dark Luxury Trap — langsam, bass-heavy, emotional",
+  "sceneKeywords": [
+    "Luxury car parked outside cheap apartment building, contrast shot",
+    "Person in designer clothes waiting in line, ironic lighting",
+    "Empty penthouse with city view, single chair, minimalist",
+    "Hands counting cash vs. hands typing on laptop, split screen aesthetic",
+    "Person walking alone in expensive suit, empty street, rain",
+    "Bank statement on phone screen, blurred but large number visible"
+  ],
+  "seo": {
+    "youtubeTitle": "Reich aussehen vs. reich sein — der Unterschied den niemand erklärt",
+    "tiktokCaption": "Echter Reichtum ist unsichtbar. Weil er nicht zeigen muss. 🖤 #luxurylifestyle #mindset #geld #erfolg #reichtum",
+    "instagramCaption": "Reich aussehen kostet dich Geld.\nReich sein — bringt dir welches.\n\nDer Unterschied den kaum jemand versteht — bis es zu spät ist. 🖤\n\nSave this post. Für später.\n\n#luxurylifestyle #reichtum #geld #mindset #erfolg #motivation #cinematic #nostalgie #germany #österreich",
+    "hashtags": [
+      "#luxurylifestyle",
+      "#reichtum",
+      "#geld",
+      "#mindset",
+      "#erfolg",
+      "#motivation",
+      "#cinematic",
+      "#nostalgie",
+      "#germany",
+      "#österreich",
+      "#schweiz",
+      "#shorts",
+      "#reels",
+      "#viral"
+    ]
+  },
+  "duration": "75 Sekunden",
+  "format": "9:16 Vertikal (TikTok / Reels / Shorts)",
+  "colorGrade": "Dark Luxury — Teal-Orange, Gold Accents",
+  "nextSteps": [
+    "1. Kopiere den InVideo-Prompt in InVideo AI (invideo.io/ai)",
+    "2. Wähle 'AI-generated video from script'",
+    "3. Füge den Prompt ein und generiere",
+    "4. Export als MP4 1080x1920",
+    "5. Upload auf TikTok / Instagram / YouTube mit den SEO-Daten oben"
+  ],
+  "platforms": {
+    "tiktok": {
+      "caption": "",
+      "bestTime": "07:00 Uhr",
+      "day": "Donnerstag"
+    },
+    "instagram": {
+      "caption": "",
+      "bestTime": "07:30 Uhr",
+      "day": "Donnerstag"
+    },
+    "youtube": {
+      "caption": "",
+      "bestTime": "08:00 Uhr",
+      "day": "Donnerstag"
+    }
+  }
+}

@@ -63,7 +63,7 @@ export default function SEOPage() {
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="text-xs text-muted mb-2"># HASHTAGS</div>
           <div className="flex flex-wrap gap-1.5">
-            {data.hashtags.map((h, i) => (
+            {(data?.hashtags || []).map((h, i) => (
               <span key={i} className="text-xs px-2 py-1 bg-surface rounded text-indigo-400">{h}</span>
             ))}
           </div>
@@ -73,7 +73,7 @@ export default function SEOPage() {
         <div className="bg-card border border-border rounded-xl p-4">
           <div className="text-xs text-muted mb-2">🔑 KEYWORDS</div>
           <div className="flex flex-wrap gap-1.5">
-            {data.keywords.map((k, i) => (
+            {(data?.keywords || []).map((k, i) => (
               <span key={i} className="text-xs px-2 py-1 bg-surface rounded text-green-400">{typeof k === 'string' ? k : k.keyword || JSON.stringify(k)}</span>
             ))}
           </div>

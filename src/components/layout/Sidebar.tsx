@@ -9,7 +9,8 @@ const NAV_SECTIONS: NavSection[] = [
     title: 'System',
     items: [
       { href: '/',          label: 'Dashboard',       icon: '⊞'  },
-      { href: '/pipeline',  label: 'Pipeline Live',    icon: '⛓️' },
+      { href: '/pipeline',    label: 'Pipeline Live',    icon: '⛓️' },
+      { href: '/first-video', label: 'Erstes Video',      icon: '🎬' },
       { href: '/workflow',  label: 'Workflow Canvas',  icon: '◈'  },
       { href: '/agents',    label: 'Alle Agenten',     icon: '◉'  },
     ],
@@ -50,6 +51,7 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       { href: '/analytics',  label: 'Analytics',         icon: '◎'  },
       { href: '/engagement', label: 'Engagement Agent',  icon: '💬' },
+      { href: '/learning',   label: 'Learning Agent',    icon: '🤖' },
     ],
   },
 ]

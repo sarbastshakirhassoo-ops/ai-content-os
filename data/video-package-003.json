@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-06-29T23:34:47Z",
+  "topic": "Diese 3 Gewohnheiten trennen Gewinner von allen anderen",
+  "hook": "90% wissen das nicht. Die anderen 10% werden nie darüber reden.",
+  "niche": "Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic",
+  "fullScript": "[HOOK — 0:00–0:02]\n90% wissen das nicht. Die anderen 10% werden nie darüber reden.\n\n[SCENE 1 — 0:02–0:10]\n5:00 Uhr morgens. Dunkles Zimmer. Wecker. Person steht auf.\nKein Ton außer Musik.\n\n[VOICEOVER 1 — 0:10–0:25]\nGewohnheit 1: Sie starten bevor die Welt aufwacht.\nNicht weil sie müssen.\nSondern weil diese Stunden ihnen gehören.\nKeine Ablenkung. Kein Lärm. Nur Fokus.\n\n[SCENE 2 — 0:25–0:38]\nLeeres Gym. 5:30 Uhr. Eine Person trainiert.\nText: \"Gewohnheit 1: Die erste Stunde gehört dir.\"\n\n[VOICEOVER 2 — 0:38–0:52]\nGewohnheit 2: Sie schreiben. Täglich.\nNicht für andere. Für sich.\nZiele. Gedanken. Was sie gelernt haben.\nDas Gehirn vergisst. Papier nicht.\n\n[SCENE 3 — 0:52–1:05]\nJournal. Kaffee. Morgenlicht. Hand schreibt.\n\n[VOICEOVER 3 — 1:05–1:12]\nGewohnheit 3: Sie schützen ihre Energie.\nVon wem sie Zeit bekommen — entscheiden sie.\n\n[CTA — 1:12–1:15]\nFollow. Täglich 7:00 Uhr.",
+  "invideoPrompt": "Create a 75-second cinematic motivational short for TikTok/Reels/Shorts.\n\nHOOK: \"90% wissen das nicht. Die anderen 10% werden nie darüber reden.\"\nTOPIC: Diese 3 Gewohnheiten trennen Gewinner von allen anderen\nNICHE: Luxury Lifestyle + Nostalgie + Motivation + Erfolg + Cinematic\n\nVISUAL STYLE:\n- Dark cinematic with gold morning light accents\n- Teal-orange grade, epic atmosphere\n- Slow motion and time-lapse mix\n- Text overlays: \"Gewohnheit 1: Die erste Stunde gehört dir.\" in gold at 0:25\n\nMUSIC: Epic Motivation — choir + percussion, builds to crescendo at 1:05\n\nSCENES:\n1. (0:00-0:10) 5am wakeup, dark room, alarm clock close-up\n2. (0:10-0:25) Empty gym 5:30am, single person, dramatic lighting\n3. (0:25-0:38) Morning journal and coffee, golden hour light\n4. (0:38-0:52) City aerial waking up, drone, time-lapse\n5. (0:52-1:05) Confident walk into office building, slow motion\n6. (1:05-1:15) Night desk with screens, focused work\n\nVOICEOVER: German, deep, powerful, motivational.\nASPECT RATIO: 9:16 | RESOLUTION: 4K | DURATION: 75s",
+  "musicStyle": "Epic Motivation — Chor + Percussion, crescendo bis zum Ende",
+  "sceneKeywords": [
+    "Person waking up at 5am, dark room, alarm, slow motion getting up",
+    "Empty gym at 5:30am, single person training, cinematic lighting",
+    "Journal and coffee on desk, morning golden light, focused writing",
+    "City waking up from above, drone shot, time-lapse style",
+    "Person in suit walking into building confidently, slow motion",
+    "Night shot: desk with multiple screens, work in progress, focus"
+  ],
+  "seo": {
+    "youtubeTitle": "Diese 3 Gewohnheiten trennen Erfolgreiche von allen anderen (niemand redet darüber)",
+    "tiktokCaption": "Die 3 Gewohnheiten die alles verändern. Niemand redet darüber. 🖤 #motivation #erfolg #gewohnheiten #mindset #luxurylifestyle",
+    "instagramCaption": "90% kennen sie nicht.\nDie anderen 10% schützen sie.\n\nDiese 3 Gewohnheiten sind der Unterschied zwischen ankommen — und stehen bleiben. 🖤\n\nSave + Share wenn du es ernst meinst.\n\n#motivation #erfolg #gewohnheiten #mindset #luxurylifestyle #disziplin #cinematic #nostalgie",
+    "hashtags": [
+      "#motivation",
+      "#erfolg",
+      "#gewohnheiten",
+      "#mindset",
+      "#luxurylifestyle",
+      "#disziplin",
+      "#cinematic",
+      "#nostalgie",
+      "#germany",
+      "#österreich",
+      "#5am",
+      "#discipline",
+      "#shorts",
+      "#reels"
+    ]
+  },
+  "duration": "75 Sekunden",
+  "format": "9:16 Vertikal (TikTok / Reels / Shorts)",
+  "colorGrade": "Dark Luxury — Teal-Orange, Gold Accents",
+  "nextSteps": [
+    "1. Kopiere den InVideo-Prompt in InVideo AI (invideo.io/ai)",
+    "2. Wähle 'AI-generated video from script'",
+    "3. Füge den Prompt ein und generiere",
+    "4. Export als MP4 1080x1920",
+    "5. Upload auf TikTok / Instagram / YouTube mit den SEO-Daten oben"
+  ],
+  "platforms": {
+    "tiktok": {
+      "caption": "",
+      "bestTime": "07:00 Uhr",
+      "day": "Samstag"
+    },
+    "instagram": {
+      "caption": "",
+      "bestTime": "07:30 Uhr",
+      "day": "Samstag"
+    },
+    "youtube": {
+      "caption": "",
+      "bestTime": "08:00 Uhr",
+      "day": "Samstag"
+    }
+  }
+}

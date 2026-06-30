@@ -83,9 +83,9 @@ export default function CalendarPage() {
         </div>
         {data && (
           <div className="text-right">
-            <div className="text-xl font-bold text-indigo-400">{fmt(data.plan.totalEstimatedReach)}</div>
+            <div className="text-xl font-bold text-indigo-400">{fmt(data?.plan?.totalEstimatedReach)}</div>
             <div className="text-xs text-slate-500">Geschätzte Gesamtreichweite</div>
-            <div className="text-xs text-slate-500 mt-0.5">KW {data.plan.calendarWeek}</div>
+            <div className="text-xs text-slate-500 mt-0.5">KW {data?.plan?.calendarWeek}</div>
           </div>
         )}
       </div>
@@ -167,22 +167,22 @@ export default function CalendarPage() {
           <div className="bg-[#16161f] border border-[#1e1e2e] rounded-xl p-4">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-sm font-semibold text-white">{data.plan.contentTitle}</h3>
+                <h3 className="text-sm font-semibold text-white">{data?.plan?.contentTitle}</h3>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  {data.plan.niche} • {data.plan.publishWindow} •
-                  Primär: <span className="text-indigo-400">{PLATFORM_LABELS[data.plan.primaryPlatform] ?? data.plan.primaryPlatform}</span>
+                  {data?.plan?.niche} • {data?.plan?.publishWindow} •
+                  Primär: <span className="text-indigo-400">{PLATFORM_LABELS[data?.plan?.primaryPlatform] ?? data?.plan?.primaryPlatform}</span>
                 </p>
               </div>
-              <span className="text-xs text-slate-500">KW {data.plan.calendarWeek}</span>
+              <span className="text-xs text-slate-500">KW {data?.plan?.calendarWeek}</span>
             </div>
             <div className="mt-3 space-y-1">
-              {data.plan.notes.map((n, i) => <p key={i} className="text-xs text-slate-400">• {n}</p>)}
+              {data?.plan?.notes.map((n, i) => <p key={i} className="text-xs text-slate-400">• {n}</p>)}
             </div>
           </div>
 
           {/* Slots in priority order */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {data.plan.slots
+            {data?.plan?.slots
               .sort((a, b) => a.priority - b.priority)
               .map((slot: PlatformSlot, i) => <SlotCard key={i} slot={slot} />)
             }
@@ -193,7 +193,7 @@ export default function CalendarPage() {
       {/* Tab: 4-Week Calendar */}
       {!loading && tab === 'calendar' && data && (
         <div className="space-y-4">
-          {data.calendar.map(week => (
+          {(data?.calendar || []).map(week => (
             <div key={week.id} className={`bg-[#16161f] border rounded-xl p-5 ${week.status === 'ready' ? 'border-indigo-500/30' : 'border-[#1e1e2e]'}`}>
               <div className="flex items-center justify-between mb-3">
                 <div>
@@ -231,7 +231,7 @@ export default function CalendarPage() {
       {/* Tab: Platform Insights */}
       {!loading && tab === 'insights' && data && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {(Object.entries(data.platformInsights) as [string, string][]).map(([platform, insight]) => {
+          {(Object.entries(data?.platformInsights || {}) as [string, string][]).map(([platform, insight]) => {
             const style = PLATFORM_STYLE[platform] ?? PLATFORM_STYLE.youtube
             return (
               <div key={platform} className={`rounded-xl border p-5 ${style.bg} ${style.border}`}>

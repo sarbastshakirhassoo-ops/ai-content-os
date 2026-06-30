@@ -454,7 +454,7 @@ function TrendsPageInner() {
           </p>
           {data?.meta && (
             <p className="text-xs text-slate-600 mt-0.5">
-              {data.meta.sourcesScanned.join(' · ')}
+              {(data?.meta?.sourcesScanned || []).join(' · ')}
               {lastFetch && <span className="ml-2">· Aktualisiert: {lastFetch}</span>}
             </p>
           )}
@@ -477,8 +477,8 @@ function TrendsPageInner() {
       {data?.meta && (
         <div className="grid grid-cols-4 gap-3">
           {[
-            { label: 'Trends erkannt',    value: data.meta.totalTrends },
-            { label: 'Top Kategorie',     value: data.meta.topCategory, small: true },
+            { label: 'Trends erkannt',    value: data?.meta?.totalTrends ?? 0 },
+            { label: 'Top Kategorie',     value: data?.meta?.topCategory ?? "–", small: true },
             { label: 'Upcoming Events',   value: predictions.filter(p => p.daysUntil >= 0).length },
             { label: 'Creator entdeckt',  value: allCreators.length },
           ].map(s => (

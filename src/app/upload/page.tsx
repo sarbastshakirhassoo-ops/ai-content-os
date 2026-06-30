@@ -41,7 +41,7 @@ export default function UploadPage() {
       const res  = await fetch('/api/upload', { method: 'POST', body: formData })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Fehler beim Upload')
-      setResults(data.results)
+      setResults(data?.results || [])
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Unbekannter Fehler')
     }

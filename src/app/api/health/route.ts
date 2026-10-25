@@ -16,8 +16,8 @@ export const dynamic = 'force-dynamic'
 // Netzwerk-Check, nicht aus der Anwesenheit einer Umgebungsvariable.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const ROADMAP_STEP = 7
-const ROADMAP_LABEL = 'Visual Brain und Trace vollständig — Sprache folgt in Schritt 8'
+const ROADMAP_STEP = 8
+const ROADMAP_LABEL = 'Sprache aktiv — es fehlen nur noch Tests und Härtung (Schritt 9)'
 
 function notImplemented(id: string, label: string, step: number, detail: string): CapabilityReport {
   return { id, label, status: 'NOT_IMPLEMENTED', detail, plannedInStep: step }
@@ -142,10 +142,21 @@ export async function GET() {
       status: 'CONNECTED',
       detail: 'Flow-Ansicht unter /brain mit Dauern und Tokens, vollständige Lauf-Historie unter /trace. Alle Zustände kommen aus dem Trace.',
     },
-    notImplemented('voice.stt', 'Voice · Speech to Text', 8,
-      'Web Speech API noch nicht angebunden.'),
-    notImplemented('voice.tts', 'Voice · Text to Speech', 8,
-      'Web Speech API noch nicht angebunden.'),
+    // Sprache läuft vollständig im Browser. Der Server kann nicht wissen, ob
+    // der Browser des Nutzers sie beherrscht — das meldet die Oberfläche
+    // selbst. Hier steht deshalb nur, dass die Schicht existiert.
+    {
+      id: 'voice.stt',
+      label: 'Voice · Speech to Text',
+      status: 'CONNECTED',
+      detail: 'Web Speech API, im Browser. Standardmässig aus. Chrome sendet das Audio zur Erkennung an Google, Firefox kann es nicht.',
+    },
+    {
+      id: 'voice.tts',
+      label: 'Voice · Text to Speech',
+      status: 'CONNECTED',
+      detail: 'Sprachausgabe über die Systemstimme des Browsers. Quellenliste und URLs werden vor dem Vorlesen entfernt.',
+    },
   ]
 
   const body: HealthResponse = {

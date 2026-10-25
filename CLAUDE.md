@@ -45,13 +45,13 @@ Dokument auseinanderlaufen, ist das ein Fehler.
 
 ## Aktueller Stand
 
-Roadmap-Schritte 1 bis 7 von 9 sind abgeschlossen.
-Provider-Schicht, Central Brain, Research Layer mit 13 Quellen, Belegstärke,
-Memory, Flow-Ansicht und vollständige Trace-Historie laufen.
+Roadmap-Schritte 1 bis 8 von 9 sind abgeschlossen.
+Alle Funktionen stehen: Provider-Schicht, Central Brain, Research mit 13
+Quellen, Belegstärke, Memory, Flow-Ansicht, Trace-Historie und Sprache.
 
-Acht von zehn Komponenten sind CONNECTED. Es fehlt nur noch Sprache.
+Neun von zehn Komponenten sind CONNECTED.
 
-Nächster Schritt: 8 — Voice über die Web Speech API.
+Nächster Schritt: 9 — Tests und Härtung, der letzte.
 
 ---
 

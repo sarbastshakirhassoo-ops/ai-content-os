@@ -1,10 +1,11 @@
 'use client'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { BrainEvent, FreshnessAdjustment, QueryPlan, TraceStep } from '@/brain/types'
 import type { ResearchDocument } from '@/brain/research/types'
 import type { EvidenceAssessment } from '@/brain/research/confidence'
 import type { RecallHit } from '@/brain/memory/types'
 import BrainFlow from '@/components/brain/BrainFlow'
+import { isSpeaking, speak, startDictation, stopSpeaking, voiceSupport, type Dictation } from '@/lib/voice'
 
 const STEP_STYLE: Record<string, string> = {
   running:   'bg-info/15 text-info border-info/25',
@@ -47,6 +48,32 @@ export default function BrainPage() {
   const [answer, setAnswer] = useState<string | null>(null)
   const [error, setError] = useState<{ message: string; kind: string } | null>(null)
   const abortRef = useRef<AbortController | null>(null)
+
+  // ── Sprache ──────────────────────────────────────────────────────────────
+  // Standardmässig aus. Chrome schickt das Audio zur Erkennung an Google;
+  // wer das nicht will, soll nichts abschalten müssen, sondern einschalten.
+  const [voice, setVoice] = useState({ stt: false, tts: false, note: '' })
+  const [listening, setListening] = useState(false)
+  const [speakAnswers, setSpeakAnswers] = useState(false)
+  const [speaking, setSpeaking] = useState(false)
+  const [voiceError, setVoiceError] = useState<string | null>(null)
+  const dictationRef = useRef<Dictation | null>(null)
+
+  useEffect(() => { setVoice(voiceSupport()) }, [])
+
+  const toggleDictation = () => {
+    setVoiceError(null)
+    if (listening) { dictationRef.current?.stop(); return }
+    const d = startDictation({
+      onPartial: (t) => setQuery(t),
+      onFinal: (t) => { setQuery(t); setListening(false) },
+      onError: (m) => { setVoiceError(m); setListening(false) },
+      onEnd: () => setListening(false),
+    })
+    if (!d) { setVoiceError('Dieser Browser kann keine Spracherkennung.'); return }
+    dictationRef.current = d
+    setListening(true)
+  }
 
   const ask = async () => {
     if (busy || !query.trim()) return
@@ -92,7 +119,10 @@ export default function BrainPage() {
           if (e.type === 'sources') { setSources(e.documents); setEvidence(e.evidence) }
           if (e.type === 'memory') setMemoryHits(e.hits)
           if (e.type === 'memoryWritten') setMemoryWritten(e.titles)
-          if (e.type === 'answer') setAnswer(e.text)
+          if (e.type === 'answer') {
+            setAnswer(e.text)
+            if (speakAnswers && voice.tts) { speak(e.text); setSpeaking(true) }
+          }
           if (e.type === 'error') setError({ message: e.message, kind: e.kind })
         }
       }
@@ -137,8 +167,50 @@ export default function BrainPage() {
               Abbrechen
             </button>
           )}
+          {voice.stt && (
+            <button
+              onClick={toggleDictation}
+              className={`px-3 py-1.5 text-sm rounded-lg border transition-colors ${
+                listening
+                  ? 'bg-danger/15 text-danger border-danger/40'
+                  : 'text-muted border-border hover:text-white'
+              }`}
+              title="Frage diktieren"
+            >
+              {listening ? 'Hört zu…' : 'Diktieren'}
+            </button>
+          )}
+          {voice.tts && (
+            <label className="flex items-center gap-1.5 text-xs text-muted cursor-pointer">
+              <input
+                type="checkbox"
+                checked={speakAnswers}
+                onChange={(e) => {
+                  setSpeakAnswers(e.target.checked)
+                  if (!e.target.checked) { stopSpeaking(); setSpeaking(false) }
+                }}
+              />
+              Antwort vorlesen
+            </label>
+          )}
+          {speaking && isSpeaking() && (
+            <button
+              onClick={() => { stopSpeaking(); setSpeaking(false) }}
+              className="px-3 py-1.5 text-sm text-muted hover:text-white border border-border rounded-lg"
+            >
+              Vorlesen stoppen
+            </button>
+          )}
           {runId && <span className="text-xs text-muted font-mono">Lauf {runId.slice(0, 8)}</span>}
         </div>
+        {voiceError && <p className="text-xs text-danger">{voiceError}</p>}
+        {!voice.stt && voice.note && <p className="text-xs text-muted">{voice.note}</p>}
+        {voice.stt && (
+          <p className="text-xs text-muted">
+            Diktieren nutzt die Spracherkennung deines Browsers. In Chrome wird das Audio
+            dafür an Google gesendet.
+          </p>
+        )}
       </div>
 
       {(steps.length > 0 || busy) && (

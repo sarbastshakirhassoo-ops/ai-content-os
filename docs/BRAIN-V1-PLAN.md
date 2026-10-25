@@ -325,6 +325,21 @@ als VERALTET markiert und bleiben Kontext.
 **Kontrolle.** `/memory` zeigt alles Gespeicherte und erlaubt, jeden Eintrag
 zu löschen.
 
+### Sprache (Schritt 8)
+
+`src/lib/voice.ts` kapselt die Web Speech API des Browsers. Kostenlos, kein
+Schlüssel, keine Serverkomponente. Der Rest der Anwendung spricht nur mit
+diesen Funktionen, ein späterer Wechsel auf Whisper oder Deepgram berührt nur
+diese Datei.
+
+Standardmässig aus, nicht an. Chrome sendet das Audio zur Erkennung an Google;
+wer das nicht will, soll nichts abschalten müssen. Die Oberfläche schreibt das
+auch hin. Firefox beherrscht keine Spracherkennung, dort erscheint statt eines
+toten Knopfes ein Hinweis.
+
+Vor dem Vorlesen werden Markup, Belegnummern, URLs und die Quellenliste
+entfernt. Ohne das liest die Stimme Sternchen und ganze URLs vor.
+
 ### Belegstärke (Schritt 5)
 
 `src/brain/research/confidence.ts` rechnet aus der tatsächlichen Quellenlage
@@ -372,7 +387,7 @@ Community-Quellen werden **nie** als Faktenbeleg ausgegeben.
 | ✅ 5 | Quellen und Vertrauen | Tier-Klassifikation, EZB, Eurostat, World Bank, SEC EDGAR, Wikipedia, arXiv, Datumsfelder, Confidence | EZB-Leitzins kommt aus der EZB-Quelle mit Veröffentlichungs- und Abrufdatum; Reddit-Meinung nie als Fakt |
 | ✅ 6 | Memory | SQLite-Schema, fünf Memory-Arten, FTS5-Recall, Freshness-Klassen, Schreibstrategie | Neue Sitzung kennt das Projekt aus der vorigen; `CURRENT`-Treffer unter 6 h wird wiederverwendet, `REALTIME_SENSITIVE` niemals |
 | ✅ 7 | Vollständiges Visual Brain | Ausgebaute Flow-Ansicht, `/trace`, Quellenanzeige | Jeder Run vollständig nachvollziehbar; kein Zustand hartkodiert |
-| 8 | Voice | Web Speech API als austauschbare Ein- und Ausgabeschicht | Gesprochene Frage, gesprochene Antwort; ohne Voice funktioniert Text unverändert |
+| ✅ 8 | Voice | Web Speech API als austauschbare Ein- und Ausgabeschicht | Gesprochene Frage, gesprochene Antwort; ohne Voice funktioniert Text unverändert |
 | 9 | Tests und Härtung | Sieben Testfälle als Skript, Timeouts, Retries, Rate-Limit-Behandlung, Injection-Test | Alle sieben laufen durch; eine Testseite mit eingebetteten Anweisungen ändert das Verhalten nicht |
 
 ### Arbeitsweise pro Schritt

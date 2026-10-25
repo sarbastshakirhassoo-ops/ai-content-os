@@ -15,7 +15,7 @@ import {
   type CompletionResult,
   type LLMProvider,
   type ProviderHealth,
-} from './types'
+} from './types.ts'
 
 const DEFAULT_API_BASE = 'https://generativelanguage.googleapis.com/v1beta'
 

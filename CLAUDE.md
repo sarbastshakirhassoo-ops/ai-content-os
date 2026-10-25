@@ -45,14 +45,14 @@ Dokument auseinanderlaufen, ist das ein Fehler.
 
 ## Aktueller Stand
 
-Roadmap-Schritte 1 bis 5 von 9 sind abgeschlossen.
+Roadmap-Schritte 1 bis 6 von 9 sind abgeschlossen.
 Provider-Schicht, Central Brain, Research Layer mit 13 Quellen, einfache
-Flow-Ansicht und die deterministische Belegstärke laufen. Memory fehlt noch
-und wird im Trace als übersprungen protokolliert.
+Flow-Ansicht, deterministische Belegstärke und Memory laufen.
 
-Sieben von zehn Komponenten sind CONNECTED.
+Acht von zehn Komponenten sind CONNECTED. Es fehlen nur noch Voice und der
+Ausbau des visuellen Brains.
 
-Nächster Schritt: 6 — Memory.
+Nächster Schritt: 7 — vollständiges Visual Brain.
 
 ---
 

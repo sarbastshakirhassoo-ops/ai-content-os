@@ -7,6 +7,7 @@
 
 import type { Domain, ResearchDocument } from './research/types.ts'
 import type { EvidenceAssessment } from './research/confidence.ts'
+import type { MemoryWrite, RecallHit } from './memory/types.ts'
 export type { Domain }
 
 /**
@@ -36,6 +37,12 @@ export interface QueryPlan {
   domains: Domain[]
   /** Konkrete Suchanfragen für die Research-Schicht. */
   searchQueries: string[]
+  /**
+   * Was aus der Nutzernachricht dauerhaft gespeichert werden soll.
+   * Bewusst vom Planner mitgeliefert, damit kein zusätzlicher Modellaufruf
+   * nötig ist, und bewusst auf user, project und decision begrenzt.
+   */
+  memoryWrites: MemoryWrite[]
   /**
    * Kurze, vom Modell selbst formulierte Begründung des Plans.
    * Bewusst kein interner Gedankengang, sondern eine deklarierte Aussage,
@@ -99,6 +106,8 @@ export type BrainEvent =
   | { type: 'step'; step: TraceStep }
   | { type: 'plan'; plan: QueryPlan; adjustment: FreshnessAdjustment | null }
   | { type: 'sources'; documents: ResearchDocument[]; evidence: EvidenceAssessment }
+  | { type: 'memory'; hits: RecallHit[] }
+  | { type: 'memoryWritten'; titles: string[] }
   | { type: 'answer'; text: string }
   | { type: 'error'; message: string; kind: string }
   | { type: 'done'; runId: string; durationMs: number }

@@ -9,21 +9,23 @@
 //   plan -> research (echt) -> [memory: übersprungen] -> synthesis
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { createPlan } from './plan'
-import { LLMError } from './providers/registry'
+import { createPlan } from './plan.ts'
+import { LLMError } from './providers/registry.ts'
 import { research } from './research/index.ts'
-import { synthesize } from './synthesis'
+import { synthesize } from './synthesis.ts'
 import {
   finishRun,
   finishStep,
-  recordSkippedStep,
   savePlan,
   startRun,
   startStep,
-} from './trace'
-import type { BrainEvent, QueryPlan } from './types'
+} from './trace.ts'
+import type { BrainEvent, QueryPlan } from './types.ts'
 import type { ResearchDocument } from './research/types.ts'
 import type { EvidenceAssessment } from './research/confidence.ts'
+import { buildMemoryBlock, recall } from './memory/recall.ts'
+import { remember } from './memory/store.ts'
+import type { RecallHit } from './memory/types.ts'
 
 export interface RunOptions {
   signal?: AbortSignal
@@ -159,22 +161,49 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
     }
   }
 
-  if (plan.needsMemory) {
+  // ── Schritt: Memory ────────────────────────────────────────────────────────
+  //
+  // Wird immer durchsucht, nicht nur wenn der Planner es verlangt: ob etwas
+  // Gespeichertes passt, weiss die Suche besser als die Vorab-Einschätzung.
+  // Ein Lauf ohne Treffer kostet eine Millisekunde.
+  let memoryHits: RecallHit[] = []
+  const memoryStep = startStep(runId, ++seq, 'memory', 'memory')
+  try {
+    memoryHits = recall(query, { limit: 6 })
+    const fresh = memoryHits.filter((h) => !h.stale).length
+    const stale = memoryHits.length - fresh
+
     emit({
       type: 'step',
-      step: recordSkippedStep(
-        runId,
-        ++seq,
-        'memory',
-        'Der Plan hält gespeichertes Wissen für relevant, der Memory-Store ist noch nicht gebaut (Roadmap-Schritt 6).',
-      ),
+      step: finishStep(memoryStep, {
+        status: memoryHits.length > 0 ? 'completed' : 'skipped',
+        detail:
+          memoryHits.length === 0
+            ? 'Keine passenden Einträge im Gedächtnis.'
+            : `${memoryHits.length} Treffer (${fresh} aktuell, ${stale} veraltet): ` +
+              memoryHits.map((h) => `${h.entry.kind}/${h.entry.title}`).join('; '),
+        meta: {
+          hits: memoryHits.map((h) => ({
+            id: h.entry.id,
+            kind: h.entry.kind,
+            title: h.entry.title,
+            updatedAt: h.entry.updatedAt,
+            stale: h.stale,
+          })),
+        },
+      }),
     })
+    if (memoryHits.length > 0) emit({ type: 'memory', hits: memoryHits })
+  } catch (e) {
+    // Ein defektes Gedächtnis darf die Antwort nicht verhindern.
+    const info = errorInfo(e)
+    emit({ type: 'step', step: finishStep(memoryStep, { status: 'failed', error: info.message }) })
   }
 
   // ── Schritt: Synthese ──────────────────────────────────────────────────────
   const synthStep = startStep(runId, ++seq, 'synthesis', 'synthesis')
   try {
-    const outcome = await synthesize(query, { plan, documents, researchRan, evidence }, { signal: opts.signal })
+    const outcome = await synthesize(query, { plan, documents, researchRan, evidence, memoryHits }, { signal: opts.signal })
 
     emit({
       type: 'step',
@@ -187,6 +216,37 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
         detail: `Antwort erzeugt, ${outcome.text.length} Zeichen. Quellen im Prompt: ${documents.length}.`,
       }),
     })
+
+    // ── Gedächtnis schreiben ────────────────────────────────────────────────
+    //
+    // Erst nach einer erfolgreichen Antwort, und nur das, was der Planner aus
+    // der NUTZERNACHRICHT vorgeschlagen hat. Rechercheergebnisse kommen
+    // zusätzlich als knowledge dazu, aber nur bei brauchbarer Beleglage:
+    // schlecht belegte Treffer ins Langzeitgedächtnis zu schreiben wäre ein
+    // Weg, wie sich Falsches festsetzt.
+    const written: string[] = []
+    for (const w of plan.memoryWrites) {
+      try {
+        const e = remember({ ...w, freshness: 'SLOW_CHANGING', sourceRunId: runId })
+        written.push(`${e.kind}/${e.title}`)
+      } catch { /* ein unbrauchbarer Vorschlag kippt den Lauf nicht */ }
+    }
+    if (documents.length > 0 && evidence && (evidence.level === 'HIGH' || evidence.level === 'MEDIUM')) {
+      try {
+        const e = remember({
+          kind: 'knowledge',
+          title: plan.intent.slice(0, 160),
+          content:
+            `Recherche am ${new Date().toISOString().slice(0, 10)}, Beleglage ${evidence.level}. ` +
+            documents.slice(0, 5).map((d, i) => `[${i + 1}] ${d.title}`).join(' '),
+          freshness: plan.freshness,
+          sourceRunId: runId,
+          sourceUrls: documents.slice(0, 5).map((d) => d.url),
+        })
+        written.push(`${e.kind}/${e.title}`)
+      } catch { /* dito */ }
+    }
+    if (written.length > 0) emit({ type: 'memoryWritten', titles: written })
 
     finishRun(runId, 'completed', { answer: outcome.text })
     emit({ type: 'answer', text: outcome.text })

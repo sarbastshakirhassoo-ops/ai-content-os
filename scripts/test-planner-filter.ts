@@ -8,7 +8,7 @@ import type { Freshness, QueryPlan } from '../src/brain/types.ts'
 function planWith(freshness: Freshness): QueryPlan {
   return {
     intent: 'test', answerableFromModelKnowledge: true, needsResearch: false,
-    needsMemory: false, freshness, sensitivity: 'PUBLIC', domains: [], searchQueries: [], rationale: '',
+    needsMemory: false, freshness, sensitivity: 'PUBLIC', domains: [], searchQueries: [], memoryWrites: [], rationale: '',
   }
 }
 

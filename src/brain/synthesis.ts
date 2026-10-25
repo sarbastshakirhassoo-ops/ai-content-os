@@ -10,12 +10,14 @@
 //    auf Trainingswissen beruht, und darf sich nicht als recherchiert ausgeben.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { complete, type CompletionResult } from './providers/registry'
+import { complete, type CompletionResult } from './providers/registry.ts'
 import { describeForPrompt } from './research/confidence.ts'
 import type { EvidenceAssessment } from './research/confidence.ts'
 import { buildEnvelope, ENVELOPE_RULES } from './research/envelope.ts'
+import { buildMemoryBlock } from './memory/recall.ts'
+import type { RecallHit } from './memory/types.ts'
 import type { ResearchDocument } from './research/types.ts'
-import type { QueryPlan } from './types'
+import type { QueryPlan } from './types.ts'
 
 const BASE_RULES = `Du formulierst die Endantwort eines Recherche-Systems.
 
@@ -35,6 +37,8 @@ export interface SynthesisInput {
   researchRan: boolean
   /** Deterministisch berechnete Beleglage. Nur vorhanden, wenn recherchiert wurde. */
   evidence?: EvidenceAssessment
+  /** Treffer aus dem Gedächtnis. */
+  memoryHits?: RecallHit[]
 }
 
 export function buildSystemPrompt(input: SynthesisInput): string {
@@ -84,11 +88,13 @@ sein können, und nenne die Quelle, die den aktuellen Stand liefern würde.`,
     }
   }
 
-  if (plan.needsMemory) {
+  const memory = buildMemoryBlock(input.memoryHits ?? [])
+  if (memory) {
+    parts.push(memory)
+  } else if (plan.needsMemory) {
     parts.push(
-      `Die Bedarfsanalyse hat gespeichertes Wissen über den Nutzer für relevant gehalten.
-Ein Memory-Speicher existiert noch nicht, es liegen also keine solchen Informationen vor.
-Frage nach, statt etwas über den Nutzer anzunehmen.`,
+      `Die Bedarfsanalyse hielt gespeichertes Wissen über den Nutzer für relevant,
+das Gedächtnis enthält dazu aber nichts. Frage nach, statt etwas anzunehmen.`,
     )
   }
 

@@ -2,8 +2,8 @@
 // Ein kaputter Trace darf /api/health nicht zum Absturz bringen, muss aber
 // als ERROR sichtbar werden statt still zu verschwinden.
 
-import { dbLocation as rawDbLocation } from './db'
-import { countRuns as rawCountRuns } from './trace'
+import { dbLocation as rawDbLocation } from './db.ts'
+import { countRuns as rawCountRuns } from './trace.ts'
 
 export function countRuns(): { ok: true; count: number } | { ok: false; error: string } {
   try {

@@ -10,12 +10,13 @@
     "typecheck": "tsc --noEmit",
     "check": "node scripts/check-boundaries.mjs",
     "verify": "npm run check && npm run typecheck && npm run build",
-    "test": "npm run test:planner && npm run test:confidence && npm run test:research && npm run test:extract && npm run test:provider",
+    "test": "npm run test:planner && npm run test:confidence && npm run test:memory && npm run test:research && npm run test:extract && npm run test:provider",
     "test:planner": "node --experimental-strip-types --no-warnings scripts/test-planner-filter.ts",
     "test:research": "node --experimental-strip-types --no-warnings scripts/test-research.ts",
     "test:extract": "node --experimental-strip-types --no-warnings scripts/test-extract.ts",
     "test:provider": "bash scripts/test-provider.sh",
-    "test:confidence": "node --experimental-strip-types --no-warnings scripts/test-confidence.ts"
+    "test:confidence": "node --experimental-strip-types --no-warnings scripts/test-confidence.ts",
+    "test:memory": "node --experimental-strip-types --no-warnings scripts/test-memory.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

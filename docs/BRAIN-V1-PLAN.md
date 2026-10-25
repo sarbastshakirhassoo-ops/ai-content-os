@@ -290,6 +290,41 @@ legacy/video/              archiviert, vom Build ausgeschlossen
 docs/BRAIN-V1-PLAN.md      dieses Dokument
 ```
 
+### Memory (Schritt 6)
+
+Fünf Arten in derselben SQLite-Datei: `user`, `project`, `decision`,
+`knowledge`, `conversation`.
+
+**Schreibstrategie.** Es wird nicht alles gespeichert. `user`, `project` und
+`decision` entstehen ausschliesslich aus dem, was der Nutzer selbst
+geschrieben hat, vorgeschlagen vom Planner im selben Modellaufruf, der ohnehin
+stattfindet. Kein zusätzlicher Aufruf, keine zusätzlichen Kosten. Inhalte aus
+dem Internet kommen niemals ins Langzeitgedächtnis: sie sind untrusted input
+und hätten sonst einen dauerhaften Weg in spätere Antworten. `knowledge` wird
+nur bei Beleglage `HIGH` oder `MEDIUM` geschrieben, damit sich schlecht
+Belegtes nicht festsetzt.
+
+**Abrufstrategie, bewusst zweigeteilt.** `user`, `project` und `decision`
+werden immer mitgeliefert, neueste zuerst. `knowledge` und `conversation`
+kommen über die Volltextsuche.
+
+Der Grund ist gemessen: reine Stichwortsuche scheitert im Deutschen an
+Komposita und Beugung. Die Frage "Welche rechtlichen Punkte muss ich bei
+meinem geplanten Unternehmen beachten?" fand den Eintrag "SaaS-Gründung
+Buchhaltungssoftware für deutsche Kleinunternehmen" NICHT, weil FTS5
+"Unternehmen" und "Kleinunternehmen" als verschiedene Wörter behandelt.
+Semantische Suche löst das, braucht aber Embeddings und ist erst V3.
+
+**Frische.** Dieselbe Regel wie beim Research-Cache, zum zweiten Mal
+angewandt: ein Treffer gilt nur als Fakt, wenn sein Alter unter der
+Lebensdauer seiner Klasse liegt. `REALTIME_SENSITIVE` ist sofort veraltet,
+gespeichertes Wissen kann eine Echtzeitfrage also grundsätzlich nicht
+beantworten. Veraltete Treffer werden nicht verschwiegen, sondern im Prompt
+als VERALTET markiert und bleiben Kontext.
+
+**Kontrolle.** `/memory` zeigt alles Gespeicherte und erlaubt, jeden Eintrag
+zu löschen.
+
 ### Belegstärke (Schritt 5)
 
 `src/brain/research/confidence.ts` rechnet aus der tatsächlichen Quellenlage
@@ -335,7 +370,7 @@ Community-Quellen werden **nie** als Faktenbeleg ausgegeben.
 | 4 | Research Layer | Registry, vier geerntete Quellen, Normalisierung, Dedupe, Ranking, Readability, Envelope | AI-Business-Frage liefert mindestens fünf echte klickbare Quellen; Ausfall einer Quelle bricht nichts ab |
 | ✅ 4b | Einfaches Visual Brain | React Flow mit fünf Knoten, gespeist aus dem echten Trace | INTERNET leuchtet nur bei echter Recherche, MEMORY zeigt Idle wenn kein Treffer; keine simulierten Animationen |
 | ✅ 5 | Quellen und Vertrauen | Tier-Klassifikation, EZB, Eurostat, World Bank, SEC EDGAR, Wikipedia, arXiv, Datumsfelder, Confidence | EZB-Leitzins kommt aus der EZB-Quelle mit Veröffentlichungs- und Abrufdatum; Reddit-Meinung nie als Fakt |
-| 6 | Memory | SQLite-Schema, fünf Memory-Arten, FTS5-Recall, Freshness-Klassen, Schreibstrategie | Neue Sitzung kennt das Projekt aus der vorigen; `CURRENT`-Treffer unter 6 h wird wiederverwendet, `REALTIME_SENSITIVE` niemals |
+| ✅ 6 | Memory | SQLite-Schema, fünf Memory-Arten, FTS5-Recall, Freshness-Klassen, Schreibstrategie | Neue Sitzung kennt das Projekt aus der vorigen; `CURRENT`-Treffer unter 6 h wird wiederverwendet, `REALTIME_SENSITIVE` niemals |
 | 7 | Vollständiges Visual Brain | Ausgebaute Flow-Ansicht, `/trace`, Quellenanzeige | Jeder Run vollständig nachvollziehbar; kein Zustand hartkodiert |
 | 8 | Voice | Web Speech API als austauschbare Ein- und Ausgabeschicht | Gesprochene Frage, gesprochene Antwort; ohne Voice funktioniert Text unverändert |
 | 9 | Tests und Härtung | Sieben Testfälle als Skript, Timeouts, Retries, Rate-Limit-Behandlung, Injection-Test | Alle sieben laufen durch; eine Testseite mit eingebetteten Anweisungen ändert das Verhalten nicht |

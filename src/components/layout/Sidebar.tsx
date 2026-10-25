@@ -9,6 +9,7 @@ type NavItem = { href: string; label: string; icon: string }
 
 const NAV: NavItem[] = [
   { href: '/brain', label: 'Central Brain', icon: '◈' },
+  { href: '/memory', label: 'Gedächtnis', icon: '◍' },
   { href: '/', label: 'System Status', icon: '◉' },
 ]
 

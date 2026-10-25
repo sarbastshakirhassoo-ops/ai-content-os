@@ -5,8 +5,8 @@
 // Ein Provider-Wechsel ist eine Änderung an BRAIN_LLM_PROVIDER, kein Codeumbau.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { GeminiProvider } from './gemini'
-import { OllamaProvider } from './ollama'
+import { GeminiProvider } from './gemini.ts'
+import { OllamaProvider } from './ollama.ts'
 import {
   LLMError,
   type CompletionRequest,
@@ -14,7 +14,7 @@ import {
   type LLMErrorKind,
   type LLMProvider,
   type ProviderHealth,
-} from './types'
+} from './types.ts'
 
 const PROVIDERS: LLMProvider[] = [new GeminiProvider(), new OllamaProvider()]
 

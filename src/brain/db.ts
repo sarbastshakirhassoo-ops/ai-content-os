@@ -58,8 +58,30 @@ CREATE TABLE IF NOT EXISTS research_cache (
   docs_json  TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS memory (
+  id            TEXT PRIMARY KEY,
+  kind          TEXT NOT NULL,
+  title         TEXT NOT NULL,
+  content       TEXT NOT NULL,
+  freshness     TEXT NOT NULL,
+  created_at    TEXT NOT NULL,
+  updated_at    TEXT NOT NULL,
+  source_run_id TEXT,
+  source_urls   TEXT
+);
+
+-- Volltextsuche. Eigene Tabelle statt External-Content: bei dieser Datenmenge
+-- ist die Verdopplung des Textes bedeutungslos, der Code dafür nachvollziehbar.
+CREATE VIRTUAL TABLE IF NOT EXISTS memory_fts USING fts5(
+  mem_id UNINDEXED,
+  title,
+  content
+);
+
 CREATE INDEX IF NOT EXISTS idx_runs_created ON runs(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_cache_stored ON research_cache(stored_at);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_memory_kind_title ON memory(kind, title);
+CREATE INDEX IF NOT EXISTS idx_memory_updated ON memory(updated_at DESC);
 `
 
 /**

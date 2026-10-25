@@ -53,6 +53,8 @@ export interface BrainFlowProps {
   hasAnswer: boolean
   /** Anzahl tatsächlich verwendeter Quellen. */
   sourceCount: number
+  /** Anzahl Treffer aus dem Gedächtnis. */
+  memoryHitCount: number
 }
 
 function stateOf(steps: TraceStep[], name: TraceStep['name']): NodeState {
@@ -64,7 +66,7 @@ function stateOf(steps: TraceStep[], name: TraceStep['name']): NodeState {
   return 'skipped'
 }
 
-export default function BrainFlow({ steps, busy, hasAnswer, sourceCount }: BrainFlowProps) {
+export default function BrainFlow({ steps, busy, hasAnswer, sourceCount, memoryHitCount }: BrainFlowProps) {
   const { nodes, edges } = useMemo(() => {
     // LLM arbeitet in zwei Schritten: Bedarfsanalyse und Synthese.
     const planState = stateOf(steps, 'plan')
@@ -76,9 +78,7 @@ export default function BrainFlow({ steps, busy, hasAnswer, sourceCount }: Brain
       : 'idle'
 
     const researchState = stateOf(steps, 'research')
-    // Memory existiert noch nicht. Das wird so angezeigt, nicht als "idle".
-    const memoryStep = steps.find((s) => s.name === 'memory')
-    const memoryState: NodeState = memoryStep ? 'skipped' : 'not_implemented'
+    const memoryState = stateOf(steps, 'memory')
 
     const userState: NodeState = steps.length > 0 || busy ? 'done' : 'idle'
     const brainState: NodeState =
@@ -137,7 +137,7 @@ export default function BrainFlow({ steps, busy, hasAnswer, sourceCount }: Brain
       mk('brain', 'CENTRAL BRAIN', 'Orchestrator', brainState, 190, 100),
       mk('llm', 'LLM', 'Analyse + Synthese', llmState, 0, 210),
       mk('internet', 'INTERNET', researchSub, researchState, 190, 210),
-      mk('memory', 'MEMORY', memoryState === 'not_implemented' ? 'Schritt 6' : 'übersprungen', memoryState, 380, 210),
+      mk('memory', 'MEMORY', memoryHitCount > 0 ? `${memoryHitCount} Treffer` : 'kein Treffer', memoryState, 380, 210),
       mk('answer', 'ANSWER', hasAnswer ? 'mit Belegen' : 'noch nichts', answerState, 190, 320),
     ]
 
@@ -157,7 +157,7 @@ export default function BrainFlow({ steps, busy, hasAnswer, sourceCount }: Brain
     ]
 
     return { nodes, edges }
-  }, [steps, busy, hasAnswer, sourceCount])
+  }, [steps, busy, hasAnswer, sourceCount, memoryHitCount])
 
   return (
     <div style={{ height: 440 }} className="bg-surface rounded-lg border border-border">

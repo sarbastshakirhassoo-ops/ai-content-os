@@ -3,6 +3,7 @@ import { useRef, useState } from 'react'
 import type { BrainEvent, FreshnessAdjustment, QueryPlan, TraceStep } from '@/brain/types'
 import type { ResearchDocument } from '@/brain/research/types'
 import type { EvidenceAssessment } from '@/brain/research/confidence'
+import type { RecallHit } from '@/brain/memory/types'
 import BrainFlow from '@/components/brain/BrainFlow'
 
 const STEP_STYLE: Record<string, string> = {
@@ -41,6 +42,8 @@ export default function BrainPage() {
   const [adjustment, setAdjustment] = useState<FreshnessAdjustment | null>(null)
   const [sources, setSources] = useState<ResearchDocument[]>([])
   const [evidence, setEvidence] = useState<EvidenceAssessment | null>(null)
+  const [memoryHits, setMemoryHits] = useState<RecallHit[]>([])
+  const [memoryWritten, setMemoryWritten] = useState<string[]>([])
   const [answer, setAnswer] = useState<string | null>(null)
   const [error, setError] = useState<{ message: string; kind: string } | null>(null)
   const abortRef = useRef<AbortController | null>(null)
@@ -49,7 +52,8 @@ export default function BrainPage() {
     if (busy || !query.trim()) return
     setBusy(true)
     setRunId(null); setSteps([]); setPlan(null); setAdjustment(null)
-    setSources([]); setEvidence(null); setAnswer(null); setError(null)
+    setSources([]); setEvidence(null); setMemoryHits([]); setMemoryWritten([])
+    setAnswer(null); setError(null)
 
     const ctrl = new AbortController()
     abortRef.current = ctrl
@@ -86,6 +90,8 @@ export default function BrainPage() {
           if (e.type === 'step') setSteps((prev) => [...prev.filter((s) => s.seq !== e.step.seq), e.step].sort((a, b) => a.seq - b.seq))
           if (e.type === 'plan') { setPlan(e.plan); setAdjustment(e.adjustment) }
           if (e.type === 'sources') { setSources(e.documents); setEvidence(e.evidence) }
+          if (e.type === 'memory') setMemoryHits(e.hits)
+          if (e.type === 'memoryWritten') setMemoryWritten(e.titles)
           if (e.type === 'answer') setAnswer(e.text)
           if (e.type === 'error') setError({ message: e.message, kind: e.kind })
         }
@@ -142,7 +148,7 @@ export default function BrainPage() {
             <span className="text-xs text-muted">zeigt den echten Trace, keine Animation ohne Grundlage</span>
           </div>
           <div className="p-3">
-            <BrainFlow steps={steps} busy={busy} hasAnswer={answer !== null} sourceCount={sources.length} />
+            <BrainFlow steps={steps} busy={busy} hasAnswer={answer !== null} sourceCount={sources.length} memoryHitCount={memoryHits.length} />
           </div>
         </div>
       )}
@@ -200,6 +206,37 @@ export default function BrainPage() {
       {error && (
         <div className="bg-danger/10 border border-danger/30 rounded-xl px-4 py-3 text-sm text-danger">
           <span className="font-semibold">{error.kind}: </span>{error.message}
+        </div>
+      )}
+
+      {(memoryHits.length > 0 || memoryWritten.length > 0) && (
+        <div className="bg-card border border-border rounded-xl p-4">
+          <h2 className="text-sm font-semibold text-white mb-2">Gedächtnis</h2>
+          {memoryHits.length > 0 && (
+            <>
+              <div className="text-xs text-muted mb-1.5">Verwendet:</div>
+              <ul className="text-xs text-slate-300 space-y-1 mb-3">
+                {memoryHits.map((h) => (
+                  <li key={h.entry.id} className="flex gap-2">
+                    <span className="text-muted shrink-0">[{h.entry.kind}]</span>
+                    <span className="flex-1">{h.entry.title}</span>
+                    {h.stale && <span className="text-warning shrink-0">veraltet</span>}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {memoryWritten.length > 0 && (
+            <>
+              <div className="text-xs text-muted mb-1.5">Neu gespeichert:</div>
+              <ul className="text-xs text-slate-300 space-y-1">
+                {memoryWritten.map((t, i) => <li key={i}>· {t}</li>)}
+              </ul>
+            </>
+          )}
+          <a href="/memory" className="inline-block mt-3 text-xs text-indigo-300 hover:text-indigo-200">
+            Gedächtnis ansehen und verwalten
+          </a>
         </div>
       )}
 

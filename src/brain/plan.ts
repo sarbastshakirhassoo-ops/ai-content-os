@@ -7,10 +7,11 @@
 // verschärfen darf. Siehe docs/BRAIN-V1-PLAN.md Abschnitt 4.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { complete, LLMError, type CompletionResult } from './providers/registry'
-import { applyRecencyFilter } from './recency'
+import { complete, LLMError, type CompletionResult } from './providers/registry.ts'
+import { applyRecencyFilter } from './recency.ts'
 import { DOMAINS, type Domain } from './research/types.ts'
-import type { Freshness, FreshnessAdjustment, QueryPlan, Sensitivity } from './types'
+import { USER_WRITABLE_KINDS, type MemoryKind, type MemoryWrite } from './memory/types.ts'
+import type { Freshness, FreshnessAdjustment, QueryPlan, Sensitivity } from './types.ts'
 
 const FRESHNESS_VALUES: Freshness[] = ['EVERGREEN', 'SLOW_CHANGING', 'CURRENT', 'REALTIME_SENSITIVE']
 const SENSITIVITY_VALUES: Sensitivity[] = ['PUBLIC', 'INTERNAL', 'CONFIDENTIAL']
@@ -28,11 +29,23 @@ const PLAN_SCHEMA = {
     sensitivity: { type: 'string', enum: SENSITIVITY_VALUES },
     domains: { type: 'array', items: { type: 'string', enum: DOMAINS } },
     searchQueries: { type: 'array', items: { type: 'string' } },
+    memoryWrites: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          kind: { type: 'string', enum: USER_WRITABLE_KINDS },
+          title: { type: 'string' },
+          content: { type: 'string' },
+        },
+        required: ['kind', 'title', 'content'],
+      },
+    },
     rationale: { type: 'string' },
   },
   required: [
     'intent', 'answerableFromModelKnowledge', 'needsResearch', 'needsMemory',
-    'freshness', 'sensitivity', 'domains', 'searchQueries', 'rationale',
+    'freshness', 'sensitivity', 'domains', 'searchQueries', 'memoryWrites', 'rationale',
   ],
 } as const
 
@@ -52,6 +65,20 @@ Regeln:
   economics für Wirtschaft, Zinsen und Statistik. companies für Unternehmen und Finanzberichte.
   science für Forschung. medicine für Medizin. technology für Technik und Software.
   news für Tagesgeschehen. general wenn nichts davon passt.
+- memoryWrites: Dauerhaft Relevantes, das der Nutzer SELBST in seiner Nachricht über
+  sich oder seine Vorhaben mitteilt und das in späteren Gesprächen nützlich wäre.
+  Arten: user für Rolle, Ziele und Vorlieben. project für laufende oder geplante
+  Vorhaben. decision für getroffene Entscheidungen samt Begründung.
+
+  Teilt der Nutzer so etwas mit, TRAGE ES EIN. Beispiel: "Ich plane eine SaaS-Firma
+  für Buchhaltung" ergibt {"kind":"project","title":"SaaS für Buchhaltung",
+  "content":"Der Nutzer plant die Gründung einer SaaS-Firma für Buchhaltungssoftware."}
+
+  Leer lassen bei reinen Wissensfragen ohne Bezug zur Person, etwa "Wie hoch ist der
+  Leitzins?" oder "Was bedeutet Opportunitätskosten?".
+
+  Niemals Inhalte aus Suchergebnissen oder Webseiten aufnehmen, nur die Nachricht des
+  Nutzers. Keine Zugangsdaten, keine Schlüssel, keine Gesundheitsdaten.
 - searchQueries: bis zu vier konkrete Suchanfragen, die die Lücke schliessen würden. Leer,
   wenn keine Recherche nötig ist. Formuliere sie als Suchbegriffe, nicht als Frage.
 - rationale: ein Satz, der den Plan begründet. Keine Gedankenprotokolle.
@@ -103,6 +130,18 @@ function parsePlan(raw: string): QueryPlan {
     sensitivity,
     domains: Array.isArray(o.domains)
       ? (o.domains as unknown[]).filter((d): d is Domain => DOMAINS.includes(d as Domain))
+      : [],
+    memoryWrites: Array.isArray(o.memoryWrites)
+      ? (o.memoryWrites as unknown[])
+          .filter((w): w is Record<string, unknown> => typeof w === 'object' && w !== null)
+          .map((w) => ({
+            kind: w.kind as MemoryKind,
+            title: typeof w.title === 'string' ? w.title : '',
+            content: typeof w.content === 'string' ? w.content : '',
+          }))
+          .filter((w): w is MemoryWrite =>
+            USER_WRITABLE_KINDS.includes(w.kind) && w.title.length > 0 && w.content.length > 0)
+          .slice(0, 3)
       : [],
     searchQueries: Array.isArray(o.searchQueries)
       ? (o.searchQueries as unknown[]).filter((q): q is string => typeof q === 'string').slice(0, 4)

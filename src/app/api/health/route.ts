@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { listProviders, primaryProviderId } from '@/brain/providers/registry'
 import { countRuns, dbLocationSafe } from '@/brain/health-probe'
 import { countCacheEntries, listSources } from '@/brain/research/index'
+import { countByKind } from '@/brain/memory/store'
 import type { CapabilityReport, HealthResponse } from '@/types'
 
 export const dynamic = 'force-dynamic'
@@ -15,8 +16,8 @@ export const dynamic = 'force-dynamic'
 // Netzwerk-Check, nicht aus der Anwesenheit einer Umgebungsvariable.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const ROADMAP_STEP = 4
-const ROADMAP_LABEL = 'Visual Brain in einfacher Form aktiv — Quellenvertrauen folgt in Schritt 5'
+const ROADMAP_STEP = 6
+const ROADMAP_LABEL = 'Memory aktiv — vollständiges Visual Brain folgt in Schritt 7'
 
 function notImplemented(id: string, label: string, step: number, detail: string): CapabilityReport {
   return { id, label, status: 'NOT_IMPLEMENTED', detail, plannedInStep: step }
@@ -97,6 +98,32 @@ export async function GET() {
         detail: 'Keine Quelle verfügbar.',
       }
 
+  // Memory: echter Zugriff, keine Existenzannahme.
+  let memory: CapabilityReport
+  try {
+    const counts = countByKind()
+    const total = Object.values(counts).reduce((a, b) => a + b, 0)
+    const detail = Object.entries(counts)
+      .filter(([, n]) => n > 0)
+      .map(([k, n]) => `${n} ${k}`)
+      .join(', ')
+    memory = {
+      id: 'memory.store',
+      label: 'Memory · SQLite',
+      status: 'CONNECTED',
+      detail: total === 0
+        ? 'Store erreichbar, noch keine Einträge gespeichert.'
+        : `${total} Einträge: ${detail}. Volltextsuche über FTS5.`,
+    }
+  } catch (e) {
+    memory = {
+      id: 'memory.store',
+      label: 'Memory · SQLite',
+      status: 'ERROR',
+      detail: `Memory nicht lesbar: ${e instanceof Error ? e.message : String(e)}`,
+    }
+  }
+
   const capabilities: CapabilityReport[] = [
     ...providerReports,
     orchestrator,
@@ -108,8 +135,7 @@ export async function GET() {
       status: 'CONNECTED',
       detail: 'Readability holt für die bestbewerteten Treffer den Lesetext. Paywalls und Bot-Sperren bleiben zu.',
     },
-    notImplemented('memory.store', 'Memory · SQLite', 6,
-      'Kein Memory-Store vorhanden. Es wird derzeit nichts gespeichert.'),
+    memory,
     {
       id: 'ui.brainflow',
       label: 'Visual Brain · React Flow',

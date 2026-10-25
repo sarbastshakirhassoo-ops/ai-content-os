@@ -14,7 +14,7 @@ import {
   type CompletionResult,
   type LLMProvider,
   type ProviderHealth,
-} from './types'
+} from './types.ts'
 
 const DEFAULT_BASE_URL = 'http://localhost:11434'
 const DEFAULT_MODEL = 'llama3.1:8b'

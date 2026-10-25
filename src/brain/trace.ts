@@ -8,7 +8,7 @@
 //    Gedankengänge des Modells. Jeder Text läuft durch scrubSecrets().
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { getDb } from './db'
+import { getDb } from './db.ts'
 import type {
   QueryPlan,
   RunStatus,
@@ -16,7 +16,7 @@ import type {
   StepStatus,
   TraceRun,
   TraceStep,
-} from './types'
+} from './types.ts'
 
 /**
  * Zweite Verteidigungslinie. Die Provider redigieren ihre Fehlermeldungen

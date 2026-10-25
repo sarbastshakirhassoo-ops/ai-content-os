@@ -1,34 +1,35 @@
 {
-  "name": "ai-content-os",
+  "name": "universal-brain",
   "version": "1.0.0",
   "private": true,
+  "description": "Privates AI Intelligence System — LLM, Internet-Recherche, Memory",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "db:push": "prisma db push",
-    "db:studio": "prisma studio",
-    "scheduler": "node scripts/scheduler.js",
-    "scheduler:now": "node scripts/scheduler.js --now",
-    "youtube:token": "node scripts/get-youtube-token.js",
-    "dev:full": "concurrently \"npm run dev\" \"sleep 5 && npm run scheduler\""
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-boundaries.mjs",
+    "verify": "npm run check && npm run typecheck && npm run build",
+    "test": "npm run test:planner && npm run test:research && npm run test:extract && npm run test:provider",
+    "test:planner": "node --experimental-strip-types --no-warnings scripts/test-planner-filter.ts",
+    "test:research": "node --experimental-strip-types --no-warnings scripts/test-research.ts",
+    "test:extract": "node --experimental-strip-types --no-warnings scripts/test-extract.ts",
+    "test:provider": "bash scripts/test-provider.sh"
   },
   "dependencies": {
+    "@mozilla/readability": "^0.6.0",
     "@xyflow/react": "^12.0.0",
-    "lucide-react": "^0.400.0",
-    "next": "14.2.0",
-    "puppeteer": "^22.15.0",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0"
+    "linkedom": "^0.18.0",
+    "next": "^16.3.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "@prisma/client": "^5.10.0",
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.3.0",
-    "@types/react-dom": "^18.3.0",
+    "@types/node": "^22.20.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
-    "prisma": "^5.10.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.4.0"
   }

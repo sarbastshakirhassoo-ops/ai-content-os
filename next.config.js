@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Standalone-Output für Docker/Railway/Render (nur wenn DOCKER_BUILD=true)
-  output: process.env.DOCKER_BUILD === 'true' ? 'standalone' : undefined,
+  // Next 16 hängt sonst bei jedem `next dev` einen eigenen Block an CLAUDE.md an.
+  // Die Datei ist bewusst kuratiert und soll sich nicht selbst verändern.
+  agentRules: false,
+
+  // Das Dev-Overlay unten links überdeckt die Sidebar-Statusanzeige.
+  devIndicators: false,
 }
 module.exports = nextConfig

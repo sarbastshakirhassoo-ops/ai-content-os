@@ -1,5 +1,4 @@
 import { cn } from '@/lib/utils'
-import type { AgentStatus } from '@/types'
 
 type BadgeVariant = 'success' | 'warning' | 'danger' | 'info' | 'muted' | 'accent'
 

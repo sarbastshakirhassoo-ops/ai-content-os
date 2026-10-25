@@ -23,6 +23,7 @@ import {
 } from './trace'
 import type { BrainEvent, QueryPlan } from './types'
 import type { ResearchDocument } from './research/types.ts'
+import type { EvidenceAssessment } from './research/confidence.ts'
 
 export interface RunOptions {
   signal?: AbortSignal
@@ -92,6 +93,7 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
 
   // ── Schritt: Recherche ─────────────────────────────────────────────────────
   let documents: ResearchDocument[] = []
+  let evidence: EvidenceAssessment | undefined
   let researchRan = false
 
   if (plan.needsResearch) {
@@ -106,6 +108,7 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
         signal: opts.signal,
       })
       documents = out.documents
+      evidence = out.evidence
 
       const ok = out.attempts.filter((a) => a.status === 'ok')
       const failed = out.attempts.filter((a) => a.status === 'failed')
@@ -121,13 +124,15 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
             `Cache: ${out.cache}. Quellen ausgewählt: ${out.selectedSources.join(', ') || 'keine'}. ` +
             `Suchanfragen: ${out.queries.length}. Aufrufe: ${out.attempts.length} ` +
             `(${ok.length} mit Treffern, ${empty.length} ohne, ${failed.length} fehlgeschlagen). ` +
-            `Ergebnisse nach Deduplizierung und Ranking: ${documents.length}.` +
+            `Ergebnisse nach Deduplizierung und Ranking: ${documents.length}. ` +
+            `Beleglage: ${out.evidence.level}.` +
             (failed.length > 0
               ? ` Fehlgeschlagen: ${failed.map((f) => `${f.sourceId} (${f.error ?? 'unbekannt'})`).join('; ')}`
               : ''),
           error: documents.length === 0 ? 'Keine belastbaren Quellen gefunden.' : null,
           meta: {
             cache: out.cache,
+            evidence: out.evidence,
             queries: out.queries,
             selectedSources: out.selectedSources,
             attempts: out.attempts,
@@ -142,7 +147,7 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
           },
         }),
       })
-      emit({ type: 'sources', documents })
+      emit({ type: 'sources', documents, evidence: out.evidence })
     } catch (e) {
       // Ein unerwarteter Fehler der ganzen Schicht bricht den Lauf nicht ab.
       // Die Synthese läuft weiter und muss die Lücke benennen.
@@ -169,7 +174,7 @@ export async function runQuery(query: string, opts: RunOptions = {}): Promise<st
   // ── Schritt: Synthese ──────────────────────────────────────────────────────
   const synthStep = startStep(runId, ++seq, 'synthesis', 'synthesis')
   try {
-    const outcome = await synthesize(query, { plan, documents, researchRan }, { signal: opts.signal })
+    const outcome = await synthesize(query, { plan, documents, researchRan, evidence }, { signal: opts.signal })
 
     emit({
       type: 'step',

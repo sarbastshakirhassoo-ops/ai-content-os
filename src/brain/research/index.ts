@@ -14,6 +14,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { cacheKey, readCache, writeCache } from './cache.ts'
+import { assessEvidence, type EvidenceAssessment } from './confidence.ts'
 import { enrichWithFullText } from './extract.ts'
 import { rank, dedupe } from './rank.ts'
 import { selectSources, shouldFailForTest } from './registry.ts'
@@ -105,6 +106,7 @@ export async function research(req: ResearchRequest): Promise<ResearchOutcome> {
       durationMs: Date.now() - started,
       selectedSources,
       queries,
+      evidence: assessEvidence(cached.documents, req.freshness),
     }
   }
 
@@ -116,6 +118,7 @@ export async function research(req: ResearchRequest): Promise<ResearchOutcome> {
       durationMs: Date.now() - started,
       selectedSources,
       queries,
+      evidence: assessEvidence([], req.freshness),
     }
   }
 
@@ -157,10 +160,13 @@ export async function research(req: ResearchRequest): Promise<ResearchOutcome> {
     durationMs: Date.now() - started,
     selectedSources,
     queries,
+    evidence: assessEvidence(documents, req.freshness),
   }
 }
 
 export { listSources, getSource } from './registry.ts'
 export { countCacheEntries } from './cache.ts'
 export { buildEnvelope, ENVELOPE_RULES } from './envelope.ts'
+export { assessEvidence, describeForPrompt } from './confidence.ts'
+export type { EvidenceAssessment, ConfidenceLevel } from './confidence.ts'
 export type { ResearchOutcome, ResearchDocument, SourceAttempt, Domain } from './types.ts'

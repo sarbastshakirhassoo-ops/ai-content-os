@@ -2,6 +2,7 @@
 import { useRef, useState } from 'react'
 import type { BrainEvent, FreshnessAdjustment, QueryPlan, TraceStep } from '@/brain/types'
 import type { ResearchDocument } from '@/brain/research/types'
+import type { EvidenceAssessment } from '@/brain/research/confidence'
 import BrainFlow from '@/components/brain/BrainFlow'
 
 const STEP_STYLE: Record<string, string> = {
@@ -9,6 +10,13 @@ const STEP_STYLE: Record<string, string> = {
   completed: 'bg-success/15 text-success border-success/25',
   failed:    'bg-danger/15 text-danger border-danger/25',
   skipped:   'bg-warning/15 text-warning border-warning/25',
+}
+
+const LEVEL_STYLE: Record<string, string> = {
+  HIGH:   'bg-success/15 text-success border-success/25',
+  MEDIUM: 'bg-warning/15 text-warning border-warning/25',
+  LOW:    'bg-danger/15 text-danger border-danger/25',
+  NONE:   'bg-muted/15 text-muted border-muted/25',
 }
 
 const TIER_STYLE: Record<string, string> = {
@@ -32,6 +40,7 @@ export default function BrainPage() {
   const [plan, setPlan] = useState<QueryPlan | null>(null)
   const [adjustment, setAdjustment] = useState<FreshnessAdjustment | null>(null)
   const [sources, setSources] = useState<ResearchDocument[]>([])
+  const [evidence, setEvidence] = useState<EvidenceAssessment | null>(null)
   const [answer, setAnswer] = useState<string | null>(null)
   const [error, setError] = useState<{ message: string; kind: string } | null>(null)
   const abortRef = useRef<AbortController | null>(null)
@@ -40,7 +49,7 @@ export default function BrainPage() {
     if (busy || !query.trim()) return
     setBusy(true)
     setRunId(null); setSteps([]); setPlan(null); setAdjustment(null)
-    setSources([]); setAnswer(null); setError(null)
+    setSources([]); setEvidence(null); setAnswer(null); setError(null)
 
     const ctrl = new AbortController()
     abortRef.current = ctrl
@@ -76,7 +85,7 @@ export default function BrainPage() {
           if (e.type === 'run') setRunId(e.runId)
           if (e.type === 'step') setSteps((prev) => [...prev.filter((s) => s.seq !== e.step.seq), e.step].sort((a, b) => a.seq - b.seq))
           if (e.type === 'plan') { setPlan(e.plan); setAdjustment(e.adjustment) }
-          if (e.type === 'sources') setSources(e.documents)
+          if (e.type === 'sources') { setSources(e.documents); setEvidence(e.evidence) }
           if (e.type === 'answer') setAnswer(e.text)
           if (e.type === 'error') setError({ message: e.message, kind: e.kind })
         }
@@ -191,6 +200,26 @@ export default function BrainPage() {
       {error && (
         <div className="bg-danger/10 border border-danger/30 rounded-xl px-4 py-3 text-sm text-danger">
           <span className="font-semibold">{error.kind}: </span>{error.message}
+        </div>
+      )}
+
+      {evidence && (
+        <div className="bg-card border border-border rounded-xl p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-sm font-semibold text-white">Belegstärke</h2>
+            <span className={`inline-flex px-2 py-0.5 rounded text-xs font-medium border ${LEVEL_STYLE[evidence.level]}`}>
+              {evidence.level}
+            </span>
+          </div>
+          <p className="text-xs text-muted mb-2">
+            Gerechnet aus der Quellenlage, nicht vom Modell geschätzt. Sagt etwas über
+            die Belege aus, nicht über die Wahrheit der Antwort.
+          </p>
+          <ul className="text-xs text-slate-300 space-y-1">
+            {evidence.reasons.map((r, i) => (
+              <li key={i} className="flex gap-2"><span className="text-muted">·</span>{r}</li>
+            ))}
+          </ul>
         </div>
       )}
 

@@ -45,12 +45,14 @@ Dokument auseinanderlaufen, ist das ein Fehler.
 
 ## Aktueller Stand
 
-Roadmap-Schritt 4 von 9 ist abgeschlossen: Research Layer.
-Dreizehn Quellen ohne API-Key, Auswahl nach Thema und Aktualitätsklasse,
-Primärquellen zuerst. Ergebnisse gehen im Envelope als untrusted input in die
-Synthese. Memory fehlt noch und wird im Trace als übersprungen protokolliert.
+Roadmap-Schritte 1 bis 5 von 9 sind abgeschlossen.
+Provider-Schicht, Central Brain, Research Layer mit 13 Quellen, einfache
+Flow-Ansicht und die deterministische Belegstärke laufen. Memory fehlt noch
+und wird im Trace als übersprungen protokolliert.
 
-Nächster Schritt: 4b — einfache React-Flow-Ansicht, danach Schritt 5.
+Sieben von zehn Komponenten sind CONNECTED.
+
+Nächster Schritt: 6 — Memory.
 
 ---
 

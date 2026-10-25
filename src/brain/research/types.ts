@@ -108,6 +108,8 @@ export type CacheState = 'hit' | 'miss' | 'bypass'
 
 export interface ResearchOutcome {
   documents: ResearchDocument[]
+  /** Deterministische Einschätzung der Beleglage. Siehe confidence.ts. */
+  evidence: import('./confidence.ts').EvidenceAssessment
   attempts: SourceAttempt[]
   cache: CacheState
   durationMs: number

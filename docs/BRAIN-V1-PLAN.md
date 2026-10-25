@@ -290,6 +290,29 @@ legacy/video/              archiviert, vom Build ausgeschlossen
 docs/BRAIN-V1-PLAN.md      dieses Dokument
 ```
 
+### Belegstärke (Schritt 5)
+
+`src/brain/research/confidence.ts` rechnet aus der tatsächlichen Quellenlage
+eine Einstufung: `HIGH`, `MEDIUM`, `LOW` oder `NONE`.
+
+Bewusst deterministisch und ohne LLM. Eine Confidence, die das Modell selbst
+vergibt, ist eine Selbsteinschätzung und damit genau die Art Aussage, der man
+nicht trauen kann. Gerechnet wird nur Nachprüfbares: Anzahl je Vertrauensstufe,
+Alter der jüngsten Quelle gegen die Anforderung der Frische-Klasse, Quellen ohne
+Datum, Anzahl unabhängiger Quellen.
+
+`HIGH` verlangt alle drei Bedingungen zugleich: mindestens eine Primärquelle,
+ausreichende Aktualität für die geforderte Klasse, mindestens zwei unabhängige
+Quellen. Fällt eine weg, ist es höchstens `MEDIUM`.
+
+Das Modell darf die Einstufung begründen, aber nicht neu vergeben. Es bekommt
+die gerechneten Beobachtungen in der Systemanweisung und soll sich darauf
+stützen.
+
+**Benennung:** die Zahl beschreibt die BELEGLAGE, nicht die Wahrheit. Eine gut
+belegte Aussage kann falsch sein, eine schlecht belegte richtig. Oberfläche und
+Prompt sagen deshalb "Belegstärke", nicht "Sicherheit".
+
 ### Quellen-Tiers
 
 | Tier | Beispiele | Verwendung |
@@ -310,8 +333,8 @@ Community-Quellen werden **nie** als Faktenbeleg ausgegeben.
 | 2 | Echtes LLM | Provider-Interface, Gemini, Ollama, Registry mit Health-Check und Fallback | Dieselbe Frage über beide Provider beantwortbar; Wechsel per Env ohne Codeänderung; fehlender Key meldet `NOT_CONFIGURED` statt Absturz |
 | 3 | Central Brain | Orchestrator, Planner, Synthesis, Trace, `/api/brain/query` als Stream | Wissensfrage ohne Recherche, Aktualitätsfrage mit Recherche, Trace zeigt beide Wege unterschiedlich |
 | 4 | Research Layer | Registry, vier geerntete Quellen, Normalisierung, Dedupe, Ranking, Readability, Envelope | AI-Business-Frage liefert mindestens fünf echte klickbare Quellen; Ausfall einer Quelle bricht nichts ab |
-| 4b | Einfaches Visual Brain | React Flow mit fünf Knoten, gespeist aus dem echten Trace | INTERNET leuchtet nur bei echter Recherche, MEMORY zeigt Idle wenn kein Treffer; keine simulierten Animationen |
-| 5 | Quellen und Vertrauen | Tier-Klassifikation, EZB, Eurostat, World Bank, SEC EDGAR, Wikipedia, arXiv, Datumsfelder, Confidence | EZB-Leitzins kommt aus der EZB-Quelle mit Veröffentlichungs- und Abrufdatum; Reddit-Meinung nie als Fakt |
+| ✅ 4b | Einfaches Visual Brain | React Flow mit fünf Knoten, gespeist aus dem echten Trace | INTERNET leuchtet nur bei echter Recherche, MEMORY zeigt Idle wenn kein Treffer; keine simulierten Animationen |
+| ✅ 5 | Quellen und Vertrauen | Tier-Klassifikation, EZB, Eurostat, World Bank, SEC EDGAR, Wikipedia, arXiv, Datumsfelder, Confidence | EZB-Leitzins kommt aus der EZB-Quelle mit Veröffentlichungs- und Abrufdatum; Reddit-Meinung nie als Fakt |
 | 6 | Memory | SQLite-Schema, fünf Memory-Arten, FTS5-Recall, Freshness-Klassen, Schreibstrategie | Neue Sitzung kennt das Projekt aus der vorigen; `CURRENT`-Treffer unter 6 h wird wiederverwendet, `REALTIME_SENSITIVE` niemals |
 | 7 | Vollständiges Visual Brain | Ausgebaute Flow-Ansicht, `/trace`, Quellenanzeige | Jeder Run vollständig nachvollziehbar; kein Zustand hartkodiert |
 | 8 | Voice | Web Speech API als austauschbare Ein- und Ausgabeschicht | Gesprochene Frage, gesprochene Antwort; ohne Voice funktioniert Text unverändert |

@@ -11,6 +11,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { complete, type CompletionResult } from './providers/registry'
+import { describeForPrompt } from './research/confidence.ts'
+import type { EvidenceAssessment } from './research/confidence.ts'
 import { buildEnvelope, ENVELOPE_RULES } from './research/envelope.ts'
 import type { ResearchDocument } from './research/types.ts'
 import type { QueryPlan } from './types'
@@ -31,10 +33,12 @@ export interface SynthesisInput {
   /** Hat die Research-Schicht überhaupt gelaufen? Unterscheidet "nichts
    *  gefunden" von "gar nicht gesucht" — für den Nutzer ein Unterschied. */
   researchRan: boolean
+  /** Deterministisch berechnete Beleglage. Nur vorhanden, wenn recherchiert wurde. */
+  evidence?: EvidenceAssessment
 }
 
 export function buildSystemPrompt(input: SynthesisInput): string {
-  const { plan, documents, researchRan } = input
+  const { plan, documents, researchRan, evidence } = input
   const parts = [BASE_RULES]
 
   if (documents.length > 0) {
@@ -45,6 +49,10 @@ hinausgeht, kennzeichne das ausdrücklich als nicht belegt.
 Nenne am Ende unter der Überschrift "Quellen" nur die Nummern, die du tatsächlich
 verwendet hast, jeweils mit Titel, Datum und URL. Hänge nicht alle Quellen an.`,
     )
+    // Die Einstufung der Beleglage wird gerechnet, nicht vom Modell geschätzt.
+    // Das Modell darf sie begründen, aber nicht neu vergeben.
+    if (evidence) parts.push(describeForPrompt(evidence))
+
     if (plan.freshness === 'REALTIME_SENSITIVE' || plan.freshness === 'CURRENT') {
       parts.push(
         `Die Frage ist zeitkritisch (Einstufung ${plan.freshness}). Nenne bei jeder Zahl
@@ -56,13 +64,16 @@ das ausdrücklich.`,
     parts.push(
       `WICHTIG: Es wurde recherchiert, aber KEINE belastbare Quelle gefunden.
 Sage das klar und deutlich. Gib auf keinen Fall Trainingswissen als aktuellen Fakt aus.
-Nenne stattdessen, welche Quelle die Antwort liefern würde und wo sie zu finden ist.`,
+Nenne stattdessen, welche Quelle die Antwort liefern würde und wo sie zu finden ist.
+Schliesse mit der Zeile "Belegstärke: NONE".`,
     )
   } else {
     parts.push(
       `WICHTIG: Für diese Antwort stand keine Internet-Recherche zur Verfügung.
 Du antwortest ausschliesslich aus deinem Trainingswissen.
-Sage das zu Beginn deiner Antwort in einem kurzen Satz.`,
+Sage das zu Beginn deiner Antwort in einem kurzen Satz.
+Schliesse mit der Zeile "Belegstärke: NONE" und einem Satz, dass keine Quellen
+abgerufen wurden. Das bewertet die Quellenlage, nicht die Richtigkeit deiner Antwort.`,
     )
     if (plan.needsResearch) {
       parts.push(

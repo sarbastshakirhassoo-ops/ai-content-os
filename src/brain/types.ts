@@ -6,6 +6,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Domain, ResearchDocument } from './research/types.ts'
+import type { EvidenceAssessment } from './research/confidence.ts'
 export type { Domain }
 
 /**
@@ -97,7 +98,7 @@ export type BrainEvent =
   | { type: 'run'; runId: string }
   | { type: 'step'; step: TraceStep }
   | { type: 'plan'; plan: QueryPlan; adjustment: FreshnessAdjustment | null }
-  | { type: 'sources'; documents: ResearchDocument[] }
+  | { type: 'sources'; documents: ResearchDocument[]; evidence: EvidenceAssessment }
   | { type: 'answer'; text: string }
   | { type: 'error'; message: string; kind: string }
   | { type: 'done'; runId: string; durationMs: number }

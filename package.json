@@ -17,7 +17,8 @@
     "test:provider": "bash scripts/test-provider.sh",
     "test:confidence": "node --experimental-strip-types --no-warnings scripts/test-confidence.ts",
     "test:memory": "node --experimental-strip-types --no-warnings scripts/test-memory.ts",
-    "test:voice": "node --experimental-strip-types --no-warnings scripts/test-voice.ts"
+    "test:voice": "node --experimental-strip-types --no-warnings scripts/test-voice.ts",
+    "test:acceptance": "node --env-file-if-exists=.env.local --experimental-strip-types --no-warnings scripts/test-acceptance.ts"
   },
   "dependencies": {
     "@mozilla/readability": "^0.6.0",

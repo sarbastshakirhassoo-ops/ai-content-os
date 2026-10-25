@@ -2,6 +2,7 @@
 import { useRef, useState } from 'react'
 import type { BrainEvent, FreshnessAdjustment, QueryPlan, TraceStep } from '@/brain/types'
 import type { ResearchDocument } from '@/brain/research/types'
+import BrainFlow from '@/components/brain/BrainFlow'
 
 const STEP_STYLE: Record<string, string> = {
   running:   'bg-info/15 text-info border-info/25',
@@ -124,6 +125,18 @@ export default function BrainPage() {
           {runId && <span className="text-xs text-muted font-mono">Lauf {runId.slice(0, 8)}</span>}
         </div>
       </div>
+
+      {(steps.length > 0 || busy) && (
+        <div className="bg-card border border-border rounded-xl overflow-hidden">
+          <div className="px-4 py-3 border-b border-border flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-white">Brain</h2>
+            <span className="text-xs text-muted">zeigt den echten Trace, keine Animation ohne Grundlage</span>
+          </div>
+          <div className="p-3">
+            <BrainFlow steps={steps} busy={busy} hasAnswer={answer !== null} sourceCount={sources.length} />
+          </div>
+        </div>
+      )}
 
       {steps.length > 0 && (
         <div className="bg-card border border-border rounded-xl overflow-hidden">

@@ -16,7 +16,7 @@ export const dynamic = 'force-dynamic'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const ROADMAP_STEP = 4
-const ROADMAP_LABEL = 'Research Layer aktiv — Quellen und Vertrauensstufen folgen in Schritt 5'
+const ROADMAP_LABEL = 'Visual Brain in einfacher Form aktiv — Quellenvertrauen folgt in Schritt 5'
 
 function notImplemented(id: string, label: string, step: number, detail: string): CapabilityReport {
   return { id, label, status: 'NOT_IMPLEMENTED', detail, plannedInStep: step }
@@ -110,8 +110,12 @@ export async function GET() {
     },
     notImplemented('memory.store', 'Memory · SQLite', 6,
       'Kein Memory-Store vorhanden. Es wird derzeit nichts gespeichert.'),
-    notImplemented('ui.brainflow', 'Visual Brain · React Flow', 4,
-      'Einfache Trace-Ansicht folgt direkt nach der Research-Schicht.'),
+    {
+      id: 'ui.brainflow',
+      label: 'Visual Brain · React Flow',
+      status: 'CONNECTED',
+      detail: 'Einfache Ansicht unter /brain. Die Knoten spiegeln ausschliesslich den echten Trace; der Ausbau folgt in Schritt 7.',
+    },
     notImplemented('voice.stt', 'Voice · Speech to Text', 8,
       'Web Speech API noch nicht angebunden.'),
     notImplemented('voice.tts', 'Voice · Text to Speech', 8,

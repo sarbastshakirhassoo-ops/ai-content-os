@@ -57,6 +57,22 @@ export interface BrainFlowProps {
   memoryHitCount: number
 }
 
+/** Gesamtdauer der Schritte, die dieser Knoten repräsentiert. */
+function durationOf(steps: TraceStep[], names: TraceStep['name'][]): string {
+  const ms = steps
+    .filter((s) => names.includes(s.name) && s.durationMs !== null)
+    .reduce((a, s) => a + (s.durationMs ?? 0), 0)
+  return ms > 0 ? `${(ms / 1000).toFixed(1)}s` : ''
+}
+
+/** Ausgabe-Tokens der Schritte, die dieser Knoten repräsentiert. */
+function tokensOf(steps: TraceStep[], names: TraceStep['name'][]): string {
+  const n = steps
+    .filter((s) => names.includes(s.name))
+    .reduce((a, s) => a + (s.outputTokens ?? 0), 0)
+  return n > 0 ? `${n} Tokens` : ''
+}
+
 function stateOf(steps: TraceStep[], name: TraceStep['name']): NodeState {
   const step = steps.find((s) => s.name === name)
   if (!step) return 'idle'
@@ -94,7 +110,7 @@ export default function BrainFlow({ steps, busy, hasAnswer, sourceCount, memoryH
 
     const mk = (
       id: string, label: string, sub: string, state: NodeState,
-      x: number, y: number,
+      x: number, y: number, foot = '',
     ): Node => {
       const c = STATE_COLOR[state]
       return {
@@ -106,7 +122,7 @@ export default function BrainFlow({ steps, busy, hasAnswer, sourceCount, memoryH
               <div style={{ fontWeight: 600, fontSize: 12, color: c.text }}>{label}</div>
               <div style={{ fontSize: 10, opacity: 0.8, color: c.text }}>{sub}</div>
               <div style={{ fontSize: 9, marginTop: 2, opacity: 0.65, color: c.text }}>
-                {STATE_LABEL[state]}
+                {STATE_LABEL[state]}{foot ? ` · ${foot}` : ''}
               </div>
             </div>
           ),
@@ -134,9 +150,11 @@ export default function BrainFlow({ steps, busy, hasAnswer, sourceCount, memoryH
 
     const nodes: Node[] = [
       mk('user', 'USER', 'Frage', userState, 190, 0),
-      mk('brain', 'CENTRAL BRAIN', 'Orchestrator', brainState, 190, 100),
-      mk('llm', 'LLM', 'Analyse + Synthese', llmState, 0, 210),
-      mk('internet', 'INTERNET', researchSub, researchState, 190, 210),
+      mk('brain', 'CENTRAL BRAIN', 'Orchestrator', brainState, 190, 100,
+         `${steps.length} ${steps.length === 1 ? 'Schritt' : 'Schritte'}`),
+      mk('llm', 'LLM', 'Analyse + Synthese', llmState, 0, 210,
+         [durationOf(steps, ['plan', 'synthesis']), tokensOf(steps, ['plan', 'synthesis'])].filter(Boolean).join(' · ')),
+      mk('internet', 'INTERNET', researchSub, researchState, 190, 210, durationOf(steps, ['research'])),
       mk('memory', 'MEMORY', memoryHitCount > 0 ? `${memoryHitCount} Treffer` : 'kein Treffer', memoryState, 380, 210),
       mk('answer', 'ANSWER', hasAnswer ? 'mit Belegen' : 'noch nichts', answerState, 190, 320),
     ]

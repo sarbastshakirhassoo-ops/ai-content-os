@@ -371,7 +371,7 @@ Community-Quellen werden **nie** als Faktenbeleg ausgegeben.
 | ✅ 4b | Einfaches Visual Brain | React Flow mit fünf Knoten, gespeist aus dem echten Trace | INTERNET leuchtet nur bei echter Recherche, MEMORY zeigt Idle wenn kein Treffer; keine simulierten Animationen |
 | ✅ 5 | Quellen und Vertrauen | Tier-Klassifikation, EZB, Eurostat, World Bank, SEC EDGAR, Wikipedia, arXiv, Datumsfelder, Confidence | EZB-Leitzins kommt aus der EZB-Quelle mit Veröffentlichungs- und Abrufdatum; Reddit-Meinung nie als Fakt |
 | ✅ 6 | Memory | SQLite-Schema, fünf Memory-Arten, FTS5-Recall, Freshness-Klassen, Schreibstrategie | Neue Sitzung kennt das Projekt aus der vorigen; `CURRENT`-Treffer unter 6 h wird wiederverwendet, `REALTIME_SENSITIVE` niemals |
-| 7 | Vollständiges Visual Brain | Ausgebaute Flow-Ansicht, `/trace`, Quellenanzeige | Jeder Run vollständig nachvollziehbar; kein Zustand hartkodiert |
+| ✅ 7 | Vollständiges Visual Brain | Ausgebaute Flow-Ansicht, `/trace`, Quellenanzeige | Jeder Run vollständig nachvollziehbar; kein Zustand hartkodiert |
 | 8 | Voice | Web Speech API als austauschbare Ein- und Ausgabeschicht | Gesprochene Frage, gesprochene Antwort; ohne Voice funktioniert Text unverändert |
 | 9 | Tests und Härtung | Sieben Testfälle als Skript, Timeouts, Retries, Rate-Limit-Behandlung, Injection-Test | Alle sieben laufen durch; eine Testseite mit eingebetteten Anweisungen ändert das Verhalten nicht |
 

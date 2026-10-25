@@ -16,8 +16,8 @@ export const dynamic = 'force-dynamic'
 // Netzwerk-Check, nicht aus der Anwesenheit einer Umgebungsvariable.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const ROADMAP_STEP = 6
-const ROADMAP_LABEL = 'Memory aktiv — vollständiges Visual Brain folgt in Schritt 7'
+const ROADMAP_STEP = 7
+const ROADMAP_LABEL = 'Visual Brain und Trace vollständig — Sprache folgt in Schritt 8'
 
 function notImplemented(id: string, label: string, step: number, detail: string): CapabilityReport {
   return { id, label, status: 'NOT_IMPLEMENTED', detail, plannedInStep: step }
@@ -140,7 +140,7 @@ export async function GET() {
       id: 'ui.brainflow',
       label: 'Visual Brain · React Flow',
       status: 'CONNECTED',
-      detail: 'Einfache Ansicht unter /brain. Die Knoten spiegeln ausschliesslich den echten Trace; der Ausbau folgt in Schritt 7.',
+      detail: 'Flow-Ansicht unter /brain mit Dauern und Tokens, vollständige Lauf-Historie unter /trace. Alle Zustände kommen aus dem Trace.',
     },
     notImplemented('voice.stt', 'Voice · Speech to Text', 8,
       'Web Speech API noch nicht angebunden.'),

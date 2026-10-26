@@ -325,6 +325,36 @@ als VERALTET markiert und bleiben Kontext.
 **Kontrolle.** `/memory` zeigt alles Gespeicherte und erlaubt, jeden Eintrag
 zu löschen.
 
+### Abnahme (Schritt 9)
+
+`scripts/test-acceptance.ts` prüft die ganze Kette gegen den laufenden
+Dev-Server, nicht einzelne Funktionen. 26 Prüfungen, zuletzt am 2026-10-26
+vollständig bestanden.
+
+| Fall | Geprüft |
+|---|---|
+| 1 Allgemeinwissen | Antwort trifft das Thema und weist eine Belegstärke aus |
+| 2 Tagesaktuelles | als REALTIME_SENSITIVE eingestuft, Recherche lief, 10 Quellen |
+| 3 Primärquelle | EZB dabei, mit Veröffentlichungs- und Abrufdatum, Belegstärke HIGH |
+| 4 Unternehmen | als `companies` erkannt, substanzielle Antwort |
+| 5 Gründung | Gedächtnis-Schritt lief, ein Eintrag zum Speichern vorgeschlagen |
+| 6 Modellvergleich | dieselbe Frage über Gemini und Ollama, beide antworteten |
+| 7 Sprache | Schicht vorhanden und als solche gemeldet |
+| 8 Injection | siehe unten |
+
+**Zum Injection-Test.** Ein feindliches Dokument mit eingebetteten
+Systemanweisungen, Fence-Ausbruchsversuch und der Aufforderung, Umgebungs-
+variablen auszugeben, geht durch Envelope und echte Synthese. Geprüft wird
+mit einem Kanarienwort, ob das Modell die Anweisung befolgt. Es tat es nicht,
+blieb bei der eigentlichen Frage, und es landete kein Secret in der Antwort.
+
+Das ist ein bestandener Test, keine Garantie. Was zusätzlich schützt: V1 hat
+keine schreibenden Werkzeuge. Ein erfolgreicher Versuch könnte höchstens eine
+falsche Antwort erzeugen.
+
+**Nicht automatisiert:** Mikrofon und Stimme selbst. Manuell zu prüfen unter
+`/brain` mit "Diktieren" und "Antwort vorlesen".
+
 ### Sprache (Schritt 8)
 
 `src/lib/voice.ts` kapselt die Web Speech API des Browsers. Kostenlos, kein
@@ -388,7 +418,7 @@ Community-Quellen werden **nie** als Faktenbeleg ausgegeben.
 | ✅ 6 | Memory | SQLite-Schema, fünf Memory-Arten, FTS5-Recall, Freshness-Klassen, Schreibstrategie | Neue Sitzung kennt das Projekt aus der vorigen; `CURRENT`-Treffer unter 6 h wird wiederverwendet, `REALTIME_SENSITIVE` niemals |
 | ✅ 7 | Vollständiges Visual Brain | Ausgebaute Flow-Ansicht, `/trace`, Quellenanzeige | Jeder Run vollständig nachvollziehbar; kein Zustand hartkodiert |
 | ✅ 8 | Voice | Web Speech API als austauschbare Ein- und Ausgabeschicht | Gesprochene Frage, gesprochene Antwort; ohne Voice funktioniert Text unverändert |
-| 9 | Tests und Härtung | Sieben Testfälle als Skript, Timeouts, Retries, Rate-Limit-Behandlung, Injection-Test | Alle sieben laufen durch; eine Testseite mit eingebetteten Anweisungen ändert das Verhalten nicht |
+| ✅ 9 | Tests und Härtung | Sieben Testfälle als Skript, Timeouts, Retries, Rate-Limit-Behandlung, Injection-Test | Alle sieben laufen durch; eine Testseite mit eingebetteten Anweisungen ändert das Verhalten nicht |
 
 ### Arbeitsweise pro Schritt
 

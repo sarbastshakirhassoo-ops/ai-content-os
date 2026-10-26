@@ -45,13 +45,18 @@ Dokument auseinanderlaufen, ist das ein Fehler.
 
 ## Aktueller Stand
 
-Roadmap-Schritte 1 bis 8 von 9 sind abgeschlossen.
-Alle Funktionen stehen: Provider-Schicht, Central Brain, Research mit 13
-Quellen, Belegstärke, Memory, Flow-Ansicht, Trace-Historie und Sprache.
+V1 ist vollständig. Alle neun Roadmap-Schritte sind abgeschlossen, zehn von
+zehn Komponenten melden CONNECTED.
 
-Neun von zehn Komponenten sind CONNECTED.
+Was läuft: Provider-Schicht mit Gemini und Ollama samt Fallback, Central
+Brain mit Orchestrator, Planner, Synthese und Trace, Research Layer mit 13
+kostenlosen Quellen, deterministische Belegstärke, Memory mit fünf Arten,
+Flow-Ansicht, vollständige Trace-Historie und Sprache.
 
-Nächster Schritt: 9 — Tests und Härtung, der letzte.
+Laufende Kosten: 0 Euro.
+
+Nächster Schritt: offen. Mögliche Richtungen stehen in
+docs/BRAIN-V1-PLAN.md unter "Was V1 ausdrücklich nicht enthält".
 
 ---
 

@@ -16,8 +16,8 @@ export const dynamic = 'force-dynamic'
 // Netzwerk-Check, nicht aus der Anwesenheit einer Umgebungsvariable.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const ROADMAP_STEP = 8
-const ROADMAP_LABEL = 'Sprache aktiv — es fehlen nur noch Tests und Härtung (Schritt 9)'
+const ROADMAP_STEP = 9
+const ROADMAP_LABEL = 'V1 vollständig — alle neun Roadmap-Schritte abgeschlossen'
 
 function notImplemented(id: string, label: string, step: number, detail: string): CapabilityReport {
   return { id, label, status: 'NOT_IMPLEMENTED', detail, plannedInStep: step }

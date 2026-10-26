@@ -60,13 +60,17 @@ export type LLMErrorKind =
   | 'ERROR'
 
 export class LLMError extends Error {
-  constructor(
-    readonly kind: LLMErrorKind,
-    message: string,
-    readonly providerId?: string,
-  ) {
+  // Bewusst als Felder statt als Parameter-Eigenschaften: Nodes
+  // Type-Stripping kann letztere nicht umwandeln, und die Testskripte laden
+  // dieses Modul ohne Bundler.
+  readonly kind: LLMErrorKind
+  readonly providerId?: string
+
+  constructor(kind: LLMErrorKind, message: string, providerId?: string) {
     super(message)
     this.name = 'LLMError'
+    this.kind = kind
+    this.providerId = providerId
   }
 }
 
